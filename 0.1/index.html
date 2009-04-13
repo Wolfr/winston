@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+	<title>WOLF_UI</title>
+	<link rel="favicon" src="/favicon.ico" />
+
+	<link rel="stylesheet" href="css/wolf.ui.full.0.1.css" type="text/css" media="screen" />
+
+	<!-- jQuery -->
+	<script src="js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="js/jquery/jquery.shortcuts.min.js" type="text/javascript"></script>
+
+	<!-- Helpers; don't load when live -->
+	<link rel="stylesheet" href="css/wolf.ui.helpers.0.1.css" type="text/css" media="screen" />
+	<script src="js/wolf.ui/wolf.ui.helpers.0.1.js" type="text/javascript"></script>
+	<script src="js/jquery/jquery.cookie.min.js" type="text/javascript"></script>
+	
+	<!--  Syntax highlighter -->
+	<script type="text/javascript" src="js/syntax/scripts/shCore.js"></script>
+	<script type="text/javascript" src="js/syntax/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="js/syntax/scripts/shBrushPlain.js"></script>
+	<script type="text/javascript" src="js/syntax/scripts/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="js/syntax/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="js/syntax/styles/shThemeDefault.css"/>
+	
+</head>
+<body>
+	<div id="container">
+		<p><code>A work in progress - hit SHIFT+T for todo's</code></p>
+		
+		<div class="todoFlag">Check all anchors</div>
+		<div class="todoFlag">Add components</div>
+		<div class="todoFlag">...</div>
+
+		<h1>WOLF_UI <span>0.1</span></h1>
+
+		<div class="content">
+			<h3>Table of contents</h3>
+			<ol>
+				<li>
+					<a href="#introduction">Introduction</a>
+					<ol>
+						<li><a href="#whatis">What is <code>WOLF_UI</code>?</a></li>
+						<li><a href="#demo"><strong>Demo</strong></a></li>
+						<li><a href="#download">Download</a></li>
+					</ol>
+				<li>
+					<a href="#conventions">Conventions</a>
+					<ol>
+						<li><a href="#cssFileHandling">CSS file handling</a></li>
+						<li><a href="#commenting">Commenting</a></li>
+						<li><a href="#indentation">Indentation</a></li>
+						<li><a href="#typography">Typography</a></li>
+						<li><a href="#handlingDFC">Handling the default content problem</a></li>
+						<li><a href="#presentationalMarkup">On presentational markup</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#">Layout</a>
+					<ol>
+						<li><a href="#">Building layouts</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#">Components</a>
+					<ol>
+						<li><a href="#">Buttons</a></li>
+						<li><a href="#">Simple pagination</a></li>
+						<li><a href="#">Pagination</a></li>
+						<li><a href="#">Lightbox</a></li>
+						<li><a href="#">Humanized messages</a></li>
+						<li><a href="#">Filter selection menu</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#">Code examples</a>
+					<ol>
+						<li><a href="#">Sign in</a></li>
+						<li>
+							<a href="#">Simple form</a>
+							<ol>
+								<li><a href="#">Error handling</a></li>
+								<li><a href="#">Success message</a></li>
+							</ol>
+						</li>
+						<li><a href="#">Advanced form</a></li>
+						<li><a href="#">Multistep form</a></li>
+						<li><a href="#">Form-in-form</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#">Helpers</a>
+					<ol>
+						<li><a href="#todoHelper">Todo helper</a></li>
+						<li><a href="#resolutionHelperA">Resolution helper</a></li>
+					</ol>
+				</li>
+			</ol>
+			
+			<div class="hr"><hr /></div>
+		</div>
+
+		<h2 id="introduction">Introduction</h2>
+
+		<div class="id1">
+
+			<div class="col-5 content">
+
+				<div class="todoFlag">HI!</div>
+
+				<h3 id="whatis">What is WOLF_UI?</h3>
+				<p>You are not building websites anymore. You are building full-fledged web applications. In order to build the best you can, in order to have room for innovation, you need a set of defaults so you don't have to deal with the <em>monkey jobs</em> anymore &ndash; to be able to spend more time solving the real design issues instead of booting up your Windows machine for the umptheenth time to solve <em>that</em> cross browser bug.</p>
+				<p><code>WOLF_UI</code> is a user interface library consisting of common elements in websites and web applications. These elements work together in an ecosystem of conventions, guidelines and best practices. The goal of this library is to provide designers and developers with a solid base to build user interfaces. Think of it as <a href="http://rubyonrails.org/">Rails</a> for designers.</p>
+
+				<h3 id="demo">Demos</h3>
+				<p>Nobody likes plowing through documentation and sets of conventions without knowing first what to expect. Time is valuable to anyone. That is why this section features some demo pages built using <code>WOLF_UI</code>. So you can get a sense of what you can do before investing any time in this.</p>
+				<ul>
+					<li><a href="#"><s>Grid layout</s></a></li>
+					<li><a href="#"><s>Advanced form</s></a></li>
+					<li><a href="mobiledemo.html">Resolution helper demo</a></li>
+					<li><a href="#"><s>Todo helper demo</s></a></li>
+				</ul>
+		
+				<h3 id="download">Download</h3>
+				<div class="buttonHolder disabled">
+					<a href="#" class="button">
+						<span>Download WOLF_UI</span>
+					</a>
+				</div>
+				<p class="helpTxt"><strong><code>WOLF_UI</code> is a work in progress and cannot be downloaded yet.</strong></p>
+			
+			</div>
+		
+		</div>
+		
+		<div class="hr"><hr /></div>
+
+		<h2 id="conventions">Conventions</h2>
+		
+		<div class="cols id1">
+			<div class="col col-8">
+				<h3 id="cssFileHandling">CSS file handling</h3>
+				
+				<div class="content col-5">
+					<p><code>WOLF_UI</code> consists of several CSS files. In the real world, with regards to website performance, you should work with 1 CSS file only &ndash; minified, even.</p>
+					<p>I recommend downloading the <code>wolf.ui.full.css</code> file and stripping out the sections you don't need. However, to build this UI library I had to make sure components could be used separately without too much dependencies. This is why there are different CSS files.</p>
+					<p>This is what you need to get started. This is required for all interface elements.</p>
+					<ul>
+						<li><code>reset.css</code></li>
+						<li><code>base.css</code></li>
+					</ul>
+				</div>
+				
+				<div class="hr"><hr /></div>
+				
+				<h3 id="commenting">Commenting</h3>
+				
+				<p>Every CSS file starts with some metadata: author, copyright, license.</p>
+				<pre class="brush: css;">
+					/*
+
+						Stylesheet for PROJECTNAME
+
+						Media:      screen, projection
+						Copyright:  Company Name &lt;http://www.companyname.com&gt;
+						author:     Name Surname &lt;name@domain.com&gt;
+
+					*/
+				</pre>
+
+				<p>This is the standard way of marking sections in your CSS: (e.g. "this is the css for the buttons")</p>
+
+				<pre class="brush: css;">
+					/*
+						Buttons
+					*/
+				</pre>
+				
+				<p>And inline comments:</p>
+
+				<pre class="brush: css;">
+					#container {
+						display: inline; /* Fix double margin bug */
+					}
+				</pre>
+
+				<div class="hr"><hr /></div>
+				
+				<h3 id="indentation">Indentation guidelines</h3>
+				
+				<p>Properly indent your files to produce readable code, for yourself and for your team.</p>
+				
+				<pre class="brush: xml;">
+					&lt;ul&gt;
+					&lt;li&gt;Don&#x27;t do this&lt;/li&gt;
+					&lt;/ul&gt;
+				</pre>
+
+				<pre class="brush: xml;">
+					&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;Nor&lt;/span&gt; &lt;strong&gt;this&lt;/strong&gt; one line crap&lt;/a&gt;&lt;/li&gt;
+					&nbsp;
+				</pre>
+
+				<div class="col-5">
+					<p>As a general rule, block elements should live on their own line, e.g. the opening &lt;ul&gt; and closing &lt;/ul&gt; should be on the same line. Inline elements can be on the same line as long as things stay clear. If lines get too long (longer than 100 characters for instance) then you should start putting inline elements on separate lines. This happens, for instance, when constructing button CSS that includes a lot of inline elements to work around lacking browsers.</p>
+					<p>So do this (preferred):</p>
+				</div>
+
+				<pre class="brush: xml;">
+					&lt;div class=&quot;buttonHolder&quot;&gt;
+						&lt;a href=&quot;#&quot; class=&quot;button buttonSmall&quot;&gt;
+							&lt;span&gt;Something&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+				</pre>
+
+				<p>Or this:</p>
+
+				<pre class="brush: xml;">
+					&lt;div class=&quot;buttonHolder&quot;&gt;
+						&lt;a href=&quot;#&quot; class=&quot;button buttonSmall&quot;&gt;&lt;span&gt;Something&lt;/span&gt;&lt;/a&gt;
+					&lt;/div&gt;
+				</pre>
+
+				<p>Not this:</p>
+
+				<pre class="brush: xml;">
+					&lt;div class=&quot;buttonHolder&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;button buttonSmall&quot;&gt;&lt;span&gt;Something&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+				</pre>
+
+				<div class="hr"><hr /></div>
+				
+				<h3 id="namingIDsAndClasses">Naming IDs and classes</h3>
+				<div class="content">
+					<ul>
+						<li>Use camelCase for everything</li>
+						<li>Use non-trivial, English language <code>id</code> and <code>class</code>-names</li>
+					</ul>
+				</div>
+
+				<div class="hr"><hr /></div>
+
+				<h3 id="typography">Typography</h3>
+				
+				<p>Best practices</p>
+				
+				<div class="content col-5">
+					<h4>Don'ts</h4>
+					<ol>
+						<li>
+							<p>Never, ever, justify text</p>
+							<p class="helpTxt"><strong>Why?</strong> Justifying of text is highly dependant on dictionaries: in order to know whether to hyphenate a word, software needs a dictionary. When you justify in Microsoft Word or in Adobe Indesign, these applications use the dictionaries built into your OS. Browsers could do this, in theory, but none of them do.</p>
+						</li>
+						<li>
+							<p>Use a serif font for font sizes below 13px</p>
+							<p class="helpTxt"><strong>Why?</strong> You might not notice it on your shiny Mac, but serif fonts, and especially serif fonts set in italic, render problematically on OS-challenged machines. There is only so much detail one can render when not anti-aliasing, so keep this in mind.</p>
+						</li>
+					</ol>
+				</div>
+
+				<h4 id="fontSizes">Font sizes</h4>
+				<div class="col-5">
+
+					<p>The default font size should be large enough to read a longer text without trouble. I tend to choose 12-14px, depending on the design.</p>
+
+					<div class="example">
+						<span class="ex">Example</span>
+						<p><strong>This is a standard paragraph</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+					</div>
+
+					<p>Text that should be smaller (e.g. help text in a form) is handled with the class <code>.secondaryContent</code>.</p>
+
+					<div class="example">
+						<span class="ex">Example</span>
+						<p class="secondaryContent"><strong>This is a paragraph with the secondaryContent class</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+					</div>
+
+					<p>You can &ndash; and actually, should, use this on the parent element, so that everything within the parent is small:</p>
+
+					<div class="example secondaryContent">
+						<span class="ex">Example</span>
+						<p><strong>This is a paragraph with the secondaryContent class</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						<ul>
+							<li>Now an unordered list is also small</li>
+							<li>Now an unordered list is also small</li>
+						</ul>
+					</div>
+
+				</div>
+				
+				<div class="hr"><hr /></div>
+				
+				<h3 id="buildingLayouts">Building layouts</h3>
+
+				<div class="content">
+					<div class="col-5">
+
+						<p>Dependencies:</p>
+						<ul>
+							<li><code>grid.css</code></li>
+						</ul>
+
+						<p>To layout our user interface, we use a grid. The grid depends on the application. We know a few things: we want to keep things within a 960px wide frame; we want enough space (>20px) between columns; and we want the reading length of text to be proper.</p>
+						<p>This is what the CSS for the default 10 column grid looks like:</p>
+					</div>
+				</div>
+
+					<pre class="brush: css;">
+						.col { width: 72px; margin-right: 24px; float: left; }
+						.col-2 { width: 168px; }
+						.col-3 { width: 264px; }
+						.col-4 { width: 360px; }
+						.col-5 { width: 456px; }
+						.col-6 { width: 552px; }
+						.col-7 { width: 648px; }
+						.col-8 { width: 744px; }
+						.col-9 { width: 840px; }
+						.col-10 { width: 936px; }
+						.last { margin-right: 0 !important; }
+					</pre>
+
+					<div class="col-5">
+						<p>In <code>WOLF_UI</code> all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
+						<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
+						<p>I tend to use the <a href="#http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
+						<p>Here's an example of four columns:</p>
+					</div>
+
+					<div class="cols">
+						<div class="col col-2">
+							This is column A.
+						</div>
+						<div class="col col-2">
+							This is column B.
+						</div>
+						<div class="col col-2">
+							This is column C.
+						</div>
+						<div class="col col-2 last">
+							This is column D.
+						</div>
+					</div>
+
+					<br />
+
+					<p>And the code for this:</p>
+
+					<pre class="brush: xml;">
+						&lt;div class=&quot;cols&quot;&gt;
+							&lt;div class=&quot;col col-2&quot;&gt;
+								This is column A.
+							&lt;/div&gt;
+							&lt;div class=&quot;col col-2&quot;&gt;
+								This is column B.
+							&lt;/div&gt;
+							&lt;div class=&quot;col col-2&quot;&gt;
+								This is column C.
+							&lt;/div&gt;
+							&lt;div class=&quot;col col-2 last&quot;&gt;
+								This is column D.
+							&lt;/div&gt;
+						&lt;/div&gt;
+					</pre>
+
+					<div class="content col-5">
+						<p>We can use this column system to create layouts. However, not everything fits on the grid. Websites and web applications are not a piece of paper: we can't go Joseph Muller Brockmann-style when rewiring the latest Wordpress interface. Depending on the situation, you might consider working with another type of column system, based on percentages (such as <a href="http://v1.wolfslittlestore.be/a-simple-column-system-the-code">a simple column system</a>).</p>
+					</div>
+
+					<div class="hr"><hr /></div>
+
+					<h3 id="handlingDFC">Handling the default styling problem</h3>
+
+					<div class="col-5">
+						<p>Browsers have their default way of styling HTML elements. In order to get a consistent look across browsers, we use a CSS reset to reset every element, and then build the styling back up. The problem with this is that it leads to a horrendous amount of extra CSS. Let's clarify with an example.</p>
+
+						<p>One of the most commonly used elements in building websites is the unordered list. It default to what you would think an unordered list looks like: bullet points and a bit of margin and/or padding on the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements.</p>
+
+						<p>This is what it looks like:</p>
+
+						<iframe src="unorderedlist.html" style="height: 75px; width; 200px;"></iframe>
+
+						<p>When we reset the unordered list, this is what it looks like:</p>
+
+						<ul>
+							<li>Item one</li>
+							<li>Item two</li>
+						</ul>
+						<br />
+						<p>So, the common thing for a web designer to do is to define some styles so it ends up looking like this:</p>
+
+						<div class="content">
+						<ul>
+							<ul>
+								<li>Item one</li>
+								<li>Item two</li>
+							</ul>
+						</ul>
+
+						<p>This fits with the other styling. Good. But now, for the problem. The designer has to build a navigation and he doesn't need to the bullets. This is what he's going to do:</p>
+
+						<pre class="brush: css;">
+							#navigation ul {
+								list-style: none;
+								padding: 0;
+							}
+						</pre>
+
+						<p>Reset, build up again, reset again. Not good. <code>WOLF_UI</code> has a better way to handle this, and it's called the <code>.content</code> class. Whenever you add the <code>.content</code> class to a parent elements, the HTML elements within are styled accordingly.</p>
+
+						<p>In <code>base.css</code> you might find rules like these one then:</p>
+
+						<pre class="brush: css;">
+							.content ul,
+							.content ol {
+								padding: 0 0 12px 24px;
+							}
+
+							.content ul {
+								list-style: disc;
+							}
+
+							.content ol {
+								list-style-type: decimal;
+								padding: 0 0 12px 24px;
+							}
+						</pre>
+
+						<p><strong>Why?</strong> Most of the unordered lists you use when building a web application do not function as standard unordered lists, but as navigations, step selectors et cetera. The content class can clearly define which areas are actual content.</p>
+					</div>
+				</div>
+				
+				
+				<h3 id="presentationalMarkup">On presentational markup</h3>
+				
+				<div class="col-5">
+					<p><code>WOLF_UI</code> occasionally uses presentational markup. Many HTML purists won't like this. But they're the only ones who care. For designers and developers, the HTML and CSS decisions made lead to cleaner and maintainable code. Users will be served a lighter page. You might not think there's too much difference between <code>&lt;span class=&quot;item&quot;&gt;</code> and <code>&lt;b&gt;</code>, but when a list contains a thousand items there is indeed a difference, namely one of many bytes.</p>
+					<p>For example, when hooking up an image via a CSS sprite, we might use the <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags, since they are short and offer us another option instead of yet another classname. Much of this has to do with the way the cascade in CSS works and <a href="http://meyerweb.com/eric/thoughts/2004/08/23/markup-missive/">document weight</a>.</p>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="hr"><hr /></div>
+		
+		<h2>Components</h2>
+		
+		<div class="id1">
+				<h3>Buttons</h3>
+		
+				<p>Dependencies:</p>
+				<div class="content">
+					<ul>
+						<li><code>buttons.css</code></li>
+					</ul>
+				</div>
+		
+				<p>Use the following HTML to create a regular button:</p>
+
+				<pre class="brush: xml;">
+					&lt;div class=&quot;buttonHolder&quot;&gt;
+						&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
+							&lt;span&gt;Button text&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+				</pre>
+
+			<p>This will result in a button:</p>
+
+			<div class="buttonHolder">
+				<a href="#" class="button">
+					<span>Button text</span>
+				</a>
+			</div>
+	
+			<br />
+			<div class="hr"><hr /></div>
+
+			<p>Now sometimes you want to have 2 buttons next to each other. Simply add another <code>&lt;a&gt;</code> inside the <code>buttonHolder</code>-div.</p>
+
+
+		<pre class="brush: xml;">
+		&lt;div class=&quot;buttonHolder buttonHolderDouble&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
+				&lt;span&gt;Button one&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
+				&lt;span&gt;Button two&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		</pre>
+
+		<p>This will add some spacing between the two buttons. Tight.</p>
+
+			<div class="buttonHolder buttonHolderDouble">
+				<a href="#" class="button">
+					<span>Button one</span>
+				</a>
+				<a href="#" class="button">
+					<span>Button two</span>
+				</a>
+			</div>
+	
+			<br />
+			<div class="hr"><hr /></div>
+
+		<p>Depending on the use case you sometimes want smaller buttons. Easy. Add a <code>buttonSmall</code> class to the <code>button</code> class.</p>
+
+		<pre class="brush: xml; highlight: 2">
+		&lt;div class=&quot;buttonHolder&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;button buttonSmall&quot;&gt;
+				&lt;span&gt;Small button&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		</pre>
+
+		<p>There we go:</p>
+
+		<div class="buttonHolder">
+			<a href="#" class="button buttonSmall">
+				<span>Small button</span>
+			</a>
+		</div>
+
+		<br />
+		<div class="hr"><hr /></div>
+
+		<p>And of course, you can also place 2 small buttons together:</p>
+
+		<div class="buttonHolder buttonHolderDouble">
+			<a href="#" class="button buttonSmall">
+				<span>Small button</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>Small button two</span>
+			</a>
+		</div>
+
+		<br />
+		<div class="hr"><hr /></div>
+
+		<p>Don't limit yourself to just two buttons:</p>
+
+		<div class="buttonHolder buttonHolderDouble">
+			<a href="#" class="button buttonSmall">
+				<span>A</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>B</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>C</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>D</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>1</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>2</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>3</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>4</span>
+			</a>
+		</div>
+
+		<br />
+		<div class="hr"><hr /></div>
+
+		<p>Consider using HTML entities, if you're working for a single platform (e.g. iPhone). You can't count on these entities to work on every platform. The examples below don't work in Windows XP, don't know about Vista:</p>
+
+		<div class="buttonHolder buttonHolderDouble">
+			<a href="#" class="button buttonSmall">
+				<span>&#x2717;</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>&#x2764;</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>&#x27A1;</span>
+			</a>
+		</div>
+
+		<br />
+		<div class="hr"><hr /></div>
+
+		<p>If you mix big and small buttons, add the <code>buttonMix</code> class to <code>buttonHolder</code> to vertically center the buttons.</p>
+
+		<pre class="brush: xml; highlight: 1">
+			<div class="buttonHolder buttonHolderDouble buttonMix">
+				<a href="#" class="button">
+					<span>Bigger</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>&#x2717;</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>&#x2764;</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>&#x27A1;</span>
+				</a>
+				<a href="#" class="button">
+					<span>Bigger</span>
+				</a>
+			</div>
+		</pre>
+	
+		<div class="buttonHolder buttonHolderDouble buttonMix">
+			<a href="#" class="button">
+				<span>Bigger</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>&#x2717;</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>&#x2764;</span>
+			</a>
+			<a href="#" class="button buttonSmall">
+				<span>&#x27A1;</span>
+			</a>
+			<a href="#" class="button">
+				<span>Bigger</span>
+			</a>
+		</div>
+
+		<br />
+		<div class="hr"><hr /></div>
+	</div>
+
+	<h2>Form layout</h2>
+	
+	<p>Forms get increasingly complex. This is my attempt to tame those beasts.</p>
+	
+	<div class="hr"><hr /></div>
+	
+	<h2 id="todoHelper">TODO helper:</h2>
+	
+	<div class="col-5 content">
+
+		<p>Dependencies:</p>
+		<ul>
+			<li><code>jquery-1.3.2.min.js</code></li>
+			<li><code>jquery.shortcuts.min.js</code></li>
+			<li><code>wolf.ui.helpers.0.1.js</code></li>
+			<li><code>wolf.ui.helpers.0.1.css</code></li>
+		</ul>
+	
+		<p>There are many ways to handle TODO's in projects. One problem with adding todo's in a separate list is that they lose their context in the project. Sometimes it's more beneficial to add todo's inline in the code. To help see TODOs in a visual way, <code>WOLF_UI</code> includes a dev helper called TODO.</p>
+		<p>To add a todo to a project, use the following code:</p>
+	</div>
+	
+	<pre class="brush: xml;">
+		&lt;div class=&quot;todoHelper&quot;&gt;Add todo text here&lt;/div&gt;
+	</pre>
+
+	<div class="col-5">
+		<p>This will end up looking like this:</p>
+		<div class="todoFlag" style="display: block;">Add todo text here</div>
+		<p>Todo's are invisible by default but can be toggled by the keyboard shortcut <strong>SHIFT+T</strong>. Try hitting SHIFT+T and then SHIFT+T again and you will see the above todo will toggle.</p>
+	</div>
+
+	<div class="hr"><hr /></div>
+	
+	<h2 id="resolutionHelperA">Resolution helper:</h2>
+	
+	<div class="content col-5">
+		<p>Dependencies:</p>
+		<ul>
+			<li><code>jquery-1.3.2.min.js</code></li>
+			<li><code>jquery.shortcuts.min.js</code></li>
+			<li><code>wolf.ui.helpers.0.1.js</code></li>
+			<li><code>wolf.ui.helpers.0.1.css</code></li>
+		</ul>
+	
+		<p>The resolution helper is a combined piece of CSS and JS to help developing layouts for different resolutions. This is especially useful when creating the user interface for a mobile website or application.</p>
+	
+		<p><a href="mobiledemo.html">Give it a try</a>.</p>
+	</div>
+
+	<div class="hr"><hr /></div>
+	
+	<h2>Examples</h2>
+	
+	<div>
+		<ul class="secondaryContent">
+			<li>
+				<p>Signed in as <a title="Fictional Character" href="/manage"><strong>Fictional character</strong></a></p>
+			</li>
+			<li>
+				<p class="buttonHolder">
+					<a href="/sign-in/p/logout/design/getting-started" class="button buttonSmall">
+						<span>Sign out</span>
+					</a>
+				</p>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'js/syntax/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+	
+</body>
+</html>

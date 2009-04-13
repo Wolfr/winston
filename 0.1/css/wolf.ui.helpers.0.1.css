@@ -1,0 +1,206 @@
+/*
+	Grid helper
+*/
+
+#grid {
+	position: fixed;
+	background: url(../images/grid.png) no-repeat;
+	width: 984px;
+	height: 1682px;
+	top: 0; left: 0;
+	display: none;
+}
+
+/*
+	todoHelper
+*/
+
+.todoFlag {
+	background: url(../images/todoFlag.gif) no-repeat scroll 0 4px;
+	z-index: 30;
+	color: #FF0000;
+	display: none;
+	font-family: "Consolas", Courier, fixed;
+	text-indent: 38px;
+}
+
+/*
+	Grid helper
+*/
+
+#gridHelper {
+	position: fixed;
+	right: 10px;
+	bottom: 40px;
+	color: #FFF;
+	background: #808080;
+	padding: 2px 5px;
+	font-size: 12px;
+	font-weight: 700;
+	border: 1px solid #FFF;
+	_display: none;
+}
+
+	#gridHelper p {
+		font-family: "Consolas", Courier, fixed;
+		padding: 0;
+	}
+
+#grid {
+	position: fixed;
+	background: url(../images/grid.png) no-repeat;
+	width: 984px;
+	height: 1500px;
+	top: 0; left: 0;
+}
+
+
+
+
+/*
+	Mobile res helper
+*/
+
+html, body, #wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+#resolutionHelper {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+	#resolutionHelper p {
+		padding: 10px 0;
+	}
+
+#resolutionHelper em {
+	display: inline-block;
+	width: 100px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+#resolutionHelper label,
+#resolutionHelper a {
+	padding: 2px 6px;
+	text-decoration: none;
+	font-weight: 700;
+	background: rgba(0,0,0,0.08);
+	border: none;
+}
+
+#resolutionHelper a {
+	margin: 0 0 0 5px;
+}
+
+	#resolutionHelper .selected {
+		background: #000;
+		color: #FFF;
+	}
+
+	#resolutionHelper input {
+		margin: 0 5px 0 10px;
+	}
+
+	.meta #resolutionHelper label {
+		color: #FFF;
+	}
+
+#resolutionHelper em {
+	font-family: "Lucida Sans";
+}
+
+	/* Not shorthand because of the switch class */
+	/* These values can be 1px off, this is so they render properly within the container */
+
+	/*
+		Nokia N95: QVGA (240x320)
+		Blackberry Pearl: QVGA (240x320)
+	*/
+
+	body.n95 { 
+		width: 240px;
+		background-image: url(../images/fold.gif);
+		background-repeat: repeat-x;
+		background-position: 0 320px;
+	}
+	
+		body.n95 #wrapper {
+			background-image: url(../images/fold.gif);
+			background-repeat: repeat-y;
+			background-position: 239px 0;
+		}
+
+	/*
+		Apple iPhone / Apple iPod Touch: Half VGA portrait (320x480)
+		Blackberry Storm is nearly the same: 360px width instead of 320 [in portrait mode]
+	*/
+	
+	body.iPhone {
+		width: 320px;
+		background-image: url(../images/fold.gif);
+		background-repeat: repeat-x;
+		background-position: 0 480px;
+	}
+	
+		body.iPhone #wrapper {
+			background-image: url(../images/fold.gif);
+			background-repeat: repeat-y;
+			background-position: 319px 0;
+		}
+
+	/*
+		Blackberry Bold: Half VGA landscape (480x320)
+		Blackberry Storm is nearly the same: 360px height instead of 320 [in landscape mode]
+	*/
+
+	body.blackberryBold {
+		width: 480px;
+		background-image: url(../images/fold.gif);
+		background-repeat: repeat-x;
+		background-position: 0 320px;
+	}
+	
+		body.blackberryBold #wrapper {
+			background-image: url(../images/fold.gif);
+			background-repeat: repeat-y;
+			background-position: 479px 0;
+		}
+		
+	/*
+		HTC Touch: VGA (480x640)
+	*/
+
+	body.htc {
+		width: 480px;
+		background-image: url(../images/fold.gif);
+		background-repeat: repeat-x;
+		background-position: 0 640px;
+	}
+	
+		body.htc #wrapper {
+			background-image: url(../images/fold.gif);
+			background-repeat: repeat-y;
+			background-position: 479px 0;
+		}
+		
+	/*
+		HTC Touch: VGA (640x480)
+		*Landscape mode*
+	*/
+
+	body.htcLS {
+		width: 640px;
+		background-image: url(../images/fold.gif);
+		background-repeat: repeat-x;
+		background-position: 0 480px;
+	}
+
+		body.htcLS #wrapper {
+			background-image: url(../images/fold.gif);
+			background-repeat: repeat-y;
+			background-position: 639px 0;
+		}
