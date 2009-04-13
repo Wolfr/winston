@@ -1,8 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	
 	<title>WOLF_UI</title>
-	<link rel="favicon" src="/favicon.ico" />
+	<link rel="favicon" href="/favicon.ico" />
 
 	<link rel="stylesheet" href="css/wolf.ui.full.0.1.css" type="text/css" media="screen" />
 
@@ -35,7 +38,7 @@
 		<h1>WOLF_UI <span>0.1</span></h1>
 
 		<div class="content">
-			<h3>Table of contents</h3>
+			<h3>Table of Contents</h3>
 			<ol>
 				<li>
 					<a href="#introduction">Introduction</a>
@@ -44,6 +47,7 @@
 						<li><a href="#demo"><strong>Demo</strong></a></li>
 						<li><a href="#download">Download</a></li>
 					</ol>
+				</li>
 				<li>
 					<a href="#conventions">Conventions</a>
 					<ol>
@@ -56,40 +60,45 @@
 					</ol>
 				</li>
 				<li>
-					<a href="#">Layout</a>
+					Layout
 					<ol>
-						<li><a href="#">Building layouts</a></li>
-					</ol>
-				</li>
-				<li>
-					<a href="#">Components</a>
-					<ol>
-						<li><a href="#">Buttons</a></li>
-						<li><a href="#">Simple pagination</a></li>
-						<li><a href="#">Pagination</a></li>
-						<li><a href="#">Lightbox</a></li>
-						<li><a href="#">Humanized messages</a></li>
-						<li><a href="#">Filter selection menu</a></li>
-					</ol>
-				</li>
-				<li>
-					<a href="#">Code examples</a>
-					<ol>
-						<li><a href="#">Sign in</a></li>
-						<li>
-							<a href="#">Simple form</a>
+						<li>Building layouts using the column systems
 							<ol>
-								<li><a href="#">Error handling</a></li>
-								<li><a href="#">Success message</a></li>
+								<li>Simple column system</li>
+								<li>Grid column system</li>
 							</ol>
 						</li>
-						<li><a href="#">Advanced form</a></li>
-						<li><a href="#">Multistep form</a></li>
-						<li><a href="#">Form-in-form</a></li>
 					</ol>
 				</li>
 				<li>
-					<a href="#">Helpers</a>
+					<a href="#components">Components</a>
+					<ol>
+						<li><a href="#buttons">Buttons</a></li>
+						<li>Simple pagination</li>
+						<li>Pagination</li>
+						<li>Lightbox</li>
+						<li>Humanized messages</li>
+						<li>Filter selection menu</li>
+					</ol>
+				</li>
+				<li>
+					<a href="#codeExamples">Code examples</a>
+					<ol>
+						<li>Sign in</li>
+						<li>
+							Simple form
+							<ol>
+								<li>Error handling</li>
+								<li>Success message</li>
+							</ol>
+						</li>
+						<li>Advanced form</li>
+						<li>Multistep form</li>
+						<li>Form-in-form</li>
+					</ol>
+				</li>
+				<li>
+					<a href="#helpers">Helpers</a>
 					<ol>
 						<li><a href="#todoHelper">Todo helper</a></li>
 						<li><a href="#resolutionHelperA">Resolution helper</a></li>
@@ -115,10 +124,10 @@
 				<h3 id="demo">Demos</h3>
 				<p>Nobody likes plowing through documentation and sets of conventions without knowing first what to expect. Time is valuable to anyone. That is why this section features some demo pages built using <code>WOLF_UI</code>. So you can get a sense of what you can do before investing any time in this.</p>
 				<ul>
-					<li><a href="#"><s>Grid layout</s></a></li>
-					<li><a href="#"><s>Advanced form</s></a></li>
+					<li>Grid layout</li>
+					<li>Advanced form</li>
 					<li><a href="mobiledemo.html">Resolution helper demo</a></li>
-					<li><a href="#"><s>Todo helper demo</s></a></li>
+					<li>Todo helper demo</li>
 				</ul>
 		
 				<h3 id="download">Download</h3>
@@ -127,7 +136,8 @@
 						<span>Download WOLF_UI</span>
 					</a>
 				</div>
-				<p class="helpTxt"><strong><code>WOLF_UI</code> is a work in progress and cannot be downloaded yet.</strong></p>
+				<br />
+				<p><strong><code>WOLF_UI</code> is a work in progress and cannot be downloaded yet.</strong> If you are interested in watching the development and contributing, check out the repository at <a href="http://github.com/Wolfr/wolf_ui/tree/master">GitHub</a>.</p>
 			
 			</div>
 		
@@ -305,130 +315,127 @@
 					</div>
 				</div>
 
-					<pre class="brush: css;">
-						.col { width: 72px; margin-right: 24px; float: left; }
-						.col-2 { width: 168px; }
-						.col-3 { width: 264px; }
-						.col-4 { width: 360px; }
-						.col-5 { width: 456px; }
-						.col-6 { width: 552px; }
-						.col-7 { width: 648px; }
-						.col-8 { width: 744px; }
-						.col-9 { width: 840px; }
-						.col-10 { width: 936px; }
-						.last { margin-right: 0 !important; }
-					</pre>
+				<pre class="brush: css;">
+					.col { width: 72px; margin-right: 24px; float: left; }
+					.col-2 { width: 168px; }
+					.col-3 { width: 264px; }
+					.col-4 { width: 360px; }
+					.col-5 { width: 456px; }
+					.col-6 { width: 552px; }
+					.col-7 { width: 648px; }
+					.col-8 { width: 744px; }
+					.col-9 { width: 840px; }
+					.col-10 { width: 936px; }
+					.last { margin-right: 0 !important; }
+				</pre>
 
-					<div class="col-5">
-						<p>In <code>WOLF_UI</code> all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
-						<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
-						<p>I tend to use the <a href="#http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
-						<p>Here's an example of four columns:</p>
+				<div class="col-5">
+					<p>In <code>WOLF_UI</code> all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
+					<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
+					<p>I tend to use the <a href="#http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
+					<p>Here's an example of four columns:</p>
+				</div>
+
+				<div class="cols">
+					<div class="col col-2">
+						This is column A.
 					</div>
+					<div class="col col-2">
+						This is column B.
+					</div>
+					<div class="col col-2">
+						This is column C.
+					</div>
+					<div class="col col-2 last">
+						This is column D.
+					</div>
+				</div>
 
-					<div class="cols">
-						<div class="col col-2">
+				<br />
+
+				<p>And the code for this:</p>
+
+				<pre class="brush: xml;">
+					&lt;div class=&quot;cols&quot;&gt;
+						&lt;div class=&quot;col col-2&quot;&gt;
 							This is column A.
-						</div>
-						<div class="col col-2">
-							This is column B.
-						</div>
-						<div class="col col-2">
-							This is column C.
-						</div>
-						<div class="col col-2 last">
-							This is column D.
-						</div>
-					</div>
-
-					<br />
-
-					<p>And the code for this:</p>
-
-					<pre class="brush: xml;">
-						&lt;div class=&quot;cols&quot;&gt;
-							&lt;div class=&quot;col col-2&quot;&gt;
-								This is column A.
-							&lt;/div&gt;
-							&lt;div class=&quot;col col-2&quot;&gt;
-								This is column B.
-							&lt;/div&gt;
-							&lt;div class=&quot;col col-2&quot;&gt;
-								This is column C.
-							&lt;/div&gt;
-							&lt;div class=&quot;col col-2 last&quot;&gt;
-								This is column D.
-							&lt;/div&gt;
 						&lt;/div&gt;
-					</pre>
+						&lt;div class=&quot;col col-2&quot;&gt;
+							This is column B.
+						&lt;/div&gt;
+						&lt;div class=&quot;col col-2&quot;&gt;
+							This is column C.
+						&lt;/div&gt;
+						&lt;div class=&quot;col col-2 last&quot;&gt;
+							This is column D.
+						&lt;/div&gt;
+					&lt;/div&gt;
+				</pre>
 
-					<div class="content col-5">
-						<p>We can use this column system to create layouts. However, not everything fits on the grid. Websites and web applications are not a piece of paper: we can't go Joseph Muller Brockmann-style when rewiring the latest Wordpress interface. Depending on the situation, you might consider working with another type of column system, based on percentages (such as <a href="http://v1.wolfslittlestore.be/a-simple-column-system-the-code">a simple column system</a>).</p>
-					</div>
+				<div class="content col-5">
+					<p>We can use this column system to create layouts. However, not everything fits on the grid. Websites and web applications are not a piece of paper: we can't go Joseph Muller Brockmann-style when rewiring the latest Wordpress interface. Depending on the situation, you might consider working with another type of column system, based on percentages (such as <a href="http://v1.wolfslittlestore.be/a-simple-column-system-the-code">a simple column system</a>).</p>
+				</div>
 
-					<div class="hr"><hr /></div>
+				<div class="hr"><hr /></div>
 
-					<h3 id="handlingDFC">Handling the default styling problem</h3>
+				<h3 id="handlingDFC">Handling the default styling problem</h3>
 
-					<div class="col-5">
-						<p>Browsers have their default way of styling HTML elements. In order to get a consistent look across browsers, we use a CSS reset to reset every element, and then build the styling back up. The problem with this is that it leads to a horrendous amount of extra CSS. Let's clarify with an example.</p>
+				<div class="col-5">
+					<p>Browsers have their default way of styling HTML elements. In order to get a consistent look across browsers, we use a CSS reset to reset every element, and then build the styling back up. The problem with this is that it leads to a horrendous amount of extra CSS. Let's clarify with an example.</p>
 
-						<p>One of the most commonly used elements in building websites is the unordered list. It default to what you would think an unordered list looks like: bullet points and a bit of margin and/or padding on the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements.</p>
+					<p>One of the most commonly used elements in building websites is the unordered list. It default to what you would think an unordered list looks like: bullet points and a bit of margin and/or padding on the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements.</p>
 
-						<p>This is what it looks like:</p>
+					<p>This is what it looks like:</p>
 
-						<iframe src="unorderedlist.html" style="height: 75px; width; 200px;"></iframe>
+					<iframe src="unorderedlist.html" style="height: 75px; width; 200px;"></iframe>
 
-						<p>When we reset the unordered list, this is what it looks like:</p>
+					<p>When we reset the unordered list, this is what it looks like:</p>
 
+					<ul>
+						<li>Item one</li>
+						<li>Item two</li>
+					</ul>
+					<br />
+					<p>So, the common thing for a web designer to do is to define some styles so it ends up looking like this:</p>
+
+					<div class="content">
 						<ul>
 							<li>Item one</li>
 							<li>Item two</li>
 						</ul>
-						<br />
-						<p>So, the common thing for a web designer to do is to define some styles so it ends up looking like this:</p>
+					</div>
+					
+					<p>This fits with the other styling. Good. But now, for the problem. The designer has to build a navigation and he doesn't need to the bullets. This is what he's going to do:</p>
 
-						<div class="content">
-						<ul>
-							<ul>
-								<li>Item one</li>
-								<li>Item two</li>
-							</ul>
-						</ul>
-
-						<p>This fits with the other styling. Good. But now, for the problem. The designer has to build a navigation and he doesn't need to the bullets. This is what he's going to do:</p>
-
-						<pre class="brush: css;">
-							#navigation ul {
-								list-style: none;
-								padding: 0;
-							}
-						</pre>
+					<pre class="brush: css;">
+						#navigation ul {
+							list-style: none;
+							padding: 0;
+						}
+					</pre>
 
 						<p>Reset, build up again, reset again. Not good. <code>WOLF_UI</code> has a better way to handle this, and it's called the <code>.content</code> class. Whenever you add the <code>.content</code> class to a parent elements, the HTML elements within are styled accordingly.</p>
 
-						<p>In <code>base.css</code> you might find rules like these one then:</p>
+					<p>In <code>base.css</code> you might find rules like these one then:</p>
 
-						<pre class="brush: css;">
-							.content ul,
-							.content ol {
-								padding: 0 0 12px 24px;
-							}
+					<pre class="brush: css;">
+						.content ul,
+						.content ol {
+							padding: 0 0 12px 24px;
+						}
 
-							.content ul {
-								list-style: disc;
-							}
+						.content ul {
+							list-style: disc;
+						}
 
-							.content ol {
-								list-style-type: decimal;
-								padding: 0 0 12px 24px;
-							}
-						</pre>
+						.content ol {
+							list-style-type: decimal;
+							padding: 0 0 12px 24px;
+						}
+					</pre>
 
-						<p><strong>Why?</strong> Most of the unordered lists you use when building a web application do not function as standard unordered lists, but as navigations, step selectors et cetera. The content class can clearly define which areas are actual content.</p>
-					</div>
+					<p><strong>Why?</strong> Most of the unordered lists you use when building a web application do not function as standard unordered lists, but as navigations, step selectors et cetera. The content class can clearly define which areas are actual content.</p>
 				</div>
-				
 				
 				<h3 id="presentationalMarkup">On presentational markup</h3>
 				
@@ -442,27 +449,27 @@
 		
 		<div class="hr"><hr /></div>
 		
-		<h2>Components</h2>
+		<h2 id="components">Components</h2>
 		
 		<div class="id1">
-				<h3>Buttons</h3>
+			<h3 id="buttons">Buttons</h3>
 		
-				<p>Dependencies:</p>
-				<div class="content">
-					<ul>
-						<li><code>buttons.css</code></li>
-					</ul>
-				</div>
+			<p>Dependencies:</p>
+			<div class="content">
+				<ul>
+					<li><code>buttons.css</code></li>
+				</ul>
+			</div>
 		
-				<p>Use the following HTML to create a regular button:</p>
+			<p>Use the following HTML to create a regular button:</p>
 
-				<pre class="brush: xml;">
-					&lt;div class=&quot;buttonHolder&quot;&gt;
-						&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
-							&lt;span&gt;Button text&lt;/span&gt;
-						&lt;/a&gt;
-					&lt;/div&gt;
-				</pre>
+			<pre class="brush: xml;">
+				&lt;div class=&quot;buttonHolder&quot;&gt;
+					&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
+						&lt;span&gt;Button text&lt;/span&gt;
+					&lt;/a&gt;
+				&lt;/div&gt;
+			</pre>
 
 			<p>This will result in a button:</p>
 
@@ -477,19 +484,18 @@
 
 			<p>Now sometimes you want to have 2 buttons next to each other. Simply add another <code>&lt;a&gt;</code> inside the <code>buttonHolder</code>-div.</p>
 
+			<pre class="brush: xml;">
+			&lt;div class=&quot;buttonHolder buttonHolderDouble&quot;&gt;
+				&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
+					&lt;span&gt;Button one&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
+					&lt;span&gt;Button two&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+			</pre>
 
-		<pre class="brush: xml;">
-		&lt;div class=&quot;buttonHolder buttonHolderDouble&quot;&gt;
-			&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
-				&lt;span&gt;Button one&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;
-				&lt;span&gt;Button two&lt;/span&gt;
-			&lt;/a&gt;
-		&lt;/div&gt;
-		</pre>
-
-		<p>This will add some spacing between the two buttons. Tight.</p>
+			<p>This will add some spacing between the two buttons. Tight.</p>
 
 			<div class="buttonHolder buttonHolderDouble">
 				<a href="#" class="button">
@@ -503,93 +509,112 @@
 			<br />
 			<div class="hr"><hr /></div>
 
-		<p>Depending on the use case you sometimes want smaller buttons. Easy. Add a <code>buttonSmall</code> class to the <code>button</code> class.</p>
+			<p>Depending on the use case you sometimes want smaller buttons. Easy. Add a <code>buttonSmall</code> class to the <code>button</code> class.</p>
 
-		<pre class="brush: xml; highlight: 2">
-		&lt;div class=&quot;buttonHolder&quot;&gt;
-			&lt;a href=&quot;#&quot; class=&quot;button buttonSmall&quot;&gt;
-				&lt;span&gt;Small button&lt;/span&gt;
-			&lt;/a&gt;
-		&lt;/div&gt;
-		</pre>
+			<pre class="brush: xml; highlight: 2">
+			&lt;div class=&quot;buttonHolder&quot;&gt;
+				&lt;a href=&quot;#&quot; class=&quot;button buttonSmall&quot;&gt;
+					&lt;span&gt;Small button&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+			</pre>
 
-		<p>There we go:</p>
+			<p>There we go:</p>
 
-		<div class="buttonHolder">
-			<a href="#" class="button buttonSmall">
-				<span>Small button</span>
-			</a>
-		</div>
+			<div class="buttonHolder">
+				<a href="#" class="button buttonSmall">
+					<span>Small button</span>
+				</a>
+			</div>
 
-		<br />
-		<div class="hr"><hr /></div>
+			<br />
+			<div class="hr"><hr /></div>
 
-		<p>And of course, you can also place 2 small buttons together:</p>
+			<p>And of course, you can also place 2 small buttons together:</p>
 
-		<div class="buttonHolder buttonHolderDouble">
-			<a href="#" class="button buttonSmall">
-				<span>Small button</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>Small button two</span>
-			</a>
-		</div>
+			<div class="buttonHolder buttonHolderDouble">
+				<a href="#" class="button buttonSmall">
+					<span>Small button</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>Small button two</span>
+				</a>
+			</div>
 
-		<br />
-		<div class="hr"><hr /></div>
+			<br />
+			<div class="hr"><hr /></div>
 
-		<p>Don't limit yourself to just two buttons:</p>
+			<p>Don't limit yourself to just two buttons:</p>
 
-		<div class="buttonHolder buttonHolderDouble">
-			<a href="#" class="button buttonSmall">
-				<span>A</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>B</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>C</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>D</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>1</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>2</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>3</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>4</span>
-			</a>
-		</div>
+			<div class="buttonHolder buttonHolderDouble">
+				<a href="#" class="button buttonSmall">
+					<span>A</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>B</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>C</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>D</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>1</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>2</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>3</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>4</span>
+				</a>
+			</div>
 
-		<br />
-		<div class="hr"><hr /></div>
+			<br />
+			<div class="hr"><hr /></div>
 
-		<p>Consider using HTML entities, if you're working for a single platform (e.g. iPhone). You can't count on these entities to work on every platform. The examples below don't work in Windows XP, don't know about Vista:</p>
+			<p>Consider using HTML entities, if you're working for a single platform (e.g. iPhone). You can't count on these entities to work on every platform. The examples below don't work in Windows XP, don't know about Vista:</p>
 
-		<div class="buttonHolder buttonHolderDouble">
-			<a href="#" class="button buttonSmall">
-				<span>&#x2717;</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>&#x2764;</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>&#x27A1;</span>
-			</a>
-		</div>
+			<div class="buttonHolder buttonHolderDouble">
+				<a href="#" class="button buttonSmall">
+					<span>&#x2717;</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>&#x2764;</span>
+				</a>
+				<a href="#" class="button buttonSmall">
+					<span>&#x27A1;</span>
+				</a>
+			</div>
 
-		<br />
-		<div class="hr"><hr /></div>
+			<br />
+			<div class="hr"><hr /></div>
 
-		<p>If you mix big and small buttons, add the <code>buttonMix</code> class to <code>buttonHolder</code> to vertically center the buttons.</p>
+			<p>If you mix big and small buttons, add the <code>buttonMix</code> class to <code>buttonHolder</code> to vertically center the buttons.</p>
 
-		<pre class="brush: xml; highlight: 1">
+			<pre class="brush: xml; highlight: 1;">
+				<div class="buttonHolder buttonHolderDouble buttonMix">
+					<a href="#" class="button">
+						<span>Bigger</span>
+					</a>
+					<a href="#" class="button buttonSmall">
+						<span>&#x2717;</span>
+					</a>
+					<a href="#" class="button buttonSmall">
+						<span>&#x2764;</span>
+					</a>
+					<a href="#" class="button buttonSmall">
+						<span>&#x27A1;</span>
+					</a>
+					<a href="#" class="button">
+						<span>Bigger</span>
+					</a>
+				</div>
+			</pre>
+
 			<div class="buttonHolder buttonHolderDouble buttonMix">
 				<a href="#" class="button">
 					<span>Bigger</span>
@@ -607,103 +632,77 @@
 					<span>Bigger</span>
 				</a>
 			</div>
-		</pre>
+
+			<br />
+		</div>
 	
-		<div class="buttonHolder buttonHolderDouble buttonMix">
-			<a href="#" class="button">
-				<span>Bigger</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>&#x2717;</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>&#x2764;</span>
-			</a>
-			<a href="#" class="button buttonSmall">
-				<span>&#x27A1;</span>
-			</a>
-			<a href="#" class="button">
-				<span>Bigger</span>
-			</a>
+		<div class="hr"><hr /></div>
+
+		<h2 id="codeExamples">Code examples</h2>
+
+		<div class="id1">
+			<p>Todo!</p>
 		</div>
 
-		<br />
 		<div class="hr"><hr /></div>
+
+		<h2 id="helpers">Helpers</h2>
+	
+		<div class="id1">
+			<h3 id="todoHelper">TODO helper:</h3>
+	
+			<div class="col-5 content">
+
+				<p>Dependencies:</p>
+				<ul>
+					<li><code>jquery-1.3.2.min.js</code></li>
+					<li><code>jquery.shortcuts.min.js</code></li>
+					<li><code>wolf.ui.helpers.0.1.js</code></li>
+					<li><code>wolf.ui.helpers.0.1.css</code></li>
+				</ul>
+	
+				<p>There are many ways to handle TODO's in projects. One problem with adding todo's in a separate list is that they lose their context in the project. Sometimes it's more beneficial to add todo's inline in the code. To help see TODOs in a visual way, <code>WOLF_UI</code> includes a dev helper called TODO.</p>
+				<p>To add a todo to a project, use the following code:</p>
+			</div>
+	
+			<pre class="brush: xml;">
+				&lt;div class=&quot;todoHelper&quot;&gt;Add todo text here&lt;/div&gt;
+			</pre>
+
+			<div class="col-5">
+				<p>This will end up looking like this:</p>
+				<div class="todoFlag" style="display: block;">Add todo text here</div>
+				<p>Todo's are invisible by default but can be toggled by the keyboard shortcut <strong>SHIFT+T</strong>. Try hitting SHIFT+T and then SHIFT+T again and you will see the above todo will toggle.</p>
+			</div>
+
+			<div class="hr"><hr /></div>
+	
+			<h3 id="resolutionHelperA">Resolution helper:</h3>
+	
+			<div class="content col-5">
+				<p>Dependencies:</p>
+				<ul>
+					<li><code>jquery-1.3.2.min.js</code></li>
+					<li><code>jquery.shortcuts.min.js</code></li>
+					<li><code>wolf.ui.helpers.0.1.js</code></li>
+					<li><code>wolf.ui.helpers.0.1.css</code></li>
+				</ul>
+	
+				<p>The resolution helper is a combined piece of CSS and JS to help developing layouts for different resolutions. This is especially useful when creating the user interface for a mobile website or application.</p>
+	
+				<p><a href="mobiledemo.html">Give it a try</a>.</p>
+			</div>
+		</div>
+
+		<div class="hr"><hr /></div>
+		
+		<p>By <a href="http://www.johanronsse.be">Johan Ronsse (Wolf)</a>.</p>
+		<p>See README for licensing details (GNU General Public License).</p>
+
+		<script type="text/javascript">
+			SyntaxHighlighter.config.clipboardSwf = 'js/syntax/scripts/clipboard.swf';
+			SyntaxHighlighter.all();
+		</script>
 	</div>
-
-	<h2>Form layout</h2>
-	
-	<p>Forms get increasingly complex. This is my attempt to tame those beasts.</p>
-	
-	<div class="hr"><hr /></div>
-	
-	<h2 id="todoHelper">TODO helper:</h2>
-	
-	<div class="col-5 content">
-
-		<p>Dependencies:</p>
-		<ul>
-			<li><code>jquery-1.3.2.min.js</code></li>
-			<li><code>jquery.shortcuts.min.js</code></li>
-			<li><code>wolf.ui.helpers.0.1.js</code></li>
-			<li><code>wolf.ui.helpers.0.1.css</code></li>
-		</ul>
-	
-		<p>There are many ways to handle TODO's in projects. One problem with adding todo's in a separate list is that they lose their context in the project. Sometimes it's more beneficial to add todo's inline in the code. To help see TODOs in a visual way, <code>WOLF_UI</code> includes a dev helper called TODO.</p>
-		<p>To add a todo to a project, use the following code:</p>
-	</div>
-	
-	<pre class="brush: xml;">
-		&lt;div class=&quot;todoHelper&quot;&gt;Add todo text here&lt;/div&gt;
-	</pre>
-
-	<div class="col-5">
-		<p>This will end up looking like this:</p>
-		<div class="todoFlag" style="display: block;">Add todo text here</div>
-		<p>Todo's are invisible by default but can be toggled by the keyboard shortcut <strong>SHIFT+T</strong>. Try hitting SHIFT+T and then SHIFT+T again and you will see the above todo will toggle.</p>
-	</div>
-
-	<div class="hr"><hr /></div>
-	
-	<h2 id="resolutionHelperA">Resolution helper:</h2>
-	
-	<div class="content col-5">
-		<p>Dependencies:</p>
-		<ul>
-			<li><code>jquery-1.3.2.min.js</code></li>
-			<li><code>jquery.shortcuts.min.js</code></li>
-			<li><code>wolf.ui.helpers.0.1.js</code></li>
-			<li><code>wolf.ui.helpers.0.1.css</code></li>
-		</ul>
-	
-		<p>The resolution helper is a combined piece of CSS and JS to help developing layouts for different resolutions. This is especially useful when creating the user interface for a mobile website or application.</p>
-	
-		<p><a href="mobiledemo.html">Give it a try</a>.</p>
-	</div>
-
-	<div class="hr"><hr /></div>
-	
-	<h2>Examples</h2>
-	
-	<div>
-		<ul class="secondaryContent">
-			<li>
-				<p>Signed in as <a title="Fictional Character" href="/manage"><strong>Fictional character</strong></a></p>
-			</li>
-			<li>
-				<p class="buttonHolder">
-					<a href="/sign-in/p/logout/design/getting-started" class="button buttonSmall">
-						<span>Sign out</span>
-					</a>
-				</p>
-			</li>
-		</ul>
-	</div>
-
-	<script type="text/javascript">
-		SyntaxHighlighter.config.clipboardSwf = 'js/syntax/scripts/clipboard.swf';
-		SyntaxHighlighter.all();
-	</script>
-	
 </body>
 </html>
