@@ -13,7 +13,7 @@
 	height: 100%;
 	width: 320px;
 	border-right: 1px solid #CCC;
-	/*overflow-y: scroll;*/
+	overflow-y: auto;
 }
 
 	#toc div {
@@ -68,3 +68,26 @@
 		color: #FFF;
 		background: #000;
 	}
+	
+	h1 {
+		font-size: 54px;
+		letter-spacing: -2px;
+		text-transform: uppercase;
+	}
+
+		h1 span {
+			font-size: 11px;
+			letter-spacing: 0;
+			font-weight: 300;
+			background: rgba(0,0,0,0.8);
+			position: relative;
+			padding: 3px 6px;
+			top: 3px;
+			right: 6px;
+			color: #FFF;
+			font-weight: 700;
+			/* @inc .rc */
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+		}
