@@ -4,18 +4,21 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	
-	<title>WOLF_UI</title>
+	<title>Winston 0.2</title>
 	<link rel="favicon" href="/favicon.ico" />
 
-	<link rel="stylesheet" href="css/wolf.ui.full.0.1.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/winston.full.0.1.css" type="text/css" media="screen" />
 
 	<!-- jQuery -->
 	<script src="js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
 	<script src="js/jquery/jquery.shortcuts.min.js" type="text/javascript"></script>
 
+	<!-- Specific styling for this page only that is not part of Winston -->
+	<link rel="stylesheet" href="css/winston.ui.docsspecific.css" type="text/css" media="screen" />
+
 	<!-- Helpers; don't load when live -->
-	<link rel="stylesheet" href="css/wolf.ui.helpers.0.1.css" type="text/css" media="screen" />
-	<script src="js/wolf.ui/wolf.ui.helpers.0.1.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/winston.ui.helpers.0.1.css" type="text/css" media="screen" />
+	<script src="js/winston/winston.helpers.0.1.js" type="text/javascript"></script>
 	<script src="js/jquery/jquery.cookie.min.js" type="text/javascript"></script>
 	
 	<!--  Syntax highlighter -->
@@ -29,84 +32,92 @@
 </head>
 <body>
 	<div id="container">
-		<p><code>A work in progress - hit SHIFT+T for todo's</code></p>
+		<p class="secondaryContent">A work in progress - <strong>version 0.2</strong> - hit SHIFT+T for todo's.</p>
 		
 		<div class="todoFlag">Check all anchors</div>
 		<div class="todoFlag">Add components</div>
 		<div class="todoFlag">...</div>
 
-		<h1>WOLF_UI <span>0.1</span></h1>
-
-		<div class="content">
-			<h3>Table of Contents</h3>
-			<ol>
-				<li>
-					<a href="#introduction">Introduction</a>
-					<ol>
-						<li><a href="#whatis">What is <code>WOLF_UI</code>?</a></li>
-						<li><a href="#demo"><strong>Demo</strong></a></li>
-						<li><a href="#download">Download</a></li>
-					</ol>
-				</li>
-				<li>
-					<a href="#conventions">Conventions</a>
-					<ol>
-						<li><a href="#cssFileHandling">CSS file handling</a></li>
-						<li><a href="#commenting">Commenting</a></li>
-						<li><a href="#indentation">Indentation</a></li>
-						<li><a href="#typography">Typography</a></li>
-						<li><a href="#handlingDFC">Handling the default content problem</a></li>
-						<li><a href="#presentationalMarkup">On presentational markup</a></li>
-					</ol>
-				</li>
-				<li>
-					Layout
-					<ol>
-						<li>Building layouts using the column systems
-							<ol>
-								<li>Simple column system</li>
-								<li>Grid column system</li>
-							</ol>
-						</li>
-					</ol>
-				</li>
-				<li>
-					<a href="#components">Components</a>
-					<ol>
-						<li><a href="#buttons">Buttons</a></li>
-						<li>Simple pagination</li>
-						<li>Pagination</li>
-						<li>Lightbox</li>
-						<li>Humanized messages</li>
-						<li>Filter selection menu</li>
-					</ol>
-				</li>
-				<li>
-					<a href="#codeExamples">Code examples</a>
-					<ol>
-						<li>Sign in</li>
-						<li>
-							Simple form
-							<ol>
-								<li>Error handling</li>
-								<li>Success message</li>
-							</ol>
-						</li>
-						<li>Advanced form</li>
-						<li>Multistep form</li>
-						<li>Form-in-form</li>
-					</ol>
-				</li>
-				<li>
-					<a href="#helpers">Helpers</a>
-					<ol>
-						<li><a href="#todoHelper">Todo helper</a></li>
-						<li><a href="#resolutionHelperA">Resolution helper</a></li>
-					</ol>
-				</li>
-			</ol>
-			
-			<div class="hr"><hr /></div>
+		<div id="header">
+			<h1>Winston <span>solves problems.</span></h1>
+			<blockquote><p>&ldquo;I&#x27;m not here to say please.<br />I'm here to tell you what to do.&rdquo;</p></blockquote>
+		</div>
+		
+		<div id="toc">
+			<div class="content">
+				<h4 class="secondaryContent">Table of Contents</h4>
+				<ol>
+					<li>
+						<a href="#container">Back to top</a>
+					</li>
+					<li>
+						<a href="#introduction">Introduction</a>
+						<ol>
+							<li><a href="#whatis">What is Winston?</a></li>
+							<li><strong><a href="#demo">Demos</a></strong></li>
+							<li>Download (not available yet!)</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#conventions">Conventions</a>
+						<ol>
+							<li><a href="#cssFileHandling">CSS file handling</a></li>
+							<li><a href="#commenting">Commenting</a></li>
+							<li><a href="#indentation">Indentation</a></li>
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#usabilityPrinciples">Usability conventions</a></li>
+							<li><a href="#handlingDFC">Handling the default content problem</a></li>
+							<li><a href="#presentationalMarkup">On presentational markup</a></li>
+						</ol>
+					</li>
+					<li>
+						Layout
+						<ol>
+							<li>Building layouts using the column systems
+								<ol>
+									<li>Simple column system</li>
+									<li>Grid column system</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#components">Components</a>
+						<ol>
+							<li><a href="#buttons">Buttons</a></li>
+							<li><a href="#simplePagination">Simple pagination</a></li>
+							<li>Pagination</li>
+							<li>Lightbox</li>
+							<li>Humanized messages</li>
+							<li>Filter selection menu</li>
+							<li>Avatar list</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#codeExamples">Code examples</a>
+						<ol>
+							<li>Sign in</li>
+							<li>
+								Simple form
+								<ol>
+									<li>Error handling</li>
+									<li>Success message</li>
+								</ol>
+							</li>
+							<li>Advanced form</li>
+							<li>Multistep form</li>
+							<li>Form-in-form</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#helpers">Helpers</a>
+						<ol>
+							<li><a href="#todoHelper">Todo helper</a></li>
+							<li><a href="#resolutionHelperA">Resolution helper</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
 		</div>
 
 		<h2 id="introduction">Introduction</h2>
@@ -114,15 +125,17 @@
 		<div class="id1">
 
 			<div class="col-5 content">
+				
+				<div class="note">
+					<p class="p24"><strong>Winston is a work in progress and cannot be downloaded yet.</strong> If you are interested in watching the development and contributing, check out the repository at <a href="http://github.com/Wolfr/wolf_ui/tree/master">GitHub</a>.</p>
+				</div>
 
-				<div class="todoFlag">HI!</div>
-
-				<h3 id="whatis">What is WOLF_UI?</h3>
+				<h3 id="whatis">What is Winston?</h3>
 				<p>You are not building websites anymore. You are building full-fledged web applications. In order to build the best you can, in order to have room for innovation, you need a set of defaults so you don't have to deal with the <em>monkey jobs</em> anymore &ndash; to be able to spend more time solving the real design issues instead of booting up your Windows machine for the umptheenth time to solve <em>that</em> cross browser bug.</p>
-				<p><code>WOLF_UI</code> is a user interface library consisting of common elements in websites and web applications. These elements work together in an ecosystem of conventions, guidelines and best practices. The goal of this library is to provide designers and developers with a solid base to build user interfaces. Think of it as <a href="http://rubyonrails.org/">Rails</a> for designers.</p>
+				<p>Winston is a user interface library consisting of common elements in websites and web applications. These elements work together in an ecosystem of conventions, guidelines and best practices. The goal of this library is to provide designers and developers with a solid base to build user interfaces. Think of it as <a href="http://rubyonrails.org/">Rails</a> for designers.</p>
 
 				<h3 id="demo">Demos</h3>
-				<p>Nobody likes plowing through documentation and sets of conventions without knowing first what to expect. Time is valuable to anyone. That is why this section features some demo pages built using <code>WOLF_UI</code>. So you can get a sense of what you can do before investing any time in this.</p>
+				<p>Nobody likes plowing through documentation and sets of conventions without knowing first what to expect. Time is valuable to anyone. That is why this section features some demo pages built using Winston. So you can get a sense of what you can do before investing any time in this.</p>
 				<ul>
 					<li>Grid layout</li>
 					<li>Advanced form</li>
@@ -130,14 +143,12 @@
 					<li>Todo helper demo</li>
 				</ul>
 		
-				<h3 id="download">Download</h3>
+				<!-- <h3 id="download">Download</h3>
 				<div class="buttonHolder disabled">
 					<a href="#" class="button">
-						<span>Download WOLF_UI</span>
+						<span>Download Winston 0.2</span>
 					</a>
-				</div>
-				<br />
-				<p><strong><code>WOLF_UI</code> is a work in progress and cannot be downloaded yet.</strong> If you are interested in watching the development and contributing, check out the repository at <a href="http://github.com/Wolfr/wolf_ui/tree/master">GitHub</a>.</p>
+				</div> -->
 			
 			</div>
 		
@@ -152,8 +163,8 @@
 				<h3 id="cssFileHandling">CSS file handling</h3>
 				
 				<div class="content col-5">
-					<p><code>WOLF_UI</code> consists of several CSS files. In the real world, with regards to website performance, you should work with 1 CSS file only &ndash; minified, even.</p>
-					<p>I recommend downloading the <code>wolf.ui.full.css</code> file and stripping out the sections you don't need. However, to build this UI library I had to make sure components could be used separately without too much dependencies. This is why there are different CSS files.</p>
+					<p><code>Winston</code> consists of several CSS files. In the real world, with regards to website performance, you should work with 1 CSS file only &ndash; minified, even.</p>
+					<p>I recommend downloading the <code>winston.full.css</code> file and stripping out the sections you don't need. However, to build this UI library I had to make sure components could be used separately without too much dependencies. This is why there are different CSS files.</p>
 					<p>This is what you need to get started. This is required for all interface elements.</p>
 					<ul>
 						<li><code>reset.css</code></li>
@@ -258,12 +269,13 @@
 					<h4>Don'ts</h4>
 					<ol>
 						<li>
-							<p>Never, ever, justify text</p>
-							<p class="helpTxt"><strong>Why?</strong> Justifying of text is highly dependant on dictionaries: in order to know whether to hyphenate a word, software needs a dictionary. When you justify in Microsoft Word or in Adobe Indesign, these applications use the dictionaries built into your OS. Browsers could do this, in theory, but none of them do.</p>
+							<h4>Never, ever, justify text</h4>
+							<p><strong>Why?</strong> Justifying of text is highly dependant on dictionaries: in order to know whether to hyphenate a word, software needs a dictionary. When you justify in Microsoft Word or in Adobe Indesign, these applications use the dictionaries built into your OS. Browsers could do this, in theory, but none of them do.</p>
+							<p>My favorite German <a href="http://fontfeed.com/archives/erik-spiekermanns-typo-tips/">agrees</a>.</p>
 						</li>
 						<li>
-							<p>Use a serif font for font sizes below 13px</p>
-							<p class="helpTxt"><strong>Why?</strong> You might not notice it on your shiny Mac, but serif fonts, and especially serif fonts set in italic, render problematically on OS-challenged machines. There is only so much detail one can render when not anti-aliasing, so keep this in mind.</p>
+							<h4>Don't use a serif font for font sizes below 13px</h4>
+							<p><strong>Why?</strong> You might not notice it on your shiny Mac, but serif fonts, and especially serif fonts set in italic, render problematically on OS-challenged machines. There is only so much detail one can render when not anti-aliasing, so keep this in mind.</p>
 						</li>
 					</ol>
 				</div>
@@ -287,9 +299,9 @@
 
 					<p>You can &ndash; and actually, should, use this on the parent element, so that everything within the parent is small:</p>
 
-					<div class="example secondaryContent">
+					<div class="example secondaryContent content">
 						<span class="ex">Example</span>
-						<p><strong>This is a paragraph with the secondaryContent class</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						<p><strong>Now the parent <code>&lt;div&gt;</code> has a secondaryContent class, and everything inside becomes small</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 						<ul>
 							<li>Now an unordered list is also small</li>
 							<li>Now an unordered list is also small</li>
@@ -300,6 +312,26 @@
 				
 				<div class="hr"><hr /></div>
 				
+				<h3 id="usabilityPrinciples">Usability conventions</h3>
+				
+				<div class="col-5">
+
+					<p>Usability comes down to two things. Knowing how computers work. Knowing how humans work. Those two combined with a solution to a problem and BAM. Usable.</p>
+				
+					<p>There are a few conventions inside Winston. Some of these might be straightforward.</p>
+				
+					<p>These are the defaults. If a brands' colors are red, black and white, obviously your links shouldn't be blue. But these are a starting point to build from.</p>
+				
+					<p><a href="#">Blue text</a> means clickable.</p>
+
+					<p>If something looks like a <div class="buttonHolder"><a href="#" class="button buttonSmall"><span>Button</span></a></div>it is clickable.</p>
+				
+					<p class="mute">Greyed out text means it's less important, but could be helpful.</p>
+				
+				</div>
+				
+				<div class="hr"><hr /></div>
+
 				<h3 id="buildingLayouts">Building layouts</h3>
 
 				<div class="content">
@@ -330,7 +362,7 @@
 				</pre>
 
 				<div class="col-5">
-					<p>In <code>WOLF_UI</code> all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
+					<p>In Winston all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
 					<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
 					<p>I tend to use the <a href="#http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
 					<p>Here's an example of four columns:</p>
@@ -414,7 +446,7 @@
 						}
 					</pre>
 
-						<p>Reset, build up again, reset again. Not good. <code>WOLF_UI</code> has a better way to handle this, and it's called the <code>.content</code> class. Whenever you add the <code>.content</code> class to a parent elements, the HTML elements within are styled accordingly.</p>
+						<p>Reset, build up again, reset again. Not good. Winston has a better way to handle this, and it's called the <code>.content</code> class. Whenever you add the <code>.content</code> class to a parent elements, the HTML elements within are styled accordingly.</p>
 
 					<p>In <code>base.css</code> you might find rules like these one then:</p>
 
@@ -440,7 +472,7 @@
 				<h3 id="presentationalMarkup">On presentational markup</h3>
 				
 				<div class="col-5">
-					<p><code>WOLF_UI</code> occasionally uses presentational markup. Many HTML purists won't like this. But they're the only ones who care. For designers and developers, the HTML and CSS decisions made lead to cleaner and maintainable code. Users will be served a lighter page. You might not think there's too much difference between <code>&lt;span class=&quot;item&quot;&gt;</code> and <code>&lt;b&gt;</code>, but when a list contains a thousand items there is indeed a difference, namely one of many bytes.</p>
+					<p>Winston occasionally uses presentational markup. Many HTML purists won't like this. But they're the only ones who care. For designers and developers, the HTML and CSS decisions made lead to cleaner and maintainable code. Users will be served a lighter page. You might not think there's too much difference between <code>&lt;span class=&quot;item&quot;&gt;</code> and <code>&lt;b&gt;</code>, but when a list contains a thousand items there is indeed a difference, namely one of many bytes.</p>
 					<p>For example, when hooking up an image via a CSS sprite, we might use the <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags, since they are short and offer us another option instead of yet another classname. Much of this has to do with the way the cascade in CSS works and <a href="http://meyerweb.com/eric/thoughts/2004/08/23/markup-missive/">document weight</a>.</p>
 				</div>
 				
@@ -633,7 +665,118 @@
 				</a>
 			</div>
 
-			<br />
+			<br /><br />
+			
+			<h3 id="simplePagination">Simple pagination</h3>
+			
+			<div class="col-6">
+
+				<p>What is simple pagination, one might ask? Pagination in it's purest form is a previous and a next link or button.</p>
+
+				<div class="example">
+					<span class="ex">Poor example from a well known CMS</span>
+					<p>
+						<a href="#">Previous</a> - <a href="#">Next</a>
+					</p>
+				</div>
+			
+				<p>When you're at the last page, it would look this:</p>
+			
+				<div class="example">
+					<span class="ex">It gets even worse</span>
+					<p>
+						<a href="#">Previous</a>
+					</p>
+				</div>
+			
+				<p>This is kind of lame. Anu kind of navigation should stay in the same place (and not jump around the website or application). An option can't just dissapear. We need to give the pagination more context: where exactly am I? And why can't I go to the next page now?</p>
+			
+				<p>Here's my proposal:</p>
+
+				<div class="example">
+					<span class="ex">Example</span>
+					<div class="simplePagination">
+						<ul class="clearfix">
+							<li><span>Previous</span></li>
+							<li><strong>1/13</strong></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+				</div>
+			
+				<div class="example">
+					<span class="ex">Example</span>
+					<div class="simplePagination">
+						<ul class="clearfix">
+							<li><a href="#">Previous</a></li>
+							<li><strong>2/13</strong></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="example">
+					<span class="ex">Example</span>
+					<div class="simplePagination">
+						<ul class="clearfix">
+							<li><a href="#">Previous</a></li>
+							<li><strong>13/13</strong></li>
+							<li><span>Next</span></li>
+						</ul>
+					</div>
+				</div>
+			
+				<pre class="brush: xml">
+					<div class="simplePagination">
+						<ul class="clearfix">
+							<li><span>Previous</span></li>
+							<li><strong>1/13</strong></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+				</pre>
+			
+				<div class="content">
+			
+					<p>You HTML purists might wonder why we wrap the text in three different elements. The reasoning behind this is:</p>
+				
+					<ul>
+						<li><code>&lt;a&gt;</code> is for links</li>
+						<li><code>&lt;strong&gt;</code> is for your current location</li>
+						<li><code>&lt;span&gt;</code> is used as a generic inline element to mute the unavailable options</li>
+					</ul>
+				
+					<p>Alternatively one could use the <code>select</code>-element coupled with some javascript to quickly skip to a certain page. However, it is very speculative to assume a user wants to be at some page exactly. Pagination is for browsing long lists of generic items and should by no means be used as a navigation.</p>
+
+				</div>
+
+				<div class="example">
+					<span class="ex">Example</span>
+					<div class="simplePagination">
+						<ul class="clearfix">
+							<li><a href="#">Previous</a></li>
+							<li>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option selected="selected">3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+								</li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	
 		<div class="hr"><hr /></div>
@@ -657,11 +800,11 @@
 				<ul>
 					<li><code>jquery-1.3.2.min.js</code></li>
 					<li><code>jquery.shortcuts.min.js</code></li>
-					<li><code>wolf.ui.helpers.0.1.js</code></li>
-					<li><code>wolf.ui.helpers.0.1.css</code></li>
+					<li><code>winston.helpers.0.1.js</code></li>
+					<li><code>winston.helpers.0.1.css</code></li>
 				</ul>
 	
-				<p>There are many ways to handle TODO's in projects. One problem with adding todo's in a separate list is that they lose their context in the project. Sometimes it's more beneficial to add todo's inline in the code. To help see TODOs in a visual way, <code>WOLF_UI</code> includes a dev helper called TODO.</p>
+				<p>There are many ways to handle TODO's in projects. One problem with adding todo's in a separate list is that they lose their context in the project. Sometimes it's more beneficial to add todo's inline in the code. To help see TODOs in a visual way, Winston includes a dev helper called TODO.</p>
 				<p>To add a todo to a project, use the following code:</p>
 			</div>
 	
@@ -684,8 +827,8 @@
 				<ul>
 					<li><code>jquery-1.3.2.min.js</code></li>
 					<li><code>jquery.shortcuts.min.js</code></li>
-					<li><code>wolf.ui.helpers.0.1.js</code></li>
-					<li><code>wolf.ui.helpers.0.1.css</code></li>
+					<li><code>winston.helpers.0.1.js</code></li>
+					<li><code>winston.helpers.0.1.css</code></li>
 				</ul>
 	
 				<p>The resolution helper is a combined piece of CSS and JS to help developing layouts for different resolutions. This is especially useful when creating the user interface for a mobile website or application.</p>
@@ -696,9 +839,15 @@
 
 		<div class="hr"><hr /></div>
 		
-		<p>By <a href="http://www.johanronsse.be">Johan Ronsse (Wolf)</a>.</p>
-		<p>See LICENSE for licensing details (GNU General Public License).</p>
+		<div class="content col-5">
 
+			<h3>Contributors:</h3>
+			<p>None yet, except <a href="http://www.greencurry.be/">Dieter</a> who proposed the name Winston. If you are interested in contributing, drop me an e-mail at wolf@wolfslittlestore.be.</p>
+			
+			<p class="secondaryContent">By <a href="http://www.johanronsse.be">Johan Ronsse (Wolf)</a>. See LICENSE for licensing details (GNU General Public License).</p>
+		
+		</div>
+		
 		<script type="text/javascript">
 			SyntaxHighlighter.config.clipboardSwf = 'js/syntax/scripts/clipboard.swf';
 			SyntaxHighlighter.all();

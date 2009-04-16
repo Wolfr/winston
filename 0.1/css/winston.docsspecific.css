@@ -1,0 +1,70 @@
+/*
+	Docs specific
+*/
+
+#header {
+	padding: 15px 0 40px;
+}
+
+#toc {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 320px;
+	border-right: 1px solid #CCC;
+	/*overflow-y: scroll;*/
+}
+
+	#toc div {
+		padding: 30px;
+	}
+	
+#container {
+	width: 960px;
+	padding: 40px 0 40px 360px;
+	margin: 0;
+}
+
+.example {
+	padding: 24px 24px 8px;
+	border: 1px solid #AAA;
+	margin: 0 0 12px;
+	position: relative;
+	/* @inc .rc */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+
+}
+	.example .ex {
+		text-transform: uppercase;
+		font-family: "Consolas", Courier, monospace;
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		font-size: 11px;
+		color: #999;
+	}
+
+	iframe {
+		border: 0;
+	}
+	
+	h2, h3 {
+		padding-top: 20px;
+	}
+	
+	h2 + h3 {
+		padding-top: 0;
+	}
+	
+	#toc h4 {
+		padding-top: 6px;
+		text-transform: uppercase;
+	}
+	
+	:target {
+		color: #FFF;
+		background: #000;
+	}
