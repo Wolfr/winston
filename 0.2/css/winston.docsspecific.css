@@ -11,9 +11,10 @@
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 320px;
 	border-right: 1px solid #CCC;
 	overflow-y: auto;
+	background: #333;
+	color: #999;
 }
 
 	#toc div {
@@ -21,9 +22,9 @@
 	}
 	
 #container {
-	width: 960px;
-	padding: 40px 0 40px 360px;
-	margin: 0;
+	width: 552px;
+	padding: 40px 0;
+	margin: 0 0 0 360px;
 }
 
 .example {
@@ -64,30 +65,43 @@
 		text-transform: uppercase;
 	}
 	
-	:target {
+	h2:target,
+	h3:target {
 		color: #FFF;
 		background: #000;
 	}
 	
 	h1 {
-		font-size: 54px;
-		letter-spacing: -2px;
+		font-size: 98px;
+		letter-spacing: -5px;
 		text-transform: uppercase;
+		line-height: 1;
 	}
 
-		h1 span {
+		#header h1 + p {
 			font-size: 11px;
 			letter-spacing: 0;
 			font-weight: 300;
-			background: rgba(0,0,0,0.8);
+			background: #333;
+			padding: 2px 6px;
+			line-height: 1;
+			width: 417px;
 			position: relative;
-			padding: 3px 6px;
-			top: 3px;
-			right: 6px;
+			bottom: 12px;
+			left: 19px;
 			color: #FFF;
 			font-weight: 700;
+			white-space: nowrap;
 			/* @inc .rc */
 			-moz-border-radius: 3px;
 			-webkit-border-radius: 3px;
 			border-radius: 3px;
 		}
+
+.id1 {
+	padding-left: 24px;
+}
+
+#feedback {
+	text-align: center;
+}

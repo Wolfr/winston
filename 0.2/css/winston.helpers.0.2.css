@@ -3,8 +3,7 @@
 	Stylesheet for Winston
 	
 	Media:      screen, projection
-	License:    GNU LESSER GENERAL PUBLIC LICENSE
-	            see license.txt packaged with Winston
+	License:    see LICENSE packaged with Winston
 	author:     Johan Ronsse <johan@netlash.com>
 
 */
@@ -49,7 +48,6 @@
 	font-size: 12px;
 	font-weight: 700;
 	border: 1px solid #FFF;
-	_display: none;
 }
 
 	#gridHelper p {

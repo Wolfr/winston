@@ -3,14 +3,14 @@
 	Stylesheet for Winston
 	
 	Media:      screen, projection
-	License:    GNU LESSER GENERAL PUBLIC LICENSE
-	            see license.txt packaged with Winston
+	License:    see LICENSE packaged with Winston
 	author:     Johan Ronsse <johan@netlash.com>
 
 */
 
 /*
 	Reset
+	@v0.2
 */
 
 body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address { margin: 0; padding: 0; }
@@ -24,6 +24,7 @@ a:focus { overflow: hidden; }
 
 /*
 	Typography and text styles
+	@v0.2
 */
 
 body {
@@ -32,38 +33,28 @@ body {
 	color: #454545;
 }
 
-	.colorInverse { color: #CDCDCD; }
-	.colorInverse strong { color: #FFF; }
-
 /* Headings */
 h1, h2, h3 {
 	line-height: 1.1;
 	font-family: Helvetica, Arial, sans-serif;
-	color: #000;
 }
+
+	h1, h2, h3, h4 { 
+		color: #000;
+		padding: 0 0 12px;
+	}
 
 h2 {
 	font-size: 22px;
-	padding: 0 0 12px;
 }
-
-	h2 strong {
-		font-family: Helvetica, Arial, serif;
-	}
 	
 h3 {
 	font-size: 16px;
-	padding: 0 0 12px;
 }
-
-	h3 strong {
-		font-family: Helvetica, Arial, serif;
-	}
 
 h4 {
 	font-size: 13px;
 	color: #000;
-	padding: 0 0 12px;
 	font-weight: 700;
 }
 
@@ -76,11 +67,6 @@ p {
 	small {
 		font-family: Arial, sans-serif;
 		font-size: 11px;
-	}
-	
-	.secondaryContent em,
-	small em {
-		font-family: Georgia, Arial, sans-serif;
 	}
 	
 strong {
@@ -154,7 +140,8 @@ blockquote cite {
 }
 
 sub, sup {
-	line-height: 0; /* Fix sub & sup fucking with the baseline */
+	line-height: 0;
+	/* Fix sub & sup fucking with the baseline */
 }
 
 hr {
@@ -163,7 +150,17 @@ hr {
 	padding: 0;
 }
 
+div.hr {
+	border-bottom: 1px solid #D7D7D7;
+	margin: 12px 0 24px;
+}
+
+	div.hr hr {
+		display: none;
+	}
+
 /* Default styling for data tables */
+
 table.datagrid  {
 	font-family: Arial, sans-serif;
 	width: 100%;
@@ -216,13 +213,25 @@ table.datagrid  {
 	table.datagrid th.date {
 		padding-left: 0;
 	}
-	
-	#totalRow td {
-		font-weight: 700;
-		font-size: 13px;
-		border: none;
+
+/*
+	ColorInverse
+*/
+
+	.colorInverse { color: #CDCDCD; }
+	.colorInverse strong { color: #FFF; }
+
+	.colorInverse h1,
+	.colorInverse h2,
+	.colorInverse h3,
+	.colorInverse h4 {
+		color: #FFF;
 	}
 	
+	.colorInverse a:link { color: #EEE; text-decoration: none; border-bottom: 1px solid #888; }
+	.colorInverse a:visited { color: #DDD; text-decoration: none; border-bottom: 1px solid #777; }
+	.colorInverse a:hover, .colorInverse a:active, .colorInverse a:focus { color: #FFF; border-bottom: 1px solid #CCC; }
+
 /* 
 	Link styles
 */
@@ -241,10 +250,6 @@ a.halfmute:hover, a.halfmute:active, a.halfmute:focus { color: #B1C1F7; border-c
 .mute a:link { color: #9C9C9C; border-color: #E3E3E3; }
 .mute a:visited { color: #7B7B7B; border-color: #D3D3D3; }
 .mute a:hover, a.mute:active, a.mute:focus { color: #6AAEED; border-color: #CEE4F9; }
-
-.colorInverse a:link { color: #EEE; text-decoration: none; border-bottom: 1px solid #888; }
-.colorInverse a:visited { color: #DDD; text-decoration: none; border-bottom: 1px solid #777; }
-.colorInverse a:hover, .colorInverse a:active, .colorInverse a:focus { color: #FFF; border-bottom: 1px solid #CCC; }
 
 .noUnderlines a:link,
 .noUnderlines a:visited,
@@ -282,18 +287,17 @@ label {
 	font-family: Arial, sans-serif;
 }
 
-input.input-text,
-input.input-submit,
-input.input-medium,
-input.input-small,
+input.inputText,
+input.inputSubmit,
 textarea {
 	font-size: 12px;
 	padding: 1px;
 	font-family: Arial, sans-serif;
 }
 
-input.input-submit {
+input.inputSubmit, button {
 	overflow: visible;
+	/* Fix "ridiculously long buttons" in IE6 and IE7 */
 }
 
 textarea {
@@ -304,27 +308,6 @@ textarea {
 /* Don't try to improve selects too much */
 select, option {
 	font-family: Arial, sans-serif;
-	font-size: 12px;
-}
-
-.errorMessage {
-	color: #E2001A;
-	padding: 0 0 2px 0;
-	font-family: Arial, sans-serif;
-	font-size: 11px;
-	font-weight: 700;
-}
-
-.formSuccess {
-	color: #008A0D;
-	background: #CFC;
-	padding: 8px;
-	border: 1px solid #008A0D;
-	margin: 0 0 10px;
-}
-
-input.input-submit {
-	font-weight: 700;
 	font-size: 12px;
 }
 
@@ -366,228 +349,6 @@ input.input-submit {
 			left: 0;
 			top: 0;
 		}
-
-/*
-	Navigation
-*/
-
-
-
-/*
-	Sidebar > Filter selection
-*/
-
-.filterSelection p {
-	font-family: Georgia, serif;
-	font-size: 13px;
-	color: #000;
-	padding: 0;
-	line-height: 2;
-}
-
-.filterSelection ul {
-	margin: 0 0 36px;
-}
-
-.filterSelection li a:link,
-.filterSelection li a:visited {
-	display: block;
-	width: 134px;
-	font-size: 12px;
-	height: 26px;
-	line-height: 26px;
-	padding: 0 0 0 10px;
-}
-
-.filterSelection li a:hover,
-.filterSelection li a:active,
-.filterSelection li a:focus {
-	background: #808080;
-	color: white;
-	border-color: white;
-}
-
-.filterSelection li.selected a:link,
-.filterSelection li.selected a:visited,
-.filterSelection li.selected a:hover,
-.filterSelection li.selected a:active,
-.filterSelection li.selected a:focus {
-	background: #000;
-	color: #FFF;
-	font-weight: 700;
-	width: 146px;
-	border: none;
-	background: #000 url('../images/fSSelected.png') no-repeat top right;
-}
-
-/*
-	Breadcrumb
-*/
-
-.breadcrumb {
-	font-size: 11px;
-	line-height: 2;
-}
-
-	.breadcrumb p {
-		padding: 0;
-		white-space: nowrap;
-	}
-
-	.breadcrumb em {
-		font-family: Georgia, "Times New Roman", Times, serif;
-		color: #858585;
-	}
-
-/*
-	Content Filter
-*/
-
-#contentFilter div {
-	float: right;
-	padding-top: 2px;
-}
-
-#contentFilter label,
-#contentFilter select,
-#contentFilter span {
-	display: block;
-	float: left;
-	margin: 0 3px;
-}
-
-
-#contentFilter select {
-	font-size: 11px;
-	float: left;
-}
-
-#contentFilter {
-	font-size: 11px;
-}
-
-/*
-	Doormat
-*/
-
-#doormat s {
-	cursor: default;
-}
-
-#bottom {
-	margin: 48px 0;
-	height: 166px;
-	position: relative;
-	width: 936px;
-	padding: 0 0 0 24px;
-}
-
-#doormat {
-	width: 576px;
-	overflow: hidden;
-	margin-right: 0;
-}
-
-#doormat .col,
-#doormat .cols {
-	position: relative;
-}
-
-#doormat .col {
-	margin-right: 24px;
-	width: 72px;
-}
-
-	#doormat .cols .col {
-		margin-right: 0;
-		width: 96px;
-	}
-	
-	#doormat .cols .last {
-		width: 72px;
-	}
-	
-	#shopLinks .last {
-		margin-right: 0 !important;
-	}
-	
-		#doormat #shopLinks .extend a,
-		#doormat #shopLinks .extend span {
-			width: 92px;
-		}
-		
-		#doormat #shopLinks .last a {
-			width: 70px;
-		}
-	
-	#doormat .last {
-		width: 72px;
-	}
-
-#doormat .col ul {
-	padding-top: 30px;
-}
-
-#doormat h4 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	text-transform: uppercase;
-	font-size: 11px;
-	border-bottom: 1px solid #ababab;
-	padding-bottom: 0;
-	width: 72px;
-}
-
-	#shopLinks h4 {
-		width: 264px;
-	}
-
-	#doormat .cols {
-		width: 288px;
-		float: left;
-	}
-
-	#doormat .col a:link,
-	#doormat .col a:visited,
-	#doormat .col span {
-		display: block;
-		padding: 2px;
-		font-size: 12px;
-		white-space: nowrap;
-		width: 72px;
-		border-bottom: 1px solid #E5E5E5;
-	}
-	
-	#doormat .col strong a:link {
-		color: #555;
-	}
-	
-	#doormat .col strong a:visited {
-		color: #808080;
-	}
-	
-	#doormat .col strong a:hover,
-	#doormat .col strong a:active,
-	#doormat .col strong a:focus {
-		color: #FFF;
-	}
-	
-	
-	#doormat a:hover,
-	#doormat a:active,
-	#doormat a:focus {
-		background: #808080;
-		color: #FFF;
-		outline: 3px solid #808080;
-		border-color: #808080;
-		z-index: 300;
-		position: relative;
-	}
-	
-	#doormat .col span {
-		border-bottom: 1px solid #E5E5E5;
-	}
 
 /*
 	Simple Pagination
@@ -704,25 +465,25 @@ input.input-submit {
 	}
 
 /*
-	Browsenavigation
+	Form
+	error and success handling
 */
 
-.browseNavigation {
-	border-top: 1px solid #CECECE;
-	border-bottom: 1px solid #EBEBEB;
-	padding: 5px 0;
-	height: 23px;
-	overflow: hidden;
-}
+	.errorMessage {
+		color: #E2001A;
+		padding: 0 0 2px 0;
+		font-family: Arial, sans-serif;
+		font-size: 11px;
+		font-weight: 700;
+	}
 
-.browseNavigationReverse {
-	border-top: 1px solid #EBEBEB;
-	border-bottom: 1px solid #CECECE;
-}
-
-
-
-/*todo!*/
+	.formSuccess {
+		color: #008A0D;
+		background: #CFC;
+		padding: 8px;
+		border: 1px solid #008A0D;
+		margin: 0 0 10px;
+	}
 
 /*
 	Image classes
@@ -769,17 +530,12 @@ img.alignright {
 	Grid based column system
 */
 
-#container {
-	width: 960px;
-	margin: 0 auto;
+.colsGrid .col {
+	float: left;
+	margin-right: 24px;
 }
 
-.id1 {
-	padding-left: 24px;
-}
-
-.col { width: 72px; margin-right: 24px; float: left; }
-.colCustom { width: 135px; }
+.col-1 { width: 72px; }
 .col-2 { width: 168px; }
 .col-3 { width: 264px; }
 .col-4 { width: 360px; }
@@ -789,7 +545,41 @@ img.alignright {
 .col-8 { width: 744px; }
 .col-9 { width: 840px; }
 .col-10 { width: 936px; }
-.last { margin-right: 0 !important; }
+.colLast { margin-right: 0 !important; }
+
+/*
+	Simple column system
+*/
+
+.cols .col { float: left; }
+
+/* Two columns */
+.col-1d2,
+.col-2d4 { width: 49.9%; }
+
+/* Three columns*/
+.col-2d3 { width: 66.5%; }
+.col-1d3 { width: 33.2%; }
+
+/* Four columns */
+.col-1d4 { width: 24.9%; }
+.col-3d4 { width: 74.9%; }
+
+/* Five columns */
+.col-1d5 { width: 19.9%; }
+.col-2d5 { width: 39.9%; }
+.col-3d5 { width: 59.9%; }
+.col-4d5 { width: 79.9%; }
+
+/*
+	Spacing divs to fit inside columns:
+	gutter width and 1/2 gutter width
+*/
+.cols .spacingLeft { margin-left: 24px; }
+.cols .spacingLeftHalf { margin-left: 12px; }
+.cols .spacingRight { margin-right: 24px; }
+.cols .spacingRightHalf { margin-right: 12px; }
+.cols .spacingBothHalf { margin-right: 12px; margin-left: 12px; }
 
 /*
 	Legendary Clearfix
@@ -804,58 +594,6 @@ img.alignright {
 	height: 0;
 	clear: both;
 	visibility: hidden;
-}
-
-/*
-	Tagslist
-*/
-
-ul.tagsList {
-	padding-top: 5px;
-	font-size: 11px;
-}
-
-ul.tagsList li {
-	float: left;
-	margin: 0 3px 3px 0;
-}
-
-ul.tagsList li a:link,
-ul.tagsList li a:visited {
-	float: left;
-	background: #F5F5F5;
-	padding: 0 3px;
-	border: 1px solid #DDD;
-	/* @inc .rc */
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-}
-
-	ul.tagsList li a:hover,
-	ul.tagsList li a:active {
-		background: #FFF;
-	}
-
-ul.tagsList li strong {
-	float: left;
-	padding: 0 3px;
-	border: 1px solid #FFF;
-}
-
-/*
-	Old browser message
-*/
-
-#olderbrowser {
-	font-size: 11px;
-	width: 960px;
-	text-align: left;
-	height: 24px;
-	line-height: 24px;
-	width: 500px;
-	position: absolute;
-	top: 0; left: 24px;
 }
 
 /*
@@ -1760,15 +1498,6 @@ table.reset {
 		padding: 0 0 12px;
 		border-bottom: 1px solid #D7D7D7;
 	}
-	
-	div.hr {
-		border-bottom: 1px solid #D7D7D7;
-		margin: 12px 0 24px;
-	}
-	
-		div.hr hr {
-			display: none;
-		}
 
 .innerForm {
 	padding: 6px 12px 6px;

@@ -5,7 +5,6 @@
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	
 	<title>Winston 0.2</title>
-	<link rel="favicon" href="/favicon.ico" />
 
 	<link rel="stylesheet" href="css/winston.full.0.2.css" type="text/css" media="screen" />
 
@@ -33,18 +32,18 @@
 <body>
 	<div id="container">
 		<p class="secondaryContent">A work in progress - <strong>version 0.2</strong> - hit SHIFT+T for todo's.</p>
-		
-		<div class="todoFlag">Update license</div>
-		<div class="todoFlag">Add pagination component</div>
+
+		<div class="todoFlag">Add ("ultimate") pagination component</div>
 		<div class="todoFlag">Finish section on usability conventions</div>
-		<div class="todoFlag">...</div>
+		<div class="todoFlag">Get rid of those FamFamFam icons in the code examples</div>
 
 		<div id="header">
-			<h1>Winston <span>solves problems.</span></h1>
-			<blockquote><p>&ldquo;I&#x27;m not here to say please.<br />I'm here to tell you what to do.&rdquo;</p></blockquote>
+			<h1>Winston.</h1>
+			<p>User Interface Library</p>
+			<!-- <blockquote><p>&ldquo;I&#x27;m not here to say please.<br />I'm here to tell you what to do.&rdquo;</p></blockquote> -->
 		</div>
 		
-		<div id="toc">
+		<div id="toc" class="col-3 colorInverse">
 			<div class="content">
 				<h4 class="secondaryContent">Table of Contents</h4>
 				<ol>
@@ -57,6 +56,8 @@
 							<li><a href="#whatis">What is Winston?</a></li>
 							<li><strong><a href="#demo">Demos</a></strong></li>
 							<li>Download (not available yet!)</li>
+							<li><a href="#contribute">Contribute</a></li>
+							<li><a href="#thanks">Thanks!</a></li>
 						</ol>
 					</li>
 					<li>
@@ -72,7 +73,7 @@
 						</ol>
 					</li>
 					<li>
-						Layout
+						<a href="#layout">Layout</a>
 						<ol>
 							<li>Building layouts using the column systems
 								<ol>
@@ -86,12 +87,23 @@
 						<a href="#components">Components</a>
 						<ol>
 							<li><a href="#buttons">Buttons</a></li>
+							<li>Links
+								<ol>
+									<li>Basic</li>
+									<li>Borders</li>
+									<li>Advanced</li>
+								</ol>
+							</li>
 							<li><a href="#simplePagination">Simple pagination</a></li>
-							<li>Pagination</li>
-							<li>Lightbox</li>
-							<li>Humanized messages</li>
-							<li>Filter selection menu</li>
-							<li>Avatar list</li>
+							<li><a href="#pagination">Pagination</a></li>
+							<li><a href="#modal">Modal</a></li>
+							<li><a href="#humanizedMessages">Humanized messages</a></li>
+							<li><a href="#avatars">Avatars</a>
+								<ol>
+									<li><a href="#defaultAvatar">Default avatar</a>
+									<li><a href="#avatarOverlays">Overlays</a>
+								</li>
+							</li>
 						</ol>
 					</li>
 					<li>
@@ -124,14 +136,13 @@
 		<h2 id="introduction">Introduction</h2>
 
 		<div class="id1">
-
-			<div class="col-5 content">
+			<div class="content">
 				
 				<div class="note">
-					<p class="p24"><strong>Winston is a work in progress and cannot be downloaded yet.</strong> If you are interested in watching the development and contributing, check out the repository at <a href="http://github.com/Wolfr/wolf_ui/tree/master">GitHub</a>.</p>
+					<p class="p24"><strong>Winston is a work in progress and cannot be downloaded yet. Any code below is untested and not recommended for production work.</strong> If you are interested in watching the development and contributing, check out the repository at <a href="http://github.com/Wolfr/wolf_ui/tree/master">GitHub</a>.</p>
 				</div>
 
-				<h3 id="whatis">What is Winston?</h3>
+				<h3 id="whatis">What is Winston? (It's the future!)</h3>
 				<p>You are not building websites anymore. You are building full-fledged web applications. In order to build the best you can, in order to have room for innovation, you need a set of defaults so you don't have to deal with the <em>monkey jobs</em> anymore &ndash; to be able to spend more time solving the real design issues instead of booting up your Windows machine for the umptheenth time to solve <em>that</em> cross browser bug.</p>
 				<p>Winston is a user interface library consisting of common elements in websites and web applications. These elements work together in an ecosystem of conventions, guidelines and best practices. The goal of this library is to provide designers and developers with a solid base to build user interfaces. Think of it as <a href="http://rubyonrails.org/">Rails</a> for designers.</p>
 
@@ -152,7 +163,6 @@
 				</div> -->
 			
 			</div>
-		
 		</div>
 		
 		<div class="hr"><hr /></div>
@@ -271,12 +281,14 @@
 					<ol>
 						<li>
 							<h4>Never, ever, justify text</h4>
-							<p><strong>Why?</strong> Justifying of text is highly dependant on dictionaries: in order to know whether to hyphenate a word, software needs a dictionary. When you justify in Microsoft Word or in Adobe Indesign, these applications use the dictionaries built into your OS. Browsers could do this, in theory, but none of them do.</p>
+							<p><strong>Why?</strong> Justifying of text is highly dependent on dictionaries: in order to know whether to hyphenate a word, software needs a dictionary. When you justify in Microsoft Word or in Adobe Indesign, these applications use the dictionaries built into your OS. Browsers could do this, in theory, but none of them do.</p>
 							<p>My favorite German <a href="http://fontfeed.com/archives/erik-spiekermanns-typo-tips/">agrees</a>.</p>
 						</li>
 						<li>
 							<h4>Don't use a serif font for font sizes below 13px</h4>
 							<p><strong>Why?</strong> You might not notice it on your shiny Mac, but serif fonts, and especially serif fonts set in italic, render problematically on OS-challenged machines. There is only so much detail one can render when not anti-aliasing, so keep this in mind.</p>
+							
+							<p>Also see Wilson Miners' <a href="http://www.wilsonminer.com/posts/2008/oct/20/relative-readability/">Relative readability</a>.
 						</li>
 					</ol>
 				</div>
@@ -318,15 +330,14 @@
 				<div class="col-5">
 
 					<p>Usability comes down to two things. Knowing how computers work. Knowing how humans work. Those two combined with a solution to a problem and BAM. Usable.</p>
-				
 					<p>There are a few conventions inside Winston. Some of these might be straightforward.</p>
-				
 					<p>These are the defaults. If a brands' colors are red, black and white, obviously your links shouldn't be blue. But these are a starting point to build from.</p>
-				
+					
+					<p>-</p>
+					
+					<p>Don't kill the defaults.</p>
 					<p><a href="#">Blue text</a> means clickable.</p>
-
-					<p>If something looks like a <div class="buttonHolder"><a href="#" class="button buttonSmall"><span>Button</span></a></div>it is clickable.</p>
-				
+					<p>If something looks like a <div class="buttonHolder"><a href="#" class="button buttonSmall"><span>Button</span></a></div>it is clickable. It should behave like a clickable element (thus, the cursor should change to pointer)</p>
 					<p class="mute">Greyed out text means it's less important, but could be helpful.</p>
 				
 				</div>
@@ -481,6 +492,14 @@
 		</div>
 		
 		<div class="hr"><hr /></div>
+
+		<h2 id="components">Layout</h2>
+
+		<div class="col-5">
+			<p>Ah, layout. Every web designers' favorite part.</p>
+		</div>
+
+		<div class="hr"><hr /></div>
 		
 		<h2 id="components">Components</h2>
 		
@@ -609,7 +628,7 @@
 			<br />
 			<div class="hr"><hr /></div>
 
-			<p>Consider using HTML entities, if you're working for a single platform (e.g. iPhone). You can't count on these entities to work on every platform. The examples below don't work in Windows XP, don't know about Vista:</p>
+			<p>Consider using HTML entities if you're working for a single platform (e.g. Apple's iPhone). You can't count on these entities to work on every platform. If you are working cross-platform (e.g. an app that works in all the <a href="http://developer.yahoo.com/yui/articles/gbs/">A Grade browsers</a>) use images instead. Based on my own tests, the examples below don't work (reliably) in Windows XP. <a href="http://thinkjavache.be/blog/">Javache</a> reported these work in Windows Vista.</p>
 
 			<div class="buttonHolder buttonHolderDouble">
 				<a href="#" class="button buttonSmall">
@@ -726,6 +745,8 @@
 						</ul>
 					</div>
 				</div>
+				
+				<p>And some example code:</p>
 			
 				<pre class="brush: xml">
 					<div class="simplePagination">
@@ -777,6 +798,38 @@
 						</ul>
 					</div>
 				</div>
+
+				<h3 id="pagination">Pagination</h3>
+
+				<!-- <div class="pagination">
+					<ul class="clearfix">
+						<li class="previousPage"><span>Previous</span></li>
+						<li class="currentPage"><strong>1</strong></li>
+						<li><a rel="nofollow" title="Go to page 2" href="#">2</a></li>
+						<li><a rel="nofollow" title="Go to page 3" href="#">3</a></li>
+						<li><a rel="nofollow" title="Go to page 4" href="#">4</a></li>
+						<li><a rel="nofollow" title="Go to page 5" href="#">5</a></li>
+						<li><a rel="nofollow" title="Go to page 6" href="#">6</a></li>
+						<li class="ellipsis"><span>&hellip;</span></li>
+						<li><a rel="nofollow" title="Go to page 129" href="#">129</a></li>
+						<li><a rel="nofollow" title="Go to page" href="#">130</a></li>
+						<li class="nextPage"><a title="Next page" rel="next nofollow" href="/blog/2">Next</a></li>
+					</ul>
+				</div> -->
+
+				<h3 id="modal">Modal</h3>
+
+				<!-- Modal! -->
+
+				<h3 id="pagination">Humanized messages</h3>
+
+				<h3 id="avatars">Avatars</h3>
+				
+				<h4 id="defaultAvatar">Default avatar</h4>
+				
+				<h4 id="avatarOverlays">Avatar overlays</h4>
+
+
 			</div>
 		</div>
 	
@@ -801,8 +854,8 @@
 				<ul>
 					<li><code>jquery-1.3.2.min.js</code></li>
 					<li><code>jquery.shortcuts.min.js</code></li>
-					<li><code>winston.helpers.0.1.js</code></li>
-					<li><code>winston.helpers.0.1.css</code></li>
+					<li><code>winston.helpers.0.2.js</code></li>
+					<li><code>winston.helpers.0.2.css</code></li>
 				</ul>
 	
 				<p>There are many ways to handle TODO's in projects. One problem with adding todo's in a separate list is that they lose their context in the project. Sometimes it's more beneficial to add todo's inline in the code. To help see TODOs in a visual way, Winston includes a dev helper called TODO.</p>
@@ -828,8 +881,8 @@
 				<ul>
 					<li><code>jquery-1.3.2.min.js</code></li>
 					<li><code>jquery.shortcuts.min.js</code></li>
-					<li><code>winston.helpers.0.1.js</code></li>
-					<li><code>winston.helpers.0.1.css</code></li>
+					<li><code>winston.helpers.0.2.js</code></li>
+					<li><code>winston.helpers.0.2.css</code></li>
 				</ul>
 	
 				<p>The resolution helper is a combined piece of CSS and JS to help developing layouts for different resolutions. This is especially useful when creating the user interface for a mobile website or application.</p>
@@ -842,17 +895,103 @@
 		
 		<div class="content col-5">
 
-			<h3>Contributors:</h3>
-			<p>None yet, except <a href="http://www.greencurry.be/">Dieter</a> who proposed the name Winston. If you are interested in contributing, drop me an e-mail at wolf@wolfslittlestore.be.</p>
+			<h3 id="contribute">Want to contribute?</h3>
+			<p>If you are interested in contributing, drop me an e-mail at wolf@wolfslittlestore.be. This could be anything from feedback, descriptions what you need/want in Winston, proposals, and so on. This thing is entirely open to discussion.</p>
 			
-			<p class="secondaryContent">By <a href="http://www.johanronsse.be">Johan Ronsse (Wolf)</a>. See LICENSE for licensing details (GNU General Public License).</p>
-		
+			
 		</div>
-		
-		<script type="text/javascript">
-			SyntaxHighlighter.config.clipboardSwf = 'js/syntax/scripts/clipboard.swf';
-			SyntaxHighlighter.all();
-		</script>
+
+		<div class="hr"><hr /></div>
+
+		<h3 id="thanks">Thanks for your feedback and/or support:</h3>
+			
+		<div class="cols noUnderlines secondaryContent" id="feedback">
+			<div class="col col-1d4">
+				<ul class="people">
+					<li>
+						<a href="http://www.abconcerts.be/nl/profielen/p/detail/feedback-master">
+							<img src="images/docs/fbm.jpg" width="48" height="48" alt="Fbm" />
+							<p>Feedback Master</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.bram.us">
+							<img src="images/docs/bramus.jpg" width="48" height="48" alt="Bramus" />
+							<p>Bramus!</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.thinkjavache.be">
+							<img src="images/docs/javache.jpg" width="48" height="48" alt="Javache" />
+							<p>Javache</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col col-1d4">
+				<ul class="people">
+					<li>
+						<a href="http://www.openminds.be">
+							<img src="images/docs/frank.jpg" width="48" height="48" alt="Frank" />
+							<p>Frank</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://dimitrivanheucke.be/blog/">
+							<img src="images/docs/default.gif" width="48" height="48" alt="" />
+							<p>Dimitri</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.idoe.be/en/home">
+							<img src="images/docs/default.gif" width="48" height="48" alt="" />
+							<p>Geert</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col col-1d4">
+				<ul class="people">
+					<li>
+						<a href="http://www.spoon-library.be">
+							<img src="images/docs/dave-twitter.jpg" width="48" height="48" alt="Dave" />
+							<p>adeepersilence</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.roam.be">
+							<img src="images/docs/default.gif" width="48" height="48" alt="" />
+							<p>Kevin</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col col-1d4">
+				<ul class="people">
+					<li>
+						<a href="http://www.thehotseat.be/">
+							<img src="images/docs/default.gif" width="48" height="48" alt="" />
+							<p>Bytte</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.greencurry.be/">
+							<img src="images/docs/default.gif" width="48" height="48" alt="" />
+							<p>Dieter</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+	<p class="secondaryContent">By <a href="http://www.johanronsse.be">Johan Ronsse (Wolf)</a>. See LICENSE for licensing details (BSD).</p>
+
+</div>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'js/syntax/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
 		
 	</div>
 </body>
