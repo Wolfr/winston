@@ -75,11 +75,11 @@
 					<li>
 						<a href="#layout">Layout</a>
 						<ol>
-							<li>Building layouts using the column systems
-								<ol>
+							<li><a href="#buildingLayouts">Building layouts</a>
+								<!-- <ol>
 									<li>Simple column system</li>
 									<li>Grid column system</li>
-								</ol>
+								</ol> -->
 							</li>
 						</ol>
 					</li>
@@ -87,26 +87,26 @@
 						<a href="#components">Components</a>
 						<ol>
 							<li><a href="#buttons">Buttons</a></li>
-							<li>Links
+							<!-- <li>Links
 								<ol>
 									<li>Basic</li>
 									<li>Borders</li>
 									<li>Advanced</li>
 								</ol>
-							</li>
+							</li> -->
 							<li><a href="#simplePagination">Simple pagination</a></li>
-							<li><a href="#pagination">Pagination</a></li>
+							<!-- <li><a href="#pagination">Pagination</a></li>
 							<li><a href="#modal">Modal</a></li>
 							<li><a href="#humanizedMessages">Humanized messages</a></li>
 							<li><a href="#avatars">Avatars</a>
 								<ol>
-									<li><a href="#defaultAvatar">Default avatar</a>
-									<li><a href="#avatarOverlays">Overlays</a>
-								</li>
-							</li>
+									<li><a href="#defaultAvatar">Default avatar</a></li>
+									<li><a href="#avatarOverlays">Overlays</a></li>
+								</ol>
+							</li> -->
 						</ol>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#codeExamples">Code examples</a>
 						<ol>
 							<li>Sign in</li>
@@ -121,7 +121,7 @@
 							<li>Multistep form</li>
 							<li>Form-in-form</li>
 						</ol>
-					</li>
+					</li> -->
 					<li>
 						<a href="#helpers">Helpers</a>
 						<ol>
@@ -288,7 +288,7 @@
 							<h4>Don't use a serif font for font sizes below 13px</h4>
 							<p><strong>Why?</strong> You might not notice it on your shiny Mac, but serif fonts, and especially serif fonts set in italic, render problematically on OS-challenged machines. There is only so much detail one can render when not anti-aliasing, so keep this in mind.</p>
 							
-							<p>Also see Wilson Miners' <a href="http://www.wilsonminer.com/posts/2008/oct/20/relative-readability/">Relative readability</a>.
+							<p>Also see Wilson Miners' <a href="http://www.wilsonminer.com/posts/2008/oct/20/relative-readability/">Relative readability</a>.</p>
 						</li>
 					</ol>
 				</div>
@@ -337,87 +337,12 @@
 					
 					<p>Don't kill the defaults.</p>
 					<p><a href="#">Blue text</a> means clickable.</p>
-					<p>If something looks like a <div class="buttonHolder"><a href="#" class="button buttonSmall"><span>Button</span></a></div>it is clickable. It should behave like a clickable element (thus, the cursor should change to pointer)</p>
+					<p>If something looks like a button it is clickable. It should behave like a clickable element (thus, the cursor should change to pointer)</p>
 					<p class="mute">Greyed out text means it's less important, but could be helpful.</p>
 				
-				</div>
-				
-				<div class="hr"><hr /></div>
+					<!-- @todo create inline button -->
+					<!-- <div class="buttonHolder"><a href="#" class="button buttonSmall"><span>Button</span></a></div> -->
 
-				<h3 id="buildingLayouts">Building layouts</h3>
-
-				<div class="content">
-					<div class="col-5">
-
-						<p>Dependencies:</p>
-						<ul>
-							<li><code>grid.css</code></li>
-						</ul>
-
-						<p>To layout our user interface, we use a grid. The grid depends on the application. We know a few things: we want to keep things within a 960px wide frame; we want enough space (>20px) between columns; and we want the reading length of text to be proper.</p>
-						<p>This is what the CSS for the default 10 column grid looks like:</p>
-					</div>
-				</div>
-
-				<pre class="brush: css;">
-					.col { width: 72px; margin-right: 24px; float: left; }
-					.col-2 { width: 168px; }
-					.col-3 { width: 264px; }
-					.col-4 { width: 360px; }
-					.col-5 { width: 456px; }
-					.col-6 { width: 552px; }
-					.col-7 { width: 648px; }
-					.col-8 { width: 744px; }
-					.col-9 { width: 840px; }
-					.col-10 { width: 936px; }
-					.last { margin-right: 0 !important; }
-				</pre>
-
-				<div class="col-5">
-					<p>In Winston all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
-					<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
-					<p>I tend to use the <a href="#http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
-					<p>Here's an example of four columns:</p>
-				</div>
-
-				<div class="cols">
-					<div class="col col-2">
-						This is column A.
-					</div>
-					<div class="col col-2">
-						This is column B.
-					</div>
-					<div class="col col-2">
-						This is column C.
-					</div>
-					<div class="col col-2 last">
-						This is column D.
-					</div>
-				</div>
-
-				<br />
-
-				<p>And the code for this:</p>
-
-				<pre class="brush: xml;">
-					&lt;div class=&quot;cols&quot;&gt;
-						&lt;div class=&quot;col col-2&quot;&gt;
-							This is column A.
-						&lt;/div&gt;
-						&lt;div class=&quot;col col-2&quot;&gt;
-							This is column B.
-						&lt;/div&gt;
-						&lt;div class=&quot;col col-2&quot;&gt;
-							This is column C.
-						&lt;/div&gt;
-						&lt;div class=&quot;col col-2 last&quot;&gt;
-							This is column D.
-						&lt;/div&gt;
-					&lt;/div&gt;
-				</pre>
-
-				<div class="content col-5">
-					<p>We can use this column system to create layouts. However, not everything fits on the grid. Websites and web applications are not a piece of paper: we can't go Joseph Muller Brockmann-style when rewiring the latest Wordpress interface. Depending on the situation, you might consider working with another type of column system, based on percentages (such as <a href="http://v1.wolfslittlestore.be/a-simple-column-system-the-code">a simple column system</a>).</p>
 				</div>
 
 				<div class="hr"><hr /></div>
@@ -493,10 +418,86 @@
 		
 		<div class="hr"><hr /></div>
 
-		<h2 id="components">Layout</h2>
+		<h2 id="layout">Layout</h2>
 
 		<div class="col-5">
 			<p>Ah, layout. Every web designers' favorite part.</p>
+		</div>
+		
+		<h3 id="buildingLayouts">Building layouts using the column systems</h3>
+
+		<div class="content">
+			<div class="col-5">
+
+				<p>Dependencies:</p>
+				<ul>
+					<li><code>grid.css</code></li>
+				</ul>
+
+				<p>To layout our user interface, we use a grid. The grid depends on the application. We know a few things: we want to keep things within a 960px wide frame; we want enough space (>20px) between columns; and we want the reading length of text to be proper.</p>
+				<p>This is what the CSS for the default 10 column grid looks like:</p>
+			</div>
+		</div>
+
+		<pre class="brush: css;">
+			.col { width: 72px; margin-right: 24px; float: left; }
+			.col-2 { width: 168px; }
+			.col-3 { width: 264px; }
+			.col-4 { width: 360px; }
+			.col-5 { width: 456px; }
+			.col-6 { width: 552px; }
+			.col-7 { width: 648px; }
+			.col-8 { width: 744px; }
+			.col-9 { width: 840px; }
+			.col-10 { width: 936px; }
+			.last { margin-right: 0 !important; }
+		</pre>
+
+		<div class="col-5">
+			<p>In Winston all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
+			<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
+			<p>I tend to use the <a href="http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
+			<p>Here's an example of four columns:</p>
+		</div>
+
+		<div class="cols">
+			<div class="col col-2">
+				This is column A.
+			</div>
+			<div class="col col-2">
+				This is column B.
+			</div>
+			<div class="col col-2">
+				This is column C.
+			</div>
+			<div class="col col-2 last">
+				This is column D.
+			</div>
+		</div>
+
+		<br />
+
+		<p>And the code for this:</p>
+
+		<pre class="brush: xml;">
+			&lt;div class=&quot;cols&quot;&gt;
+				&lt;div class=&quot;col col-2&quot;&gt;
+					This is column A.
+				&lt;/div&gt;
+				&lt;div class=&quot;col col-2&quot;&gt;
+					This is column B.
+				&lt;/div&gt;
+				&lt;div class=&quot;col col-2&quot;&gt;
+					This is column C.
+				&lt;/div&gt;
+				&lt;div class=&quot;col col-2 last&quot;&gt;
+					This is column D.
+				&lt;/div&gt;
+			&lt;/div&gt;
+		</pre>
+
+		<div class="content col-5">
+			<p>We can use this column system to create layouts. However, not everything fits on the grid. Websites and web applications are not a piece of paper: we can't go Joseph Muller Brockmann-style when rewiring the latest Wordpress interface. Depending on the situation, you might consider working with another type of column system, based on percentages (such as <a href="http://v1.wolfslittlestore.be/a-simple-column-system-the-code">a simple column system</a>).</p>
 		</div>
 
 		<div class="hr"><hr /></div>
@@ -793,13 +794,14 @@
 									<option>12</option>
 									<option>13</option>
 									<option>14</option>
-								</li>
+								</select>
+							</li>
 							<li><a href="#">Next</a></li>
 						</ul>
 					</div>
 				</div>
 
-				<h3 id="pagination">Pagination</h3>
+				<!-- <h3 id="pagination">Pagination</h3> -->
 
 				<!-- <div class="pagination">
 					<ul class="clearfix">
@@ -817,17 +819,15 @@
 					</ul>
 				</div> -->
 
-				<h3 id="modal">Modal</h3>
+				<!-- <h3 id="modal">Modal</h3>
 
-				<!-- Modal! -->
-
-				<h3 id="pagination">Humanized messages</h3>
+				<h3 id="humanizedMessages">Humanized messages</h3>
 
 				<h3 id="avatars">Avatars</h3>
 				
 				<h4 id="defaultAvatar">Default avatar</h4>
 				
-				<h4 id="avatarOverlays">Avatar overlays</h4>
+				<h4 id="avatarOverlays">Avatar overlays</h4> -->
 
 
 			</div>
@@ -835,13 +835,13 @@
 	
 		<div class="hr"><hr /></div>
 
-		<h2 id="codeExamples">Code examples</h2>
+		<!-- <h2 id="codeExamples">Code examples</h2>
 
 		<div class="id1">
 			<p>Todo!</p>
 		</div>
 
-		<div class="hr"><hr /></div>
+		<div class="hr"><hr /></div> -->
 
 		<h2 id="helpers">Helpers</h2>
 	
