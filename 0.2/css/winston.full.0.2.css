@@ -624,18 +624,15 @@ img.alignright {
 	top: 0; left: 0;
 }
 
-	#container .av24 { width: 24px; height: 24px; }
-	#container .av48 { width: 48px; height: 48px; }
-	#container .av96 { width: 96px; height: 96px; }
-	#container .av128 { width: 128px; height: 128px; }
+	.av24, .av24 img { width: 24px; height: 24px; }
+	.av48, .av48 img { width: 48px; height: 48px; }
+	.av96, .av96 img { width: 96px; height: 96px; }
+	.av128, .av128 img { width: 128px; height: 128px; }
 
-	/* @todo create overlays */
-	
-	/* Avatar overlays */
-	/*	.av24 .avOverlay { background: url(../images/av24_overlay.png) no-repeat; }
+	.av24 .avOverlay { background: url(../images/av24_overlay.png) no-repeat; }
 	.av48 .avOverlay { background: url(../images/av48_overlay.png) no-repeat; }
 	.av96 .avOverlay { background: url(../images/av96_overlay.png) no-repeat; }
-	.av128 .avOverlay { background: url(../images/av128_overlay.png) no-repeat; } */
+	.av128 .avOverlay { background: url(../images/av128_overlay.png) no-repeat; } 
 
 /*
 	Exclusive! Grandeur!
@@ -1505,3 +1502,36 @@ table.reset {
 	border: 1px solid #D7D7D7;
 	margin: 6px 0;
 }
+
+
+/*
+	general class:
+		.people
+
+*/
+
+.people li {
+	float: left;
+	padding: 0 10px 0 0;
+}
+
+	.people li div.avatar {
+		margin-left: 9px;
+	}
+
+	.people li p {
+		text-align: center;
+		/* INC .secondaryContent */
+		font-size: 11px;
+		font-family: Arial, sans-serif;
+	}
+	
+	.people li a {
+		border: none;
+	}
+	
+	li.ghostFriend {
+		background: url(../images/ghostfriend.gif) no-repeat 0 0;
+		width: 48px;
+		height: 78px;
+	}

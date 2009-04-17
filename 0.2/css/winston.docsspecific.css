@@ -39,13 +39,12 @@
 
 }
 	.example .ex {
-		text-transform: uppercase;
-		font-family: "Consolas", Courier, monospace;
 		position: absolute;
 		top: 3px;
 		left: 3px;
 		font-size: 11px;
-		color: #999;
+		font-weight: 700;
+		color: #000;
 	}
 
 	iframe {

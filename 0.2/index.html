@@ -98,13 +98,8 @@
 							<li><a href="#simplePagination">Simple pagination</a></li>
 							<!-- <li><a href="#pagination">Pagination</a></li>
 							<li><a href="#modal">Modal</a></li>
-							<li><a href="#humanizedMessages">Humanized messages</a></li>
-							<li><a href="#avatars">Avatars</a>
-								<ol>
-									<li><a href="#defaultAvatar">Default avatar</a></li>
-									<li><a href="#avatarOverlays">Overlays</a></li>
-								</ol>
-							</li> -->
+							<li><a href="#humanizedMessages">Humanized messages</a></li> -->
+							<li><a href="#avatars">Avatars</a></li>
 						</ol>
 					</li>
 					<!-- <li>
@@ -822,9 +817,169 @@
 
 				<!-- <h3 id="modal">Modal</h3>
 
-				<h3 id="humanizedMessages">Humanized messages</h3>
+				<h3 id="humanizedMessages">Humanized messages</h3> -->
 
 				<h3 id="avatars">Avatars</h3>
+				
+				<p>Lists of users are a common thing in web applications, especially the so-called <em>&ldquo;social&rdquo;</em> ones.</p>
+				
+				<div class="example">
+					<span class="ex">Example</span>
+					
+					<ul class="people clearfix">
+						<li>
+							<div class="avatar av48">
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av48">
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av48">
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av48">
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="example">
+					<span class="ex">Example: circle style avatars</span>
+					
+					<ul class="people clearfix">
+						<li>
+							<div class="avatar av48">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av48">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av48">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av48">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="example">
+					<span class="ex">Example: different sizes (24, 48, 96 and 128 sq.)</span>
+					
+					<ul class="people clearfix">
+						<li>
+							<div class="avatar av24">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av48">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av96">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+						<li>
+							<div class="avatar av128">
+								<div class="avOverlay">&nbsp;</div>
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+					</ul>
+				</div>
+				
+				<p>And a code example (this is for one avatar only, of course):</p>
+				
+				<pre class="brush: xml;">
+					<ul class="people clearfix">
+						<li>
+							<div class="avatar av48">
+								<a href="#">
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+					</ul>
+				</pre>
+				
+				<p>If you want to use funky overlays (e.g. add a bit of gloss to each avatar) you can use the <code>avOverlay</code> class. The default images for avOverlay turn square avatars into round ones. Note that this only works on a white (#FFF) background. For other colors, you're going to have to roll your own images.</p>
+				
+				<pre class="brush: xml;">
+					<ul class="people clearfix">
+						<li>
+							<div class="avatar av48">
+								<a href="#">
+									<div class="avOverlay">&nbsp;</div>
+									<img src="images/docs/default.gif" />
+								</a>
+							</div>
+							<p><a href="#">Username</a></p>
+						</li>
+					</ul>
+				</pre>
+				
+				<!--
 				
 				<h4 id="defaultAvatar">Default avatar</h4>
 				
@@ -906,95 +1061,76 @@
 
 		<h3 id="thanks">Thanks for your feedback and/or support:</h3>
 			
-		<div class="cols noUnderlines secondaryContent" id="feedback">
-			<div class="col col-1d4">
-				<ul class="people">
-					<li>
-						<a href="http://www.abconcerts.be/nl/profielen/p/detail/feedback-master">
-							<img src="images/docs/fbm.jpg" width="48" height="48" alt="Fbm" />
-							<p>Feedback Master</p>
-						</a>
-					</li>
-					<li>
-						<a href="http://www.bram.us">
-							<img src="images/docs/bramus.jpg" width="48" height="48" alt="Bramus" />
-							<p>Bramus!</p>
-						</a>
-					</li>
-					<li>
-						<a href="http://www.thinkjavache.be">
-							<img src="images/docs/javache.jpg" width="48" height="48" alt="Javache" />
-							<p>Javache</p>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="col col-1d4">
-				<ul class="people">
-					<li>
-						<a href="http://www.openminds.be">
-							<img src="images/docs/frank.jpg" width="48" height="48" alt="Frank" />
-							<p>Frank</p>
-						</a>
-					</li>
-					<li>
-						<a href="http://dimitrivanheucke.be/blog/">
-							<img src="images/docs/default.gif" width="48" height="48" alt="" />
-							<p>Dimitri</p>
-						</a>
-					</li>
-					<li>
-						<a href="http://www.idoe.be/en/home">
-							<img src="images/docs/default.gif" width="48" height="48" alt="" />
-							<p>Geert</p>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="col col-1d4">
-				<ul class="people">
-					<li>
-						<a href="http://www.spoon-library.be">
-							<img src="images/docs/dave-twitter.jpg" width="48" height="48" alt="Dave" />
-							<p>adeepersilence</p>
-						</a>
-					</li>
-					<li>
-						<a href="http://www.roam.be">
-							<img src="images/docs/default.gif" width="48" height="48" alt="" />
-							<p>Kevin</p>
-						</a>
-					</li>
-					<li>
-						<img src="images/docs/default.gif" width="48" height="48" alt="">
-						<p>You?</p>
-					</li>
-				</ul>
-			</div>
-			<div class="col col-1d4">
-				<ul class="people">
-					<li>
-						<a href="http://www.thehotseat.be/">
-							<img src="images/docs/default.gif" width="48" height="48" alt="" />
-							<p>Bytte</p>
-						</a>
-					</li>
-					<li>
-						<a href="http://www.greencurry.be/">
-							<img src="images/docs/default.gif" width="48" height="48" alt="" />
-							<p>Dieter</p>
-						</a>
-					</li>
-					<li>
-						<a href="http://blog.joggink.be/">
-							<img src="images/docs/joggink.png" width="48" height="48" alt="Joggink">
-							<p>Joggink</p>
-						</a>
-					</li>
-				</ul>
-			</div>
+		<div id="feedback">
+			<ul class="people clearfix">
+				<li>
+					<a href="http://www.abconcerts.be/nl/profielen/p/detail/feedback-master">
+						<img src="images/docs/fbm.jpg" width="48" height="48" alt="Fbm" />
+					</a>
+					<p><a href="http://www.abconcerts.be/nl/profielen/p/detail/feedback-master">饋還 達人</a></p>
+				</li>
+				<li>
+					<a href="http://www.bram.us">
+						<img src="images/docs/bramus.jpg" width="48" height="48" alt="Bramus" />
+					</a>
+					<p><a href="http://www.bram.us">Bramus!</a></p>
+				</li>
+				<li>
+					<a href="http://www.thinkjavache.be">
+						<img src="images/docs/javache.jpg" width="48" height="48" alt="Javache" />
+					</a>
+					<p><a href="http://www.thinkjavache.be">Javache</a></p>
+				</li>
+				<li>
+					<a href="http://www.openminds.be">
+						<img src="images/docs/frank.jpg" width="48" height="48" alt="Frank" />
+					</a>
+					<p><a href="http://www.openminds.be">Frank</a></p>
+				</li>
+				<li>
+					<a href="http://dimitrivanheucke.be/blog/">
+						<img src="images/docs/default.gif" width="48" height="48" alt="" />
+					</a>
+					<p><a href="http://dimitrivanheucke.be/blog/">Dimitri</a></p>
+				</li>
+				<li>
+					<a href="http://www.idoe.be/en/home">
+						<img src="images/docs/default.gif" width="48" height="48" alt="" />
+						<p>Geert</p>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.spoon-library.be">
+						<img src="images/docs/dave-twitter.jpg" width="48" height="48" alt="Dave" />
+					</a>
+					<p><a href="http://www.spoon-library.be">Dave</a></p>
+				</li>
+				<li>
+					<a href="http://www.roam.be">
+						<img src="images/docs/default.gif" width="48" height="48" alt="" />
+					</a>
+					<p><a href="http://www.roam.be">Kevin</a></p>
+				</li>
+				<li>
+					<a href="http://www.thehotseat.be/">
+						<img src="images/docs/default.gif" width="48" height="48" alt="" />
+					</a>
+					<p><a href="http://www.thehotseat.be/">Bytte</a></p>
+				</li>
+				<li>
+					<a href="http://www.greencurry.be/">
+						<img src="images/docs/default.gif" width="48" height="48" alt="" />
+					</a>
+					<p><a href="http://www.greencurry.be/">Dieter</a></p>
+				</li>
+				<li>
+					<a href="http://blog.joggink.be/">
+						<img src="images/docs/joggink.png" width="48" height="48" alt="Joggink">
+					</a>
+					<p><a href="http://blog.joggink.be/">Joggink</a></p>
+				</li>
+			</ul>
 		</div>
-	
 
 		<div class="hr"><hr /></div>
 
