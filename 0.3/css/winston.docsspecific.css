@@ -13,8 +13,6 @@
 	height: 100%;
 	border-right: 1px solid #CCC;
 	overflow-y: auto;
-	background: #333;
-	color: #999;
 }
 
 	#toc div {
