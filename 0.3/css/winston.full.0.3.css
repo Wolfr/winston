@@ -10,7 +10,7 @@
 
 /*
 	Reset
-	@v0.2
+	@v0.3
 */
 
 body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address { margin: 0; padding: 0; }
@@ -24,7 +24,7 @@ a:focus { overflow: hidden; }
 
 /*
 	Typography and text styles
-	@v0.2
+	@v0.3
 */
 
 body {
@@ -296,6 +296,7 @@ textarea {
 }
 
 input.inputSubmit, button {
+	color: #000;
 	overflow: visible;
 	/* Fix "ridiculously long buttons" in IE6 and IE7 */
 }
@@ -526,6 +527,23 @@ img.alignright {
 	border-radius: 3px;
 }
 
+.note {
+	background: #FFF;
+	border: 1px solid #CCC;
+	margin: 0 0 12px;
+	background: url('../images/note.png') no-repeat scroll bottom right;
+}
+
+.helpTxt {
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	color: #666;
+}
+
+	strong {
+		color: #000;
+	}
+
 /*
 	Grid based column system
 */
@@ -551,7 +569,7 @@ img.alignright {
 	Simple column system
 */
 
-.cols .col { float: left; }
+.cols .col { float: left; margin: 0; }
 
 /* Two columns */
 .col-1d2,
@@ -812,7 +830,6 @@ a.button:focus span {
 	.iconDownload a.button:focus span {
 		background: url(../images/buttonDownload.png) no-repeat right -24px;
 	}
-	
 
 .buttonHolderDouble a {
 	margin-right: 10px;
@@ -838,7 +855,6 @@ a.button:focus span {
 	.buttonMix .buttonSmall {
 		margin-top: 4px;
 	}
-
 
 /*
 	Icon sprite
@@ -919,30 +935,6 @@ ol.fancy li {
 }
 
 /*
-	Eyecatcher
-*/
-
-#eyecatcher {
-	padding: 0 0 48px;
-	position: relative;
-}
-
-#eyecatcher h2 {
-	font-size: 28px;
-	font-weight: 300;
-}
-
-#eyecatcher .button {
-	float: right;
-}
-
-#eyecatcher .last img {
-	position: absolute;
-	bottom: 0px;
-	right: 0;
-}
-
-/*
 	Modal box
 */
 
@@ -1006,67 +998,9 @@ ol.fancy li {
 }
 
 /*
-	Blog
-*/
-
-/*
-	Home
-	Blog
-*/
-
-
-#blog p.date {
-	font-family: Georgia, Times, serif;
-	font-size: 12px;
-	color: #808080;
-}
-
-	#home #blog p.date {
-		text-transform: uppercase;
-		_font-size: 11px;
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
-
-#home #blog .article {
-	padding-left: 48px;
-	position: relative;
-	width: 312px;
-}
-
-	#home #blog .first-child {
-		padding-top: 20px;
-	}
-
-#home #blog .first-child p.date {
-	top: 24px;
-}
-
-#home #blog h4 {
-	padding-bottom: 5px;
-}
-
-#home #blog h4 a {
-	font-weight: 300;
-}
-
-#home #blog .first-child h4 a {
-	font-weight: 700;
-	border: none;
-	font-size: 16px;
-}
-
-	#home #blog .first-child h4 span {
-		font-family: Georgia;
-		font-weight: 400;
-		padding-top: 4px;
-		display: block;
-		font-style: italic;
-	}
-
-/*
 	Icons
+	Sharelist
+	todo: separate
 */
 
 .icon {
@@ -1150,12 +1084,6 @@ b, i {
 	right: 9px;
 	border: 1px solid #999;
 	padding: 0;
-	-moz-border-radius-topleft: 3px;
-	-moz-border-radius-bottomleft: 3px;
-	-moz-border-radius-bottomright: 3px;
-	-webkit-border-top-left-radius: 3px;
-	-webkit-border-bottom-left-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
 	width: 110px;
 	z-index: 230;
 	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
@@ -1218,180 +1146,8 @@ p.dateFunky * { display: block; text-align: center; width: 30px; color: #000; }
 p.dateFunky .day { font-size: 19px; font-family: Georgia, serif; line-height: 1; padding: 0 0 3px;}
 p.dateFunky .month { font-size: 11px; text-transform: uppercase; font-family: Georgia, serif; line-height: 1; }
 
-/* Meta */
-
-.meta {
-	border-top: 1px solid #C7C7C7;
-	padding-top: 4px;
-	color: #808080;
-}
-
-.meta ul {
-	list-style: none;
-	float: right;
-}
-
-.meta li {
-	float: left;
-	padding-right: 9px;
-	position: relative;
-}
-
-.meta li:last-child {
-	padding-right: 0;
-}
-
-/* Blog sidebar */
-
-#blogSidebar .section {
-	background: url('../images/divider.gif') no-repeat scroll bottom center;
-	padding: 0 24px;
-	margin: 0 0 36px;
-	text-align: center;
-}
-
-	#blogSidebar .section h4 {
-		font-family: "Hoefler Text", Georgia, Times, serif;
-		font-style: italic;
-		font-size: 18px;
-		font-weight: 300;
-	}
-	
-	.listView li {
-		padding: 0 0 16px;
-		margin: 0 0 8px;
-		background: url(../images/bullet.gif) no-repeat bottom center;
-	}
-	
-	.listView li:last-child,
-	.listView li.last-child {
-		padding: 0;
-		margin: 0;
-		background: 0;
-	}
-	
-	ul.buttonList li {
-		padding-right: 7px;
-		float: left;
-	}
-	
-	#blog .postTitle h1,
-	#blog .postTitle h2 {
-		padding-bottom: 0;
-	}
-
-	.messageForm #name,
-	.messageForm #email,
-	.messageForm #website { width: 156px; }
-	.messageForm #subject { width: 254px; }
-	.messageForm #message { 
-		width: 254px;
-		min-height: 125px;
-		height: auto !important; 
-		height: 125px;
-	} /* Not exactly column widths to accomodate for that bitch IE */
-
-
-	..messageForm h3 {
-		padding-bottom: 0;
-	}
-
-	.messageForm {
-		width: 456px;
-	}
-	
-	.gravatar {
-		margin-left: -72px;
-		position: relative;
-		top: 10px;
-		float: left;
-	}
-	
-	.messageForm label {
-		display: block;
-		font-weight: 700;
-		font-size: 11px;
-	}
-
-	#blog.col-6 {
-		width: 456px;
-		padding: 0 48px;
-	}
-	
-	span.form-error,
-	div.form-error {
-		display: block;
-		font-size: 11px;
-		color: #E2001A;
-		font-weight: 700;
-	}
-	
-		span.form-error a,
-		div.form-error a {
-			color: #E2001A;
-			border-color: #E2001A;
-		}
-		
-	
-	#registerForm #password,
-	#registerForm #password_check {
-		width: 160px;
-	}
-	
-	#registerForm .inputList li {
-		width: 400px;
-	}
-	
-	#registerForm #portfolio {
-		width: 240px;
-	}
-
 /*
-	Slideshow controls
-*/
-	#controls a {
-		width: 28px;
-		height: 28px;
-		display: block;
-		text-indent: -9000px;
-		border: none;
-		float: left;
-		margin-right: 1px;
-	}
-	
-	#controls #previous.disabled { background: url(../images/controls.png) no-repeat 0 0; }
-	#controls #next.disabled { background: url(../images/controls.png) no-repeat -28px 0; }
-	
-	#controls #previous { background: url(../images/controls.png) no-repeat 0 -28px; }
-	#controls #next { background: url(../images/controls.png) no-repeat -28px -28px; }
-	
-	#controls #previous:hover,
-	#controls #previous:active,
-	#controls #previous:focus,
-	#controls #previous.focus { background: url(../images/controls.png) no-repeat 0 -56px; }
-	#controls #next:hover,
-	#controls #next:active,
-	#controls #next:focus,
-	#controls #next.focus { background: url(../images/controls.png) no-repeat -28px -56px; }
-	
-	#home #articlesHolder {
-		height: 250px;
-		overflow: hidden;
-		position: relative;
-	}
-	
-		#home #articlesHolder #articles {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		
-			#home #articlesHolder #articles li.col-2 {
-				height: 300px;
-			}
-
-/*
-	Page numbers on the slideshow @home
+	Center widthless wrap
 */
 
 .centerWidthlessWrap {
@@ -1404,78 +1160,12 @@ p.dateFunky .month { font-size: 11px; text-transform: uppercase; font-family: Ge
 	position: relative;
 	left: 50%;
 }
+	/* todo fix this*/
 
-#articlesPages {
-	margin: 0 auto;
-	padding: 12px 0 0;
-	z-index: 2;
-	overflow: hidden;
-	position: relative;
-	left: -50%;
-	_float: left;
-}
 
-#articlesPages li {
-	float: left;
-	color: #808080;
-	width: 14px;
-	height: 14px;
-	text-indent: -9000px;
-	text-align: center;
-	line-height: 14px;
-	font-size: 9px;
-	background: url(../images/controls.png) no-repeat -56px 0;
-	margin: 0 2px;
-	font-weight: 700;
-}
-
-#articlesPages li.selected {
-	color: #FFF;
-	background: url(../images/controls.png) no-repeat -56px -28px;
-}
-
-.note {
-	background: #FFF;
-	border: 1px solid #CCC;
-	margin: 0 0 12px;
-	background: url('../images/note.png') no-repeat scroll bottom right;
-}
-
-.helpTxt {
-	font-family: Arial, sans-serif;
-	font-size: 11px;
-	color: #666;
-}
-
-	strong {
-		color: #000;
-	}
-
-#description,
-#description_preview1,
-#description_preview2,
-#description_preview3,
-#description_preview4 {
-	height: 65px;
-}
-
-.flashUploaderWrapper {
-	padding: 0 0 8px;
-}
-
-.profileSection {
-	padding: 0 0 12px;
-	margin: 0 0 12px;
-	border-bottom: 1px solid #D7D7D7;
-}
-
-table.reset td,
-table.reset {
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-
+/*
+	Step indicator
+*/
 #stepIndicator .active {
 	font-weight: 700;
 }
@@ -1495,6 +1185,8 @@ table.reset {
 		padding: 0 0 12px;
 		border-bottom: 1px solid #D7D7D7;
 	}
+	
+/* Form in form */
 
 .innerForm {
 	padding: 6px 12px 6px;
@@ -1503,11 +1195,10 @@ table.reset {
 	margin: 6px 0;
 }
 
-
 /*
+	Avatar lists
 	general class:
-		.people
-
+	.people
 */
 
 .people li {
