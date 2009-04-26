@@ -1,0 +1,65 @@
+/*
+
+	A Winston module
+
+	Media:      screen, projection
+	License:    see LICENSE packaged with Winston
+	Author:     Johan Ronsse <johan.ronsse@gmail.com>
+
+	Name:       Datagrid
+	Desc:       Basic styles for styling tabular data
+	Version:    0.3
+
+*/
+
+table.datagrid  {
+	font-family: Arial, sans-serif;
+	width: 100%;
+	margin: 0 0 12px;
+}
+
+table.datagrid td,
+table.datagrid th {
+	padding: 7px;
+	font-size: 11px;
+}
+
+table.datagrid th {
+	font-weight: 700;
+	color: #000;
+	line-height: 1.2;
+	text-align: left;
+}
+
+table.datagrid tr.rowOdd { background: #FFF; }
+table.datagrid tr.rowEven { background: #EEE; }
+
+table.datagrid th {
+	border-bottom: 1px solid #DDD;
+	padding: 5px 10px;
+	white-space: nowrap;
+}
+
+table.datagrid td.date,
+table.datagrid td.comments {
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	color: #666;
+}
+
+table.datagrid td {
+	padding: 5px 10px;
+	border-bottom: 1px solid #D7D7D7;
+}
+
+table.datagrid td:last-child,
+table.datagrid td.comments {
+	border-right: none;
+}
+
+table.datagrid td:first-child,
+table.datagrid td.date,
+table.datagrid th:first-child,
+table.datagrid th.date {
+	padding-left: 0;
+}

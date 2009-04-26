@@ -1,0 +1,210 @@
+/*
+
+	A Winston module
+
+	Media:      screen, projection
+	License:    see LICENSE packaged with Winston
+	Author:     Johan Ronsse <johan.ronsse@gmail.com>
+
+	Name:       Typography and text styles
+	Desc:       Basic typography to start a project with
+	Version:    0.3
+
+*/
+
+/*
+	Typography and text styles
+*/
+
+body {
+	font: 300 13px Arial, sans-serif;
+	line-height: 1.5; /* Safari 2.0.4 */
+	color: #454545;
+}
+
+/* Headings */
+h1, h2, h3 {
+	line-height: 1.1;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+	h1, h2, h3, h4 { 
+		color: #000;
+		padding: 0 0 12px;
+	}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 13px;
+	color: #000;
+	font-weight: 700;
+}
+
+p {
+	padding: 0 0 12px;
+}
+
+	p.secondaryContent,
+	.secondaryContent,
+	small {
+		font-family: Arial, sans-serif;
+		font-size: 11px;
+	}
+
+strong {
+	font-weight: 700;
+	color: #000;
+}
+
+em {
+	font-style: italic;
+}
+
+.content ul,
+.content ol {
+	padding: 0 0 12px 24px;
+}
+
+.content ul {
+	list-style: disc;
+}
+
+.content ol {
+	list-style-type: decimal;
+	padding: 0 0 14px 24px;
+}
+
+	.content ul ul,
+	.content ol ul,
+	.content ol ol {
+		padding-bottom: 0;
+	}
+
+	.content ul ol {
+		padding: 0 0 0 24px;
+	}
+
+	.content ol ol {
+		list-style: upper-roman;
+	}
+
+	.content ol ol ol {
+		list-style: lower-roman;
+	}
+
+code {
+	font-family: Consolas, Monaco, "Courier New", monospace;
+	font-size: 12px;
+	line-height: 1.15;
+}
+
+pre {
+	padding: 7px 14px;
+	background: #F5F5F5;
+	margin: 0 0 14px;
+}
+
+blockquote, q {
+	font-style: italic;
+	font-family: Georgia, serif;
+}
+
+blockquote {
+	padding: 0 0 0 24px;
+	background: url('../images/bquote.gif') no-repeat 0 5px;
+}
+
+blockquote cite {
+	font-size: 11px;
+	text-align: right;
+	display: block;
+	position: relative;
+	bottom: 12px;
+}
+
+sub, sup {
+	line-height: 0;
+	/* Fix sub & sup fucking with the baseline */
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #CDCDCD;
+	padding: 0;
+}
+
+div.hr {
+	border-bottom: 1px solid #D7D7D7;
+	margin: 12px 0 24px;
+}
+
+	div.hr hr {
+		display: none;
+	}
+	
+/*
+	ColorInverse
+	Color inverses the basic typography for content areas that are reversed out
+*/
+
+.colorInverse { color: #CDCDCD; }
+.colorInverse strong { color: #FFF; }
+
+.colorInverse h1,
+.colorInverse h2,
+.colorInverse h3,
+.colorInverse h4 {
+	color: #FFF;
+}
+
+.colorInverse a:link { color: #EEE; text-decoration: none; border-bottom: 1px solid #888; }
+.colorInverse a:visited { color: #DDD; text-decoration: none; border-bottom: 1px solid #777; }
+.colorInverse a:hover, .colorInverse a:active, .colorInverse a:focus { color: #FFF; border-bottom: 1px solid #CCC; }
+
+
+
+/* Addons! */
+/*To sort*/
+
+/*
+	Fancy ordered list
+*/
+
+ol.reset,
+ul.reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ol.fancy span {
+	width: 25px;
+	height: 25px;
+	display: block;
+	float: left;
+	background: url(../images/123.gif) no-repeat;
+	margin-right: 3px;
+}
+
+	.fancy .two { background-position: 0 -31px ; }
+	.fancy .three { background-position: 0 -64px ; }
+
+ol.fancy li {
+	clear: both;
+	line-height: 25px;
+	padding: 0 0 8px;
+}
+
+/* Date formatting */
+p.dateFunky { float: left; position: relative; margin-left: -42px; padding-top: 5px;}
+p.dateFunky * { display: block; text-align: center; width: 30px; color: #000; }
+p.dateFunky .day { font-size: 19px; font-family: Georgia, serif; line-height: 1; padding: 0 0 3px;}
+p.dateFunky .month { font-size: 11px; text-transform: uppercase; font-family: Georgia, serif; line-height: 1; }
+

@@ -1,0 +1,103 @@
+/*
+
+	A Winston module
+
+	Media:      screen, projection
+	License:    see LICENSE packaged with Winston
+	Author:     Johan Ronsse <johan.ronsse@gmail.com>
+
+	Name:       General purposes classes
+	Desc:       A set of general purpose classes
+	            Use wisely!
+	Version:    0.3
+
+*/
+
+/*
+	Grid based column system
+*/
+
+.colsGrid .col {
+	float: left;
+	margin-right: 24px;
+}
+
+.col-1 { width: 72px; }
+.col-2 { width: 168px; }
+.col-3 { width: 264px; }
+.col-4 { width: 360px; }
+.col-5 { width: 456px; }
+.col-6 { width: 552px; }
+.col-7 { width: 648px; }
+.col-8 { width: 744px; }
+.col-9 { width: 840px; }
+.col-10 { width: 936px; }
+.colLast { margin-right: 0 !important; }
+
+/*
+	Simple column system
+*/
+
+.cols .col { float: left; margin: 0; }
+
+/* Two columns */
+.col-1d2,
+.col-2d4 { width: 49.9%; }
+
+/* Three columns*/
+.col-2d3 { width: 66.5%; }
+.col-1d3 { width: 33.2%; }
+
+/* Four columns */
+.col-1d4 { width: 24.9%; }
+.col-3d4 { width: 74.9%; }
+
+/* Five columns */
+.col-1d5 { width: 19.9%; }
+.col-2d5 { width: 39.9%; }
+.col-3d5 { width: 59.9%; }
+.col-4d5 { width: 79.9%; }
+
+/*
+	Spacing divs to fit inside columns:
+	gutter width and 1/2 gutter width
+*/
+.cols .spacingLeft { margin-left: 24px; }
+.cols .spacingLeftHalf { margin-left: 12px; }
+.cols .spacingRight { margin-right: 24px; }
+.cols .spacingRightHalf { margin-right: 12px; }
+.cols .spacingBothHalf { margin-right: 12px; margin-left: 12px; }
+
+
+/*
+	Image aligment classes
+	Based on grid
+*/
+
+img.alignleft {
+	float: left;
+	padding: 0 24px 12px 0;
+}
+
+img.alignright {
+	float: right;
+	padding: 0 0 12px 24px;
+}
+
+
+/*
+	Center widthless wrap
+*/
+
+.centerWidthlessWrap {
+	width: 100%;
+	overflow: hidden;
+}
+
+.centerWidthless {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+/* Todo add third wrapper element */

@@ -1,18 +1,19 @@
 /*
 
-	Single stylesheet for Winston
-	
+	A Winston module
+
 	Media:      screen, projection
 	License:    see LICENSE packaged with Winston
-	author:     Johan Ronsse <johan@netlash.com>
+	Author:     Johan Ronsse <johan.ronsse@gmail.com>
+
+	Name:       Reset
+	Desc:       Resets commonly used HTML elements
+	Version:    0.3
 
 */
 
 /*
 	Reset
-	Resets commonly used HTML elements
-	
-	@v0.3
 */
 
 body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address { margin: 0; padding: 0; }

@@ -20,7 +20,7 @@
 	#toc div {
 		padding: 30px;
 	}
-	
+
 #container {
 	width: 552px;
 	padding: 40px 0;
@@ -50,11 +50,11 @@
 	iframe {
 		border: 0;
 	}
-	
+
 	h2, h3 {
 		padding-top: 20px;
 	}
-	
+
 	h2 + h3 {
 		padding-top: 0;
 	}
@@ -63,19 +63,19 @@
 		padding-top: 6px;
 		text-transform: uppercase;
 	}
-	
+
 	h2:target,
 	h3:target {
 		color: #FFF;
 		background: #000;
 	}
-	
+
 	h1 {
 		font-size: 98px;
 		letter-spacing: -5px;
 		text-transform: uppercase;
 		line-height: 1;
-		font-family: HelveticaNeue-CondensedBold, "Helvetica Neue Condensed Bold", "Helvetica Condensed Bold", Helvetica;
+		
 	}
 
 		#header h1 + p {
@@ -97,3 +97,29 @@
 #feedback {
 	text-align: center;
 }
+
+/*
+	Avatar lists
+	general class:
+	.people
+*/
+
+.people li {
+	float: left;
+	padding: 0 10px 0 0;
+}
+
+	.people li div.avatar {
+		margin-left: 9px;
+	}
+
+	.people li p {
+		text-align: center;
+		/* INC .secondaryContent */
+		font-size: 11px;
+		font-family: Arial, sans-serif;
+	}
+
+	.people li a {
+		border: none;
+	}

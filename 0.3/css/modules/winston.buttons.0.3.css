@@ -1,0 +1,184 @@
+/*
+	Buttons
+*/
+
+.disabled a.button:link,
+.disabled a.button:visited {
+	cursor: default;
+
+	/* Inc opacity */
+	opacity: .5; /* Standard: FF gt 1.5, Opera, Safari */
+	filter: alpha(opacity=50); /* IE lt 8 */
+	-ms-filter: "alpha(opacity=50)"; /* IE 8 */
+	-khtml-opacity: .5; /* Safari 1.x */
+	-moz-opacity: .5; /* FF lt 1.5, Netscape */
+
+}
+
+.disabled a.button:hover,
+.disabled a.button:active,
+.disabled a.button:focus {
+	background: url(../images/button.png) no-repeat;
+}
+
+.disabled a.button:hover span,
+.disabled a.button:active span,
+.disabled a.button:focus span {
+	background: url(../images/button.png) no-repeat top right;
+	cursor: default;
+}
+
+a.button:link,
+a.button:visited {
+	height: 24px;
+	line-height: 24px;
+	padding: 0 0 0 10px;
+	float: left;
+	border: none;
+	white-space: nowrap;
+	color: #333;
+	background: url(../images/button.png) no-repeat;
+}
+
+	a.buttonSmall:link,
+	a.buttonSmall:visited {
+		height: 19px;
+		line-height: 19px;
+		padding: 0 0 0 7px;
+		background: url(../images/buttonSmall_2.png) no-repeat;
+	}
+
+	.colorInverse a.buttonSmall:link,
+	.colorInverse a.buttonSmall:visited {
+		background: url(../images/buttonSmall.png) no-repeat;
+	}
+
+a.button:link span,
+a.button:visited span {
+	float: left;
+	padding: 0 10px 0 0;
+	font-size: 11px;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	background: url(../images/button.png) no-repeat top right;
+}
+
+	a.buttonSmall:link span,
+	a.buttonSmall:visited span {
+		padding: 0 7px 0 0;
+		background: url(../images/buttonSmall_2.png) no-repeat top right;
+	}
+
+	.colorInverse a.buttonSmall:link span,
+	.colorInverse a.buttonSmall:visited span {
+		background: url(../images/buttonSmall.png) no-repeat top right;
+	}
+
+a.button:hover,
+a.button:active,
+a.button:focus {
+	background: url(../images/button.png) no-repeat 0 -24px;
+}
+
+	a.buttonSmall:hover,
+	a.buttonSmall:active,
+	a.buttonSmall:focus {
+		background: url(../images/buttonSmall_2.png) no-repeat 0 -19px;
+	}
+
+	.colorInverse a.buttonSmall:hover,
+	.colorInverse a.buttonSmall:active,
+	.colorInverse a.buttonSmall:focus {
+		background: url(../images/buttonSmall.png) no-repeat 0 -19px;
+	}
+
+a.button:hover span,
+a.button:active span,
+a.button:focus span {
+	background: url(../images/button.png) no-repeat right -24px;
+}
+
+	a.buttonSmall:hover span,
+	a.buttonSmall:active span,
+	a.buttonSmall:focus span {
+		background: url(../images/buttonSmall_2.png) no-repeat right -19px;
+	}
+
+	.colorInverse a.buttonSmall:hover span,
+	.colorInverse a.buttonSmall:active span,
+	.colorInverse a.buttonSmall:focus span {
+		background: url(../images/buttonSmall.png) no-repeat right -19px;
+	}
+
+.iconCart a.button:link,
+.iconCart a.button:visited {
+	background: url(../images/buttonAddToCart.png) no-repeat;
+	padding: 0 0 0 30px;
+}
+
+	.iconCart a.button:link span,
+	.iconCart a.button:visited span {
+		background: url(../images/buttonAddToCart.png) no-repeat top right;
+	}
+
+.iconCart a.button:hover,
+.iconCart a.button:active,
+.iconCart a.button:focus {
+	background: url(../images/buttonAddToCart.png) no-repeat 0 -24px;
+}
+
+	.iconCart a.button:hover span,
+	.iconCart a.button:active span,
+	.iconCart a.button:focus span {
+		float: left;
+		background: url(../images/buttonAddToCart.png) no-repeat right -24px;
+	}
+
+.iconDownload a.button:link,
+.iconDownload a.button:visited {
+	background: url(../images/buttonDownload.png) no-repeat;
+	padding: 0 0 0 30px;
+}
+
+	.iconDownload a.button:link span,
+	.iconDownload a.button:visited span {
+		background: url(../images/buttonDownload.png) no-repeat top right;
+	}
+
+.iconDownload a.button:hover,
+.iconDownload a.button:active,
+.iconDownload a.button:focus {
+	background: url(../images/buttonDownload.png) no-repeat 0 -24px;
+}
+
+	.iconDownload a.button:hover span,
+	.iconDownload a.button:active span,
+	.iconDownload a.button:focus span {
+		background: url(../images/buttonDownload.png) no-repeat right -24px;
+	}
+
+.buttonHolderDouble a {
+	margin-right: 10px;
+}
+
+.buttonHolderDoubleRight a {
+	margin-left: 10px;
+}
+
+	.buttonHolderDoubleRight {
+		width: 100%;
+	}
+
+	#addToCart .buttonHolderDoubleRight {
+		width: 348px;
+	}
+
+	#addToCart .buttonHolderDoubleRight .button,
+	#container .buttonHolderDoubleRight .button {
+		float: right;
+	}
+
+	.buttonMix .buttonSmall {
+		margin-top: 4px;
+	}
