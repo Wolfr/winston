@@ -2,45 +2,32 @@
 
 	Full stylesheet for Winston
 
-	Media:      screen, projection
 	License:    see LICENSE packaged with Winston
+	            the same license counts for each module separately
+
+	Desc:       This is the full Winston stylesheet. It is recommended
+	            to only take the parts you need in orde to minimize the
+	            amount of CSS in your project.
+
 	Author:     Johan Ronsse <johan.ronsse@gmail.com>
 	Version:    0.3
 
-*/
+	---------------------------------------------------------------------
 
-/*
 	Includes the following modules:
 	
-	* reset
-	* general
-	* layout
-	* typography
-	* buttons
-	* datagrid
-	* links
-	* simplepagination
-	* forms
-	* avatars
-	
+	* reset          * buttons            * forms
+	* general        * datagrid           * avatars
+	* layout         * links              
+	* typography     * simplepagination
+
 */
 
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Reset
+	Name:       Winston reset module [0.3]
 	Desc:       Resets commonly used HTML elements
-	Version:    0.3
 
-*/
-
-/*
-	Reset
 */
 
 body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address { margin: 0; padding: 0; }
@@ -54,22 +41,12 @@ a:focus { overflow: hidden; }
 
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       General purposes classes
+	Name:       Winston general module [0.3]
 	Desc:       A set of general purpose classes
-	            Use wisely!
-	Version:    0.3
 
 */
 
-/*
-	Legendary Clearfix
-*/
+/* Legendary Clearfix */
 
 .clearfix:after,
 .cols:after,
@@ -99,7 +76,6 @@ a:focus { overflow: hidden; }
 .border { border: 1px solid #C7C7C7; }
 
 .serif { font-family: "Times New Roman", Times, Georgia, serif; }
-.serifSpecial { font-family: "Hoefler Text", "Palatino Linotype", "Times New Roman", Times, Georgia, serif; }
 .uc { text-transform: uppercase; }
 .sC { font-variant: small-caps; }
 .lC { text-transform: lowercase; }
@@ -125,22 +101,14 @@ a:focus { overflow: hidden; }
 
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       General purposes classes
-	Desc:       A set of general purpose classes
-	            Use wisely!
-	Version:    0.3
+	Name:       Winston layout module [0.3]
+	Desc:       Styles for creating layouts, both grid style and % style
+	            Styles for image alignment on the grid
+	            Styles for centering anything
 
 */
 
-/*
-	Grid based column system
-*/
+/* Grid based column system (72px columns/24px gutter/10 columns) */
 
 .colsGrid .col {
 	float: left;
@@ -193,10 +161,11 @@ a:focus { overflow: hidden; }
 .cols .spacingRightHalf { margin-right: 12px; }
 .cols .spacingBothHalf { margin-right: 12px; margin-left: 12px; }
 
-
 /*
+
 	Image aligment classes
 	Based on grid
+
 */
 
 img.alignleft {
@@ -209,10 +178,7 @@ img.alignright {
 	padding: 0 0 12px 24px;
 }
 
-
-/*
-	Center widthless wrap
-*/
+/* Center anything */
 
 .centerWidthlessWrap {
 	width: 100%;
@@ -225,25 +191,19 @@ img.alignright {
 	left: 50%;
 }
 
-/* Todo add third wrapper element */
+.centerWidthlessInner {
+	position: relative;
+	left: -50%;
+}
 
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Typography and text styles
+	Name:       Winston typography module [0.3]
 	Desc:       Basic typography to start a project with
-	Version:    0.3
 
 */
 
-/*
-	Typography and text styles
-*/
+/* Typography and text styles */
 
 body {
 	font: 300 13px Arial, sans-serif;
@@ -307,7 +267,6 @@ em {
 
 .content ol {
 	list-style-type: decimal;
-	padding: 0 0 14px 24px;
 }
 
 	.content ul ul,
@@ -327,6 +286,17 @@ em {
 	.content ol ol ol {
 		list-style: lower-roman;
 	}
+	
+	/*
+		Reset anyway, if you want to reset inside a .content div
+		(e.g. for the "fancy" ordered list addon)
+	*/
+	ol.reset,
+	ul.reset {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 
 code {
 	font-family: Consolas, Monaco, "Courier New", monospace;
@@ -335,9 +305,9 @@ code {
 }
 
 pre {
-	padding: 7px 14px;
+	padding: 6px 12px;
 	background: #F5F5F5;
-	margin: 0 0 14px;
+	margin: 0 0 12px;
 }
 
 blockquote, q {
@@ -346,9 +316,13 @@ blockquote, q {
 }
 
 blockquote {
-	padding: 0 0 0 24px;
-	background: url(../images/bquote.gif) no-repeat 0 5px;
+	padding: 0 0 0 12px;
 }
+
+	blockquote.fancy {
+		background: url(../images/bquote.gif) no-repeat 0 5px;
+		padding: 0 0 0 24px;
+	}
 
 blockquote cite {
 	font-size: 11px;
@@ -397,19 +371,11 @@ div.hr {
 .colorInverse a:visited { color: #DDD; text-decoration: none; border-bottom: 1px solid #777; }
 .colorInverse a:hover, .colorInverse a:active, .colorInverse a:focus { color: #FFF; border-bottom: 1px solid #CCC; }
 
-/* Addons! */
-/*To sort*/
-
-/*
-	Fancy ordered list
+/* 
+	Typography addons!
 */
 
-ol.reset,
-ul.reset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+/* Fancy ordered list */
 
 ol.fancy span {
 	width: 25px;
@@ -435,9 +401,11 @@ p.dateFunky * { display: block; text-align: center; width: 30px; color: #000; }
 p.dateFunky .day { font-size: 19px; font-family: Georgia, serif; line-height: 1; padding: 0 0 3px;}
 p.dateFunky .month { font-size: 11px; text-transform: uppercase; font-family: Georgia, serif; line-height: 1; }
 
-
 /*
-	Buttons
+
+	Name:       Winston buttons module [0.3]
+	Desc:       Buttons!
+
 */
 
 .disabled a.button:link,
@@ -620,18 +588,11 @@ a.button:focus span {
 	.buttonMix .buttonSmall {
 		margin-top: 4px;
 	}
-	
+
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Datagrid
+	Name:       Winston datagrid module [0.3]
 	Desc:       Basic styles for styling tabular data
-	Version:    0.3
 
 */
 
@@ -689,20 +650,9 @@ table.datagrid th.date {
 
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Link styles
+	Name:       Winston links module [0.3]
 	Desc:       Link styles: pick the ones you need
-	Version:    0.3
 
-*/
-
-/*
-	Links
 */
 
 /* Regular border style links */
@@ -767,21 +717,12 @@ a.halfmute:hover, a.halfmute:active, a.halfmute:focus { color: #B1C1F7; border-c
 
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Simple pagination
+	Name:       Winston Simple pagination module [0.3]
 	Desc:       Basic styles for the simple pagination component
-	Version:    0.3
 
 */
 
-/*
-	Simple pagination
-*/
+/* Simple pagination */
 
 .simplePagination li {
 	float: left;
@@ -853,15 +794,8 @@ a.halfmute:hover, a.halfmute:active, a.halfmute:focus { color: #B1C1F7; border-c
 
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Form styles
+	Name:       Winston Form styles module [0.3]
 	Desc:       Basic form styling system
-	Version:    0.3
 
 */
 
@@ -893,10 +827,6 @@ select, option {
 	font-family: Arial, sans-serif;
 	font-size: 12px;
 }
-
-/*
-	Fork forms
-*/
 
 /* Forms with a winstonForm class get special treatment */
 
@@ -949,28 +879,20 @@ select, option {
 .formSuccess {
 	color: #008A0D;
 	background: #CFC;
-	padding: 8px;
+	padding: 12px;
 	border: 1px solid #008A0D;
-	margin: 0 0 10px;
+	margin: 0 0 12px;
 }
 
+
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Avatars
+	Name:       Winston avatars module [0.3]
 	Desc:       Styles for the avatars component
-	Version:    0.3
 
 */
 
-/*
-	Avatars
-*/
+/* Avatars */
 
 .avatar {
 	width: 48px;

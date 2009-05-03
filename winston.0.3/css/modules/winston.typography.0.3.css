@@ -1,20 +1,11 @@
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Typography and text styles
+	Name:       Winston typography module [0.3]
 	Desc:       Basic typography to start a project with
-	Version:    0.3
 
 */
 
-/*
-	Typography and text styles
-*/
+/* Typography and text styles */
 
 body {
 	font: 300 13px Arial, sans-serif;
@@ -78,7 +69,6 @@ em {
 
 .content ol {
 	list-style-type: decimal;
-	padding: 0 0 14px 24px;
 }
 
 	.content ul ul,
@@ -98,6 +88,17 @@ em {
 	.content ol ol ol {
 		list-style: lower-roman;
 	}
+	
+	/*
+		Reset anyway, if you want to reset inside a .content div
+		(e.g. for the "fancy" ordered list addon)
+	*/
+	ol.reset,
+	ul.reset {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 
 code {
 	font-family: Consolas, Monaco, "Courier New", monospace;
@@ -106,9 +107,9 @@ code {
 }
 
 pre {
-	padding: 7px 14px;
+	padding: 6px 12px;
 	background: #F5F5F5;
-	margin: 0 0 14px;
+	margin: 0 0 12px;
 }
 
 blockquote, q {
@@ -117,9 +118,13 @@ blockquote, q {
 }
 
 blockquote {
-	padding: 0 0 0 24px;
-	background: url('../images/bquote.gif') no-repeat 0 5px;
+	padding: 0 0 0 12px;
 }
+
+	blockquote.fancy {
+		background: url(../images/bquote.gif) no-repeat 0 5px;
+		padding: 0 0 0 24px;
+	}
 
 blockquote cite {
 	font-size: 11px;
@@ -168,21 +173,11 @@ div.hr {
 .colorInverse a:visited { color: #DDD; text-decoration: none; border-bottom: 1px solid #777; }
 .colorInverse a:hover, .colorInverse a:active, .colorInverse a:focus { color: #FFF; border-bottom: 1px solid #CCC; }
 
-
-
-/* Addons! */
-/*To sort*/
-
-/*
-	Fancy ordered list
+/* 
+	Typography addons!
 */
 
-ol.reset,
-ul.reset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+/* Fancy ordered list */
 
 ol.fancy span {
 	width: 25px;
@@ -207,4 +202,3 @@ p.dateFunky { float: left; position: relative; margin-left: -42px; padding-top: 
 p.dateFunky * { display: block; text-align: center; width: 30px; color: #000; }
 p.dateFunky .day { font-size: 19px; font-family: Georgia, serif; line-height: 1; padding: 0 0 3px;}
 p.dateFunky .month { font-size: 11px; text-transform: uppercase; font-family: Georgia, serif; line-height: 1; }
-

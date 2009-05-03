@@ -1,20 +1,11 @@
 /*
 
-	IE6 Conditional comments for a Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Conditional comments for: general purpose classes
-	Desc:       IE6 conditional comments for the general module
-	Version:    0.3
+	Name:       IE6 conditional comments for
+	            Winston general module [0.3]
 
 */
 
-/*
-	Legendary Clearfix
-*/
+/* Legendary Clearfix */
 
 .clearfix,
 .cols,
@@ -24,16 +15,10 @@
 }
 
 /*
-
-	IE6 Conditional comments for a Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Conditional comments for: Avatars
-	Desc:       IE6 conditional comments for the avatars component
-	Version:    0.3
+    
+	Name:       IE6 conditional comments for
+	            Winston avatars module [0.3]
+	Desc:       Styles for the avatars component
 
 */
 

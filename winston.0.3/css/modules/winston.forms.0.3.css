@@ -1,14 +1,7 @@
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Form styles
+	Name:       Winston Form styles module [0.3]
 	Desc:       Basic form styling system
-	Version:    0.3
 
 */
 
@@ -40,10 +33,6 @@ select, option {
 	font-family: Arial, sans-serif;
 	font-size: 12px;
 }
-
-/*
-	Fork forms
-*/
 
 /* Forms with a winstonForm class get special treatment */
 
@@ -96,7 +85,7 @@ select, option {
 .formSuccess {
 	color: #008A0D;
 	background: #CFC;
-	padding: 8px;
+	padding: 12px;
 	border: 1px solid #008A0D;
-	margin: 0 0 10px;
+	margin: 0 0 12px;
 }

@@ -1,20 +1,11 @@
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Avatars
+	Name:       Winston avatars module [0.3]
 	Desc:       Styles for the avatars component
-	Version:    0.3
 
 */
 
-/*
-	Avatars
-*/
+/* Avatars */
 
 .avatar {
 	width: 48px;

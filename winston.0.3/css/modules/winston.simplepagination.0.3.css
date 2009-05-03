@@ -1,20 +1,11 @@
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       Simple pagination
+	Name:       Winston Simple pagination module [0.3]
 	Desc:       Basic styles for the simple pagination component
-	Version:    0.3
 
 */
 
-/*
-	Simple pagination
-*/
+/* Simple pagination */
 
 .simplePagination li {
 	float: left;

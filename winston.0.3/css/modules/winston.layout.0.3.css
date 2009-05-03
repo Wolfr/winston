@@ -1,21 +1,13 @@
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       General purposes classes
-	Desc:       A set of general purpose classes
-	            Use wisely!
-	Version:    0.3
+	Name:       Winston layout module [0.3]
+	Desc:       Styles for creating layouts, both grid style and % style
+	            Styles for image alignment on the grid
+	            Styles for centering anything
 
 */
 
-/*
-	Grid based column system
-*/
+/* Grid based column system (72px columns/24px gutter/10 columns) */
 
 .colsGrid .col {
 	float: left;
@@ -68,10 +60,11 @@
 .cols .spacingRightHalf { margin-right: 12px; }
 .cols .spacingBothHalf { margin-right: 12px; margin-left: 12px; }
 
-
 /*
+
 	Image aligment classes
 	Based on grid
+
 */
 
 img.alignleft {
@@ -84,10 +77,7 @@ img.alignright {
 	padding: 0 0 12px 24px;
 }
 
-
-/*
-	Center widthless wrap
-*/
+/* Center anything */
 
 .centerWidthlessWrap {
 	width: 100%;
@@ -100,4 +90,7 @@ img.alignright {
 	left: 50%;
 }
 
-/* Todo add third wrapper element */
+.centerWidthlessInner {
+	position: relative;
+	left: -50%;
+}

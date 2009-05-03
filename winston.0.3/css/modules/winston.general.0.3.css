@@ -1,21 +1,11 @@
 /*
 
-	A Winston module
-
-	Media:      screen, projection
-	License:    see LICENSE packaged with Winston
-	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-
-	Name:       General purposes classes
+	Name:       Winston general module [0.3]
 	Desc:       A set of general purpose classes
-	            Use wisely!
-	Version:    0.3
 
 */
 
-/*
-	Legendary Clearfix
-*/
+/* Legendary Clearfix */
 
 .clearfix:after,
 .cols:after,
@@ -41,11 +31,10 @@
 .p24 { padding: 24px; }
 .p0, .nopad { padding: 0; }
 
-.noborder, .noBorder { border: none !important; }
+.noBorder { border: none !important; }
 .border { border: 1px solid #C7C7C7; }
 
 .serif { font-family: "Times New Roman", Times, Georgia, serif; }
-.serifSpecial { font-family: "Hoefler Text", "Palatino Linotype", "Times New Roman", Times, Georgia, serif; }
 .uc { text-transform: uppercase; }
 .sC { font-variant: small-caps; }
 .lC { text-transform: lowercase; }
@@ -60,7 +49,7 @@
 	background: #FFF;
 	border: 1px solid #CCC;
 	margin: 0 0 12px;
-	background: url('../images/note.png') no-repeat scroll bottom right;
+	background: url(../images/note.png) no-repeat bottom right;
 }
 
 .helpTxt {
