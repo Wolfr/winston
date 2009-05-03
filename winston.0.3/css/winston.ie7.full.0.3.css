@@ -1,0 +1,23 @@
+/*
+
+	IE7 conditional comments
+
+	Media:      screen, projection
+	License:    see LICENSE packaged with Winston
+	Author:     Johan Ronsse <johan.ronsse@gmail.com>
+
+	Name:       IE7 conditional comments
+	Version:    0.3
+
+*/
+
+/*
+	Legendary Clearfix
+*/
+
+.clearfix,
+.cols,
+.section,
+.buttonHolder {
+	zoom: 1;
+}
