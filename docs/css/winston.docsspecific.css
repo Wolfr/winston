@@ -2,6 +2,10 @@
 	Docs specific
 */
 
+body {
+	background: #F5F5F5;
+}
+
 #header {
 	padding: 15px 0 40px;
 }
@@ -13,6 +17,7 @@
 	height: 100%;
 	border-right: 1px solid #CCC;
 	overflow-y: auto;
+	background: #FFF;
 }
 
 	#toc div {
@@ -27,6 +32,7 @@
 
 .example {
 	padding: 24px 24px 8px;
+	background: #FFF;
 	border: 1px solid #AAA;
 	margin: 0 0 12px;
 	position: relative;
@@ -41,8 +47,7 @@
 		top: 3px;
 		left: 3px;
 		font-size: 11px;
-		font-weight: 700;
-		color: #000;
+		color: #666;
 	}
 
 	iframe {
@@ -62,31 +67,16 @@
 		text-transform: uppercase;
 	}
 
-	h2:target,
-	h3:target {
-		color: #FFF;
-		background: #000;
-	}
-
-	h1 {
-		font-size: 98px;
-		letter-spacing: -5px;
-		text-transform: uppercase;
-		line-height: 1;
-		
-	}
-
-		#header h1 + p {
-			font-size: 11px;
-			font-weight: 300;
-			color: #000;
-			line-height: 1;
-			font-weight: 700;
-			white-space: nowrap;
-			padding-left: 10px;
-			position: relative;
-			bottom: 20px;
-		}
+h1 {
+	background: url(../images/winston_logo.png) no-repeat scroll top left;
+	width: 418px;
+	height: 97px;
+	font-size: 97px;
+	letter-spacing: -5px;
+	text-transform: uppercase;
+	line-height: 1;
+	text-indent: -9000px;
+}
 
 .id1 {
 	padding-left: 24px;
@@ -120,4 +110,12 @@
 
 	.people li a {
 		border: none;
+	}
+	
+	strong {
+		color: #333;
+	}
+	
+	code.marked {
+		background: #FFF;
 	}

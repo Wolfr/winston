@@ -34,6 +34,7 @@
 .noBorder { border: none !important; }
 .border { border: 1px solid #C7C7C7; }
 
+.mute { color: #666; }
 .serif { font-family: "Times New Roman", Times, Georgia, serif; }
 .uc { text-transform: uppercase; }
 .sC { font-variant: small-caps; }

@@ -75,6 +75,7 @@ a:focus { overflow: hidden; }
 .noBorder { border: none !important; }
 .border { border: 1px solid #C7C7C7; }
 
+.mute { color: #666; }
 .serif { font-family: "Times New Roman", Times, Georgia, serif; }
 .uc { text-transform: uppercase; }
 .sC { font-variant: small-caps; }
@@ -291,6 +292,7 @@ em {
 		Reset anyway, if you want to reset inside a .content div
 		(e.g. for the "fancy" ordered list addon)
 	*/
+
 	ol.reset,
 	ul.reset {
 		margin: 0;
@@ -303,6 +305,10 @@ code {
 	font-size: 12px;
 	line-height: 1.15;
 }
+
+	.secondaryContent code {
+		font-size: 11px;
+	}
 
 pre {
 	padding: 6px 12px;

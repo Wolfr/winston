@@ -33,11 +33,6 @@
  * Interface elements.
  ************************************/
 
-.syntaxhighlighter
-{
-	background-color: #FFF !important;
-}
-
 /* Highlighed line number */
 .syntaxhighlighter .line.highlighted .number
 {
