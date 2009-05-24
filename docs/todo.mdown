@@ -1,0 +1,5 @@
+* Update buttons CSS with buttons that work on irregular backgrounds
+* Add print stylesheet
+* Add ("ultimate") pagination component
+* Finish section on usability conventions
+* Get rid of those FamFamFam icons in the code examples (psds todo in syntax/icons_pimping_inprogress/
