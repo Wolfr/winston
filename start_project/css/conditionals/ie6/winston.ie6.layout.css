@@ -1,0 +1,31 @@
+/*
+    
+	Name:       IE6 conditional comments for
+	            Winston layout module [0.4]
+	Desc:       Styles for the layout module
+
+*/
+
+/* Clearfix */
+
+.cols,
+.colsGrid {
+	zoom: 1;
+}
+
+/* Center anything vertically */
+
+.centerVerticallyWrap {
+	position: relative;
+}
+
+.centerVertically[class] {
+	position: absolute;
+	top: 50%; }
+}
+
+.centerVerticallyInner {
+	position: relative;
+	top: -50%;
+	float: left;
+}

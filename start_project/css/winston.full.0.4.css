@@ -10,7 +10,7 @@
 	            amount of CSS in your project.
 
 	Author:     Johan Ronsse <johan.ronsse@gmail.com>
-	Version:    0.3
+	Version:    0.4
 
 	---------------------------------------------------------------------
 
@@ -25,7 +25,7 @@
 
 /*
 
-	Name:       Winston reset module [0.3]
+	Name:       Winston reset module [0.4]
 	Desc:       Resets commonly used HTML elements
 
 */
@@ -41,25 +41,22 @@ a:focus { overflow: hidden; }
 
 /*
 
-	Name:       Winston general module [0.3]
+	Name:       Winston general module [0.4]
 	Desc:       A set of general purpose classes
 
 */
 
-/* Legendary Clearfix */
 
-.clearfix:after,
-.cols:after,
-.section:after,
-.buttonHolder:after {
+/* General purpose classes */
+
+/* Clearfix */
+.clearfix:after {
 	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden;
 }
-
-/* General purpose classes */
 
 .hidden { display: none; }
 .block { display: block; }
@@ -102,12 +99,23 @@ a:focus { overflow: hidden; }
 
 /*
 
-	Name:       Winston layout module [0.3]
+	Name:       Winston layout module [0.4]
 	Desc:       Styles for creating layouts, both grid style and % style
 	            Styles for image alignment on the grid
 	            Styles for centering anything
 
 */
+
+/* Clearfix */
+
+.cols:after,
+.colsGrid:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 
 /* Grid based column system (72px columns/24px gutter/10 columns) */
 
@@ -163,10 +171,8 @@ a:focus { overflow: hidden; }
 .cols .spacingBothHalf { margin-right: 12px; margin-left: 12px; }
 
 /*
-
 	Image aligment classes
 	Based on grid
-
 */
 
 img.alignleft {
@@ -179,27 +185,45 @@ img.alignright {
 	padding: 0 0 12px 24px;
 }
 
-/* Center anything */
+/* Center anything horizontally  */
 
-.centerWidthlessWrap {
+.centerHorizontallyWrap {
 	width: 100%;
 	overflow: hidden;
 }
 
-.centerWidthless {
+.centerHorizontally {
 	float: left;
 	position: relative;
 	left: 50%;
 }
 
-.centerWidthlessInner {
+.centerHorizontallyInner {
 	position: relative;
 	left: -50%;
 }
 
+/* Center anything vertically */
+
+.centerVerticallyWrap {
+	height: 100%;
+	overflow: hidden;
+}
+
+.centerVertically[class] {
+	display: table;
+	position: static;
+}
+
+.centerVerticallyInner {
+	display: table-cell;
+	vertical-align: middle;
+	position: static;
+}
+
 /*
 
-	Name:       Winston typography module [0.3]
+	Name:       Winston typography module [0.4]
 	Desc:       Basic typography to start a project with
 
 */
@@ -409,30 +433,44 @@ p.dateFunky .month { font-size: 11px; text-transform: uppercase; font-family: Ge
 
 /*
 
-	Name:       Winston buttons module [0.3]
+	Name:       Winston buttons module [0.4]
 	Desc:       Styles for the buttons component
 
 */
 
+/* Clearfix */
+
+.buttonHolder:after,
+.buttonHolderRight:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Buttons */
+
 a.button:link,
 a.button:visited {
-	height: 24px;
-	line-height: 24px;
+	height: 22px;
+	line-height: 22px;
 	border: none !important;
 	white-space: nowrap;
 	text-decoration: none;
+	color: #287BC8 !important;
 }
 
 a.button:link span,
 a.button:visited span {
 	font-size: 11px;
-	line-height: 24px;
+	line-height: 22px;
 	font-weight: 700;
 }
 
 a.button * {
 	float: left;
-	background-image: url(../images/button.png);
+	background-image: url(../images/buttonbg.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
@@ -445,7 +483,7 @@ a.button * {
 	a.button:hover span,
 	a.button:active span,
 	a.button:focus span {
-		background-position: center -24px;
+		background-position: center -22px;
 	}
 
 	a.button:link b,
@@ -456,7 +494,7 @@ a.button * {
 	a.button:hover b,
 	a.button:active b,
 	a.button:focus b {
-		background-position: 0 -24px;
+		background-position: 0 -22px;
 	}
 
 	a.button:link i,
@@ -467,7 +505,7 @@ a.button * {
 	a.button:hover i,
 	a.button:active i,
 	a.button:focus i {
-		background-position: right -24px;
+		background-position: right -22px;
 	}
 
 /* Standard side width */
@@ -505,7 +543,7 @@ a.button i {
 
 /*
 
-	Name:       Winston datagrid module [0.3]
+	Name:       Winston datagrid module [0.4]
 	Desc:       Basic styles for styling tabular data
 
 */
@@ -534,37 +572,15 @@ table.datagrid tr.rowEven { background: #EEE; }
 
 table.datagrid th {
 	border-bottom: 1px solid #DDD;
-	padding: 5px 10px;
-	white-space: nowrap;
-}
-
-table.datagrid td.date,
-table.datagrid td.comments {
-	font-family: Arial, sans-serif;
-	font-size: 11px;
-	color: #666;
 }
 
 table.datagrid td {
-	padding: 5px 10px;
 	border-bottom: 1px solid #D7D7D7;
-}
-
-table.datagrid td:last-child,
-table.datagrid td.comments {
-	border-right: none;
-}
-
-table.datagrid td:first-child,
-table.datagrid td.date,
-table.datagrid th:first-child,
-table.datagrid th.date {
-	padding-left: 0;
 }
 
 /*
 
-	Name:       Winston links module [0.3]
+	Name:       Winston links module [0.4]
 	Desc:       Link styles: pick the ones you need
 
 */
@@ -631,7 +647,7 @@ a.halfmute:hover, a.halfmute:active, a.halfmute:focus { color: #B1C1F7; border-c
 
 /*
 
-	Name:       Winston Simple pagination module [0.3]
+	Name:       Winston Simple pagination module [0.4]
 	Desc:       Basic styles for the simple pagination component
 
 */
@@ -708,7 +724,7 @@ a.halfmute:hover, a.halfmute:active, a.halfmute:focus { color: #B1C1F7; border-c
 
 /*
 
-	Name:       Winston Form styles module [0.3]
+	Name:       Winston Form styles module [0.4]
 	Desc:       Basic form styling system
 
 */
@@ -801,14 +817,14 @@ select, option {
 
 /*
 
-	Name:       Winston avatars module [0.3]
+	Name:       Winston avatars module [0.4]
 	Desc:       Styles for the avatars component
 
 */
 
-/* Avatars */
 
 .avatar {
+	/* Default size is 48x48 */
 	width: 48px;
 	height: 48px;
 	background: #FFF;

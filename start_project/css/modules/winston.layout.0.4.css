@@ -1,11 +1,22 @@
 /*
 
-	Name:       Winston layout module [0.3]
+	Name:       Winston layout module [0.4]
 	Desc:       Styles for creating layouts, both grid style and % style
 	            Styles for image alignment on the grid
 	            Styles for centering anything
 
 */
+
+/* Clearfix */
+
+.cols:after,
+.colsGrid:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 
 /* Grid based column system (72px columns/24px gutter/10 columns) */
 
@@ -61,10 +72,8 @@
 .cols .spacingBothHalf { margin-right: 12px; margin-left: 12px; }
 
 /*
-
 	Image aligment classes
 	Based on grid
-
 */
 
 img.alignleft {
@@ -77,20 +86,38 @@ img.alignright {
 	padding: 0 0 12px 24px;
 }
 
-/* Center anything */
+/* Center anything horizontally  */
 
-.centerWidthlessWrap {
+.centerHorizontallyWrap {
 	width: 100%;
 	overflow: hidden;
 }
 
-.centerWidthless {
+.centerHorizontally {
 	float: left;
 	position: relative;
 	left: 50%;
 }
 
-.centerWidthlessInner {
+.centerHorizontallyInner {
 	position: relative;
 	left: -50%;
+}
+
+/* Center anything vertically */
+
+.centerVerticallyWrap {
+	height: 100%;
+	overflow: hidden;
+}
+
+.centerVertically[class] {
+	display: table;
+	position: static;
+}
+
+.centerVerticallyInner {
+	display: table-cell;
+	vertical-align: middle;
+	position: static;
 }

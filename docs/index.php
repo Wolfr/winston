@@ -1,124 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	
-	<title>Winston 0.3 – Introduction</title>
-
-	<link rel="stylesheet" href="../start_project/css/winston.full.0.3.css" type="text/css" media="screen" />
-
-	<!-- jQuery -->
-	<script src="../start_project/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
-	<script src="../start_project/js/jquery/jquery.shortcuts.min.js" type="text/javascript"></script>
-
-	<!-- Specific styling for this page only that is not part of Winston -->
-	<link rel="stylesheet" href="css/winston.docsspecific.css" type="text/css" media="screen" />
-
-	<!-- Helpers; don't load when live -->
-	<link rel="stylesheet" href="../start_project/css/winston.helpers.0.3.css" type="text/css" media="screen" />
-	<script src="../start_project/js/winston/winston.helpers.0.3.js" type="text/javascript"></script>
-	<script src="../start_project/js/jquery/jquery.cookie.min.js" type="text/javascript"></script>
-	
-	<!--  Syntax highlighter -->
-	<script src="js/syntax/scripts/shCore.js" type="text/javascript"></script>
-	<script src="js/syntax/scripts/shBrushCss.js" type="text/javascript"></script>
-	<script src="js/syntax/scripts/shBrushPlain.js" type="text/javascript"></script>
-	<script src="js/syntax/scripts/shBrushXml.js" type="text/javascript"></script>
-	<link type="text/css" rel="stylesheet" href="js/syntax/styles/shCore.css" media="screen" />
-	<link type="text/css" rel="stylesheet" href="js/syntax/styles/shThemeDefault.css" media="screen" />
-	
-	<!-- Cufon -->
-	<script src="../start_project/js/cufon/js/cufon.js" type="text/javascript"></script>
-	<script src="../start_project/js/cufon/fonts/Frutiger_LT_Std.font.js" type="text/javascript" charset="utf-8"></script>
-
-	<script type="text/javascript">
-		Cufon.replace('h2, h3', {
-		    color: '-linear-gradient(black, #555)'
-		});
-	</script>
-    
-</head>
+<?php require_once '_head.php' ?>
 <body>
 	<div id="container">
 
-		<div id="header">
-			<h1>Winston User Interface Library</h1>
-			<blockquote class="fancy"><p>&ldquo;I&#x27;m not here to say please.<br />I'm here to tell you what to do.&rdquo;</p></blockquote>
-		</div>
-		
-		<div id="toc" class="col-3">
-			<div class="content">
-				<h4 class="secondaryContent">Table of Contents</h4>
-				<ol>
-					<li>
-						<a href="index.html">Introduction</a>
-						<ol>
-							<li><a href="index.html#whatis">What is Winston?</a></li>
-							<li><a href="index.html#download">Download</a></li>
-							<li><a href="index.html#why">Why?</a></li>
-							<li><a href="index.html#usage">Usage</a></li>
-							<li><a href="index.html#demo">Demos</a></li>
-							<li><a href="index.html#thanks">Thanks!</a></li>
-						</ol>
-					</li>
-					<li>
-						<a href="conventions.html">Conventions</a>
-						<ol>
-							<li><a href="conventions.html#cssFileHandling">CSS file handling</a></li>
-							<li><a href="conventions.html#commenting">Commenting</a></li>
-							<li><a href="conventions.html#indentation">Indentation</a></li>
-							<li><a href="conventions.html#typography">Typography</a></li>
-							<li><a href="conventions.html#usabilityPrinciples">Usability conventions</a></li>
-							<li><a href="conventions.html#handlingDFC">Handling the default content problem</a></li>
-							<li><a href="conventions.html#presentationalMarkup">On presentational markup</a></li>
-						</ol>
-					</li>
-					<li>
-						<a href="layout.html">Layout</a>
-						<ol>
-							<li><a href="layout.html#buildingLayouts">Building layouts</a></li>
-							<li><a href="layout.html#centerAything">Center anything</a></li>
-						</ol>
-					</li>
-					<li>
-						<a href="components.html">Components</a>
-						<ol>
-							<li><a href="components.html#buttons">Buttons</a></li>
-							<!-- <li>Links
-								<ol>
-									<li>Basic</li>
-									<li>Borders</li>
-									<li>Advanced</li>
-								</ol>
-							</li> -->
-							<li><a href="components.html#simplePagination">Simple pagination</a></li>
-							<!-- <li><a href="#pagination">Pagination</a></li>
-							<li><a href="#modal">Modal</a></li>
-							<li><a href="#humanizedMessages">Humanized messages</a></li> -->
-							<li><a href="components.html#avatars">Avatars</a></li>
-						</ol>
-					</li>
-					<!-- <li>
-						<a href="#codeExamples">Code examples</a>
-						<ol>
-							<li>Search form</li>
-							<li>Sign in</li>
-							<li>
-								Simple form
-								<ol>
-									<li>Error handling</li>
-									<li>Success message</li>
-								</ol>
-							</li>
-							<li>Advanced form</li>
-							<li>Multistep form</li>
-							<li>Form-in-form</li>
-						</ol>
-					</li> -->
-				</ol>
-			</div>
-		</div>
+		<?php require_once '_header.php' ?>
+		<?php require_once '_toc.php' ?>
 
 		<h2 id="introduction">Introduction</h2>
 
@@ -166,9 +51,9 @@
 						index.html
 						- [css]
 							- [modules]
-							  winston.full.0.3.css
-							  winston.ie6.full.0.3.css
-							  winston.ie7.full.0.3.css
+							  winston.full.0.4.css
+							  winston.ie6.full.0.4.css
+							  winston.ie7.full.0.4.css
 						- [images]
 						- [js]
 							+ [cufon]

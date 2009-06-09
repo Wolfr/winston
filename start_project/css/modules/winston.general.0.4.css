@@ -1,24 +1,21 @@
 /*
 
-	Name:       Winston general module [0.3]
+	Name:       Winston general module [0.4]
 	Desc:       A set of general purpose classes
 
 */
 
-/* Legendary Clearfix */
 
-.clearfix:after,
-.cols:after,
-.section:after,
-.buttonHolder:after {
+/* General purpose classes */
+
+/* Clearfix */
+.clearfix:after {
 	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden;
 }
-
-/* General purpose classes */
 
 .hidden { display: none; }
 .block { display: block; }

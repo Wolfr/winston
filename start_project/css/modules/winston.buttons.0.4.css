@@ -1,9 +1,22 @@
 /*
 
-	Name:       Winston buttons module [0.3]
+	Name:       Winston buttons module [0.4]
 	Desc:       Styles for the buttons component
 
 */
+
+/* Clearfix */
+
+.buttonHolder:after,
+.buttonHolderRight:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Buttons */
 
 a.button:link,
 a.button:visited {

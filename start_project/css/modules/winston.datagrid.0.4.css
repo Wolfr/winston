@@ -1,6 +1,6 @@
 /*
 
-	Name:       Winston datagrid module [0.3]
+	Name:       Winston datagrid module [0.4]
 	Desc:       Basic styles for styling tabular data
 
 */
@@ -29,30 +29,8 @@ table.datagrid tr.rowEven { background: #EEE; }
 
 table.datagrid th {
 	border-bottom: 1px solid #DDD;
-	padding: 5px 10px;
-	white-space: nowrap;
-}
-
-table.datagrid td.date,
-table.datagrid td.comments {
-	font-family: Arial, sans-serif;
-	font-size: 11px;
-	color: #666;
 }
 
 table.datagrid td {
-	padding: 5px 10px;
 	border-bottom: 1px solid #D7D7D7;
-}
-
-table.datagrid td:last-child,
-table.datagrid td.comments {
-	border-right: none;
-}
-
-table.datagrid td:first-child,
-table.datagrid td.date,
-table.datagrid th:first-child,
-table.datagrid th.date {
-	padding-left: 0;
 }

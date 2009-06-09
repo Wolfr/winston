@@ -1,4 +1,6 @@
 * Update buttons CSS with buttons that work on irregular backgrounds
+  * small buttons, button mixes, some icon examples (add, edit, delete)
+  * fallbacks for IE
 * Add print stylesheet
 * Add ("ultimate") pagination component
 * Finish section on usability conventions
