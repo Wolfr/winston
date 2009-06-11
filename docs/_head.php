@@ -29,7 +29,7 @@
 
 	<script type="text/javascript">
 		Cufon.replace('h2, h3', {
-		    color: '-linear-gradient(black, #555)'
+		    color: '-linear-gradient(black, #333)'
 		});
 	</script>
     

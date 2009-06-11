@@ -47,13 +47,13 @@
 
 .simplePagination li.next a:link,
 .simplePagination li.next a:visited {
-	background: #FFF url(../images/sPNext.gif) no-repeat right -3px;
+	background: #FFF url(../images/simplepagination/sPNext.gif) no-repeat right -3px;
 }
 
 .simplePagination li.next a:hover,
 .simplePagination li.next a:active,
 .simplePagination li.next a:focus {
-	background: #E3E8F7 url(../images/sPNext.gif) no-repeat right -29px;
+	background: #E3E8F7 url(../images/simplepagination/sPNext.gif) no-repeat right -29px;
 }
 
 #container .simplePagination li.previous a,
@@ -63,14 +63,14 @@
 
 .simplePagination li.previous a:link,
 .simplePagination li.previous a:visited {
-	background: #FFF url(../images/spPrev.gif) no-repeat 0 -3px;
+	background: #FFF url(../images/simplepagination/spPrev.gif) no-repeat 0 -3px;
 }
 
 .simplePagination li.previous a:hover,
 .simplePagination li.previous a:active,
 .simplePagination li.previous a:focus {
-	background: #E3E8F7 url(../images/spPrev.gif) no-repeat 0 -29px;
+	background: #E3E8F7 url(../images/simplepagination/spPrev.gif) no-repeat 0 -29px;
 }
 
-.simplePagination li.next span { background: #FFF url(../images/sPNext.gif) no-repeat right -55px; }
-.simplePagination li.previous span { background: #FFF url(../images/sPPrev.gif) no-repeat 0 -55px; }
+.simplePagination li.next span { background: #FFF url(../images/simplepagination/sPNext.gif) no-repeat right -55px; }
+.simplePagination li.previous span { background: #FFF url(../images/simplepagination/sPPrev.gif) no-repeat 0 -55px; }

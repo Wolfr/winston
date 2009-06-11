@@ -35,7 +35,7 @@ a.button:visited span {
 }
 
 a.button * {
-	background-image: url(../../images/button.png);
+	background-image: url(../../images/buttons/button.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	float: left;

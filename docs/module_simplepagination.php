@@ -35,9 +35,9 @@
 				<span class="ex">Example</span>
 				<div class="simplePagination">
 					<ul class="clearfix">
-						<li><span>Previous</span></li>
+						<li class="previous"><span>Previous</span></li>
 						<li><strong>1/13</strong></li>
-						<li><a href="#">Next</a></li>
+						<li class="next"><a href="#">Next</a></li>
 					</ul>
 				</div>
 			</div>
@@ -46,9 +46,9 @@
 				<span class="ex">Example</span>
 				<div class="simplePagination">
 					<ul class="clearfix">
-						<li><a href="#">Previous</a></li>
+						<li class="previous"><a href="#">Previous</a></li>
 						<li><strong>2/13</strong></li>
-						<li><a href="#">Next</a></li>
+						<li class="next"><a href="#">Next</a></li>
 					</ul>
 				</div>
 			</div>
@@ -57,9 +57,9 @@
 				<span class="ex">Example</span>
 				<div class="simplePagination">
 					<ul class="clearfix">
-						<li><a href="#">Previous</a></li>
+						<li class="previous"><a href="#">Previous</a></li>
 						<li><strong>13/13</strong></li>
-						<li><span>Next</span></li>
+						<li class="next"><span>Next</span></li>
 					</ul>
 				</div>
 			</div>
@@ -69,9 +69,9 @@
 			<pre class="brush: xml">
 				<div class="simplePagination">
 					<ul class="clearfix">
-						<li><span>Previous</span></li>
+						<li class="previous"><span>Previous</span></li>
 						<li><strong>1/13</strong></li>
-						<li><a href="#">Next</a></li>
+						<li class="next"><a href="#">Next</a></li>
 					</ul>
 				</div>
 			</pre>
@@ -94,7 +94,7 @@
 				<span class="ex">Example</span>
 				<div class="simplePagination">
 					<ul class="clearfix">
-						<li><a href="#">Previous</a></li>
+						<li class="previous"><a href="#">Previous</a></li>
 						<li>
 							<select>
 								<option>1</option>
@@ -113,7 +113,7 @@
 								<option>14</option>
 							</select>
 						</li>
-						<li><a href="#">Next</a></li>
+						<li class="next"><a href="#">Next</a></li>
 					</ul>
 				</div>
 			</div>
@@ -128,4 +128,3 @@
 	</div>
 </body>
 </html>
-

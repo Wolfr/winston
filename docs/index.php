@@ -5,13 +5,17 @@
 		<?php require_once '_header.php' ?>
 		<?php require_once '_toc.php' ?>
 
-		<h2 id="introduction">Introduction</h2>
-
 		<div class="id1">
 			<div class="content">
 
+				<p class="intro">You are not building websites anymore. You are building full-fledged web applications. In order to build the best you can, in order to have room for innovation, you need a set of defaults so you don't have to deal with the <em>monkey jobs</em> anymore &ndash; to be able to spend more time solving the real design issues instead of booting up your Windows machine for the umptheenth time to solve <em>that</em> cross browser bug.</p>
+				
+				<p class="intro">That's Winston for you.</p>
+
+				<hr />
+
 				<h3 id="whatis">What is Winston?</h3>
-				<p>You are not building websites anymore. You are building full-fledged web applications. In order to build the best you can, in order to have room for innovation, you need a set of defaults so you don't have to deal with the <em>monkey jobs</em> anymore &ndash; to be able to spend more time solving the real design issues instead of booting up your Windows machine for the umptheenth time to solve <em>that</em> cross browser bug.</p>
+
 				<p>Winston is a user interface library consisting of common elements in websites and web applications. These elements work together in an ecosystem of conventions, guidelines and best practices. The goal of this library is to provide designers and developers with a solid base to build user interfaces. Think of it as <a href="http://rubyonrails.org/">Rails</a> for designers.</p>
 
 				<h3 id="download">Download</h3>
@@ -73,9 +77,13 @@
 				
 				<p class="secondaryContent mute">I know this isn't ideal: for later versions I plan to make a "builder" so you can just check the modules you need and then you're good to go. For instance, the [images] folder probably contains a lot of things you don't need at this point.</p>
 
-				<h3 id="demo">Demos</h3>
-				<p>Nobody likes plowing through documentation and sets of conventions without knowing first what to expect. Time is valuable to anyone. That is why this section features some demo pages built using Winston. So you can get a sense of what you can do before investing any time in this.</p>
-				<p><strong>No demo's yet!</strong></p>
+				<h3 id="testsuite">Test suite</h3>
+
+				<p>Nobody likes plowing through documentation and sets of conventions without knowing first what to expect. Time is valuable to anyone.</p>
+				
+				<p>Check out the test suite pages for <a href="../test_suite/typography/index.html">typography</a>, <a href="../test_suite/buttons/index.html">buttons</a> and <a href="../test_suite/layout/index.html">layout</a>.</p>
+				
+				<p>So you can get a sense of what you can do before investing any time in this.</p>
 			
 			</div>
 		</div>

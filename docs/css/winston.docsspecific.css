@@ -30,6 +30,15 @@ body {
 	margin: 0 0 0 360px;
 }
 
+p.intro {
+	font-family: Georgia;
+	font-size: 17px;
+}
+
+h2, h3 {
+	color: #FFF;
+}
+
 .example {
 	padding: 24px 24px 8px;
 	background: #FFF;

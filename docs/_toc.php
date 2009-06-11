@@ -9,7 +9,7 @@
 					<li><a href="index.php#download">Download</a></li>
 					<li><a href="index.php#why">Why?</a></li>
 					<li><a href="index.php#usage">Usage</a></li>
-					<li><a href="index.php#demo">Demos</a></li>
+					<li><a href="index.php#testsuite">Test suite</a></li>
 					<li><a href="index.php#thanks">Thanks!</a></li>
 				</ol>
 			</li>
