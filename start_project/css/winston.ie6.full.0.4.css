@@ -11,6 +11,12 @@
 	zoom: 1;
 }
 
+/* Fix image rendering */
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
 /*
     
 	Name:       IE6 conditional comments for
@@ -32,11 +38,37 @@
 
 */
 
-/* Clearfix */
+/*
+	Grid based column system
+*/
 
-.cols,
 .colsGrid {
 	zoom: 1;
+}
+
+/*
+	Simple column system
+*/
+
+.cols {
+	zoom: 1;
+}
+
+/* Three columns */
+.col-2d3 { width: 66.5%; }
+.col-1d3 { width: 33.2%; }
+
+/*
+	Center anything* horizontally
+	(not really anything, see test_suite layout)
+*/
+
+/* Make sure centred col grids behave as expected */
+.centerHorizontallyInner .colsGrid,
+.centerHorizontallyInner .cols,
+.centerHorizontallyInner .col {
+	float: left;
+	position: relative;
 }
 
 /* Center anything vertically */
@@ -47,7 +79,7 @@
 
 .centerVertically[class] {
 	position: absolute;
-	top: 50%; }
+	top: 50%;
 }
 
 .centerVerticallyInner {
@@ -68,4 +100,10 @@
 .buttonHolder,
 .buttonHolderRight {
 	zoom: 1;
+}
+
+/* Buttons */
+
+a.button * {
+	background-image: url(../images/button.gif);
 }

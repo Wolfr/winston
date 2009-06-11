@@ -1,0 +1,115 @@
+/*
+
+	Name:       Winston typography.common module [0.4]
+	Desc:       Provides basic typography to start a project with
+	            These elements are used on almost any website.
+*/
+
+/* Typography and text styles */
+
+body {
+	font: 300 13px Arial, sans-serif;
+	line-height: 1.5; /* Safari 2.0.4 */
+	color: #454545;
+}
+
+/* Headings */
+h1, h2, h3 {
+	line-height: 1.1;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+	h1, h2, h3, h4 { 
+		font-weight: 700;
+		color: #000;
+		padding: 0 0 12px;
+	}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 13px;
+}
+
+p {
+	padding: 0 0 12px;
+}
+
+strong {
+	font-weight: 700;
+	color: #000;
+}
+
+em {
+	font-style: italic;
+}
+
+.content ol {
+	padding: 0 0 12px 28px;
+}
+
+.content ul {
+	list-style: disc;
+	padding: 0 0 12px 24px;
+}
+
+.content ol {
+	list-style-type: decimal;
+}
+
+	.content ul ul,
+	.content ol ul,
+	.content ol ol {
+		padding-bottom: 0;
+	}
+
+	.content ul ol {
+		padding: 0 0 0 24px;
+	}
+
+	.content ol ol {
+		list-style: upper-roman;
+	}
+
+	.content ol ol ol {
+		list-style: lower-roman;
+	}
+	
+.content dl {
+	padding: 0 0 0 12px;
+}
+
+.content dt {
+	font-weight: 700;
+	color: #000;
+}
+
+.content dd {
+	padding: 0 0 12px;
+}
+
+blockquote, q {
+	font-style: italic;
+	font-family: Georgia, serif;
+}
+
+blockquote {
+	padding: 0 0 0 12px;
+}
+
+/* Horizontal rules */
+
+hr {
+	height: 1px;
+	background: #CCC;
+	border: 0;
+	font-size: 0;
+	margin: 12px 0 24px;
+	line-height: 0;
+}

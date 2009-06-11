@@ -13,9 +13,14 @@ table.datagrid  {
 
 table.datagrid td,
 table.datagrid th {
-	padding: 7px;
-	font-size: 11px;
+	padding: 6px 12px;
 }
+
+	table.datagridSmall td,
+	table.datagridSmall th {
+		padding: 6px;
+		font-size: 11px;
+	}
 
 table.datagrid th {
 	font-weight: 700;
@@ -28,9 +33,10 @@ table.datagrid tr.rowOdd { background: #FFF; }
 table.datagrid tr.rowEven { background: #EEE; }
 
 table.datagrid th {
-	border-bottom: 1px solid #DDD;
+	border: 1px solid #CCC;
+	background: #F5F5F5;
 }
 
 table.datagrid td {
-	border-bottom: 1px solid #D7D7D7;
+	border: 1px solid #CCC;
 }

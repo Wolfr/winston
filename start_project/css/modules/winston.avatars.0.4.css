@@ -36,7 +36,7 @@
 	.av96, .av96 img { width: 96px; height: 96px; }
 	.av128, .av128 img { width: 128px; height: 128px; }
 
-	.av24 .avOverlay { background: url(../images/av24_overlay.png) no-repeat; }
-	.av48 .avOverlay { background: url(../images/av48_overlay.png) no-repeat; }
-	.av96 .avOverlay { background: url(../images/av96_overlay.png) no-repeat; }
-	.av128 .avOverlay { background: url(../images/av128_overlay.png) no-repeat; }
+	.av24 .avOverlay { background: url(../images/avatars/av24_overlay.png) no-repeat; }
+	.av48 .avOverlay { background: url(../images/avatars/av48_overlay.png) no-repeat; }
+	.av96 .avOverlay { background: url(../images/avatars/av96_overlay.png) no-repeat; }
+	.av128 .avOverlay { background: url(../images/avatars/av128_overlay.png) no-repeat; }

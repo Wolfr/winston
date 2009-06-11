@@ -32,7 +32,7 @@
 .border { border: 1px solid #C7C7C7; }
 
 .mute { color: #666; }
-.serif { font-family: "Times New Roman", Times, Georgia, serif; }
+.serif { font-family: Georgia, serif; }
 .uc { text-transform: uppercase; }
 .sC { font-variant: small-caps; }
 .lC { text-transform: lowercase; }
@@ -41,13 +41,6 @@
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-}
-
-.note {
-	background: #FFF;
-	border: 1px solid #CCC;
-	margin: 0 0 12px;
-	background: url(../images/note.png) no-repeat bottom right;
 }
 
 .helpTxt {

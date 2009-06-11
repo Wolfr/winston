@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	
+	<title>Test_suite/typography</title>
+
+	<!-- Winston -->
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.reset.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.typography.common.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.typography.uncommon.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.datagrid.0.4.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.layout.0.4.css" type="text/css" media="screen" />
+
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.layout.0.4.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.layout.0.4.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<style type="text/css" media="screen">
+		
+		body {
+			padding: 20px;
+		}
+		
+		.yes {
+			color: green;
+			font-weight: 700;
+		}
+		
+		.datagrid th.yes {
+			color: #FFF;
+			background: green;
+		}
+		
+		.no {
+			color: red;
+			font-weight: 700;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="content">
+
+		<h2>Test_suite/typography</h2>
+		<p>This test includes:</p>
+	
+		<ul>
+			<li>winston.reset.0.4.css</li>
+			<li>winston.layout.0.4.css (+conditionals)</li>
+			<li><strong>winston.typography.0.4.css</strong></li>
+			<li>winston.datagrid.0.4.css</li>
+		</ul>
+		
+		<hr />
+		
+		<p><strong style="color: green;">All <a href="http://developer.yahoo.com/yui/articles/gbs/">A-grade browsers</a> pass the typography test.</strong></p>
+		
+		<hr />
+		
+		<h3>Undefined elements</h3>
+
+		<h4>Not defined on purpose</h4>
+
+		<div class="colsGrid">
+			<div class="col col-4">
+				<p>Some elements of HTML4 do not have defined styles on purpose. Some are deprecated (font), seldom used (bdo, applet), shouldn't be used because the internet has moved on (area) or aren't supposed to have default styles (div, span).</p>
+				<p>Winston typography doesn't define h5 and h6 because if your structure is this deep, you should be using different pages, not headings, to structure your document.</p>
+			</div>
+			<div class="col col-4 colLast">
+				<p>The (by default) undefined elements are <code>applet, area, b, base, basefont, bdo, br, caption, center, col, colgroup, dfn, dir, div, frame, frameset, h5, h6, head, hr, html, i, iframe, img, input, isindex, link, map, menu, meta, noframes, noscript, object, optgroup, option, param, s, samp, script, select, small, span, strike, style, title, tt, u and var.</code></p>
+			</div>
+		</div>
+		
+		<h4>Defined in separate modules</h4>
+		
+		<p>All table styles are defined in <code>winston.datagrid.css</code>, all link styles in <code>winston.links.0.4.css</code>.
+			
+		<hr />
+		
+		<h3>HTML4 elements defined (typography.common)</h3>
+		
+		<table border="0" cellspacing="0" cellpadding="0" class="datagrid content" style="width: 960px;">
+			<tr>
+				<th width="15%">Element name</th>
+				<th width="15%">Meaning</th>
+				<th width="5%">Defined?</th>
+				<th width="20%">Notes</th>
+				<th width="45%">Example</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>anchor</td>
+				<td class="yes">Yes</td>
+				<td>Used for links (links are separated in a module)</td>
+				<td><a href="#">This a link</a></td>
+			</tr>
+			<tr>
+				<td>em</td>
+				<td>Used for emphasis</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td><em>emphasis</em></td>
+			</tr>
+			<tr>
+				<td>strong</td>
+				<td>Used for emphasis</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td><strong>Strong</strong></td>
+			</tr>
+			<tr>
+				<td>h1</td>
+				<td>heading 1</td>
+				<td class="yes">Yes</td>
+				<td>First level heading</td>
+				<td><h1>h1 heading</h1></td>
+			</tr>
+			<tr>
+				<td>h2</td>
+				<td>heading 2</td>
+				<td class="yes">Yes</td>
+				<td>Second level heading</td>
+				<td><h2>h2 heading</h2></td>
+			</tr>
+			<tr>
+				<td>h3</td>
+				<td>heading 3</td>
+				<td class="yes">Yes</td>
+				<td>Third level heading</td>
+				<td><h3>h3 heading</h3></td>
+			</tr>
+			<tr>
+				<td>h4</td>
+				<td>heading 4</td>
+				<td class="yes">Yes</td>
+				<td>Fourth level heading</td>
+				<td><h4>h4 heading</h4></td>
+			</tr>
+			<tr>
+				<td>p</td>
+				<td>paragraph</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id magna. Proin euismod vestibulum tortor. Vestibulum eget nisl. Donec interdum quam at nunc. In laoreet orci sit amet sem. In sed metus ac nunc blandit ultricies.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>q</td>
+				<td>inline citation</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>
+					<p>And he said <q>May the gods be with you!</q></p>
+				</td>
+			</tr>
+			<tr>
+				<td>blockquote</td>
+				<td>block citation</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>
+					<p>From Martin Luther Kings' famous <em>I have a Dream</em>-speech:</p>
+					<blockquote>
+						<p>I have a dream that one day this nation will rise up and live out the true meaning of its creed: "We hold these truths to be self-evident: that all men are created equal."</p>
+					</blockquote>
+					<p>Source: <a href="http://www.youtube.com/watch?v=I0F4iXEzOqY">Youtube</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td>ol</td>
+				<td>ordered list</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>
+					<ol>
+						<li>Apple</li>
+						<li>Carrot</li>
+						<li>Banana</li>
+					</ol>
+				</td>
+			</tr>
+			<tr>
+				<td>ul</td>
+				<td>unordered list</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>
+					<ul>
+						<li>Apple</li>
+						<li>Carrot</li>
+						<li>Banana</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dl</td>
+				<td>definition list</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>
+					<dl>
+						<dt>Apple</dt>
+						<dd>the round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh. Many varieties have been developed as dessert or cooking fruit or for making cider.</dd>
+						<dt>Banana</dt>
+						<dd>a long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe.</dd>
+					</dl>
+				</td>
+			</tr>
+		</table>
+		
+		<hr />
+
+		<h3>HTML4 elements defined (typography.uncommon)</h3>
+		
+		<table border="0" cellspacing="0" cellpadding="0" class="datagrid content" style="width: 960px;">
+			<tr>
+				<th width="15%">Element name</th>
+				<th width="15%">Meaning</th>
+				<th width="5%">Defined?</th>
+				<th width="20%">Notes</th>
+				<th width="45%">Example</th>
+			</tr>
+			<tr>
+				<td>abbr</td>
+				<td>abbreviation</td>
+				<td class="yes">Yes</td>
+				<td>Used for abbreviations</td>
+				<td><abbr title="Cable News Network">CNN</abbr></td>
+			</tr>
+			<tr>
+				<td>code</td>
+				<td>example code (inline)</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td><p>Example code like <code>alert("Stack... overflow")</code> lorem ipsum...</p></td>
+			</tr>
+			<tr>
+				<td>pre</td>
+				<td>example code (block)</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td><pre>alert("Stack... overflow")</pre>
+			</tr>
+			<tr>
+				<td>kbd</td>
+				<td>text to be entered by the user</td>
+				<td class="yes">Yes</td>
+				<td>Abused for showing keyboard shortcuts</td>
+				<td><kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>⌃</kbd></td>
+			</tr>
+			<tr>
+				<td>sub</td>
+				<td>subscript</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>Reference<sub>3</sub></td>
+			</tr>
+			<tr>
+				<td>sup</td>
+				<td>superscript</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td>Reference<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td>del and ins</td>
+				<td>Deleted and inserted text</td>
+				<td class="yes">Yes</td>
+				<td>/</td>
+				<td><del>beleif</del> <ins>Believe</ins> in something</td>
+			</tr>
+		</table>
+
+		<hr />
+
+</body>
+</html>
