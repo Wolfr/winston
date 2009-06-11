@@ -27,7 +27,8 @@
 				<ol>
 					<li><a href="module_layout.php">Module: Layout</a>
 						<ol>
-							<li><a href="module_layout.php#buildingLayouts">Building layouts</a></li>
+							<li><a href="module_layout.php#gridBasedColumns">Grid based columns</a></li>
+							<li><a href="module_layout.php#percentageBasedColumns">Percentage based columns</a></li>
 							<li><a href="module_layout.php#centerAnythingHorizontally">Center anything (horizontally)</a></li>
 							<li><a href="module_layout.php#centerAnythingVertically">Center anything (vertically)</a></li>
 						</ol>

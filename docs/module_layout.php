@@ -7,32 +7,31 @@
 
 		<h2 id="layout">Layout module</h2>
 
-		<div class="col-5 content">
+		<div class="col-6 content">
 			<p>Ah, layout. Every web designers' favorite part.</p>
 
 			<p>To use the layout module you will need:</p>
 			<ul>
 				<li><code>winston.reset.0.4.css</code></li>
 				<li><code>winston.layout.0.4.css</code></li>
-				<li><code>winston.ie6.full.0.4.css</code> (IE6 support for vertical centering)</li>
+				<li><code>winston.ie6.layout.0.4.css</code> (IE6 support for vertical centering)</li>
+				<li><code>winston.ie7.layout.0.4.css</code> (IE7 clearfix)</li>
 			</ul>
 
 			<p>Or alternatively the full versions of each file:</p>
 			<ul>
 				<li><code>winston.full.0.4.css</code></li>
 				<li><code>winston.ie6.full.0.4.css</code> (IE6 support for vertical centering)</li>
+				<li><code>winston.ie7.full.0.4.css</code> (IE7 clearfix)</li>
 			</ul>
 
 		</div>
 
-		<h3 id="buildingLayouts">Building layouts using the column systems</h3>
+		<h3 id="gridBasedColumns">Grid based column system</h3>
 
 		<div class="content">
-			<div class="col-5">
-
-				<p>To layout our user interface, we use a grid. The grid depends on the application. We know a few things: we want to keep things within a 960px wide frame; we want enough space (>20px) between columns; and we want the reading length of text to be proper.</p>
-				<p>This is what the CSS for the default 10 column grid looks like:</p>
-			</div>
+			<p>To layout our user interface, we use a grid. The grid depends on the application. We know a few things: we want to keep things within a 960px wide frame; we want enough space (>20px) between columns; and we want the reading length of text to be proper.</p>
+			<p>This is what the CSS for the default 10 column grid looks like:</p>
 		</div>
 
 		<pre class="brush: css;">
@@ -49,13 +48,18 @@
 			.last { margin-right: 0 !important; }
 		</pre>
 
-		<div class="col-5">
-			<p>In Winston all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
-			<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
-			<p>I tend to use the <a href="http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
-			<p>Here's an example of three:</p>
-		</div>
+		<p>In Winston all columns live in a <code>&lt;div&gt;</code> with a <code>.cols</code> class.</p>
+		<p>The system uses floats to define columns. Because of this it is necessary to wrap the floats in a container that gets cleared.</p>
+		<p>Winston uses the <a href="http://www.positioniseverything.net/easyclearing.html">clearfix</a> method. Some people prefer to clutter their markup with nonsense like <code>&lt;br style=&quot;clear: both&quot; /&gt;</code>. Don't do this.</p>
+		<p>Here's an example of three columns:</p>
 
+		<style type="text/css" media="screen">
+			
+			.col {
+				background: #DDD;
+			}
+			
+		</style>
 		<div class="cols">
 			<div class="col col-2">
 				This is column A.
@@ -89,13 +93,112 @@
 			&lt;/div&gt;
 		</pre>
 
-		<div class="content col-5">
-			<p>We can use this column system to create layouts. However, not everything fits on the grid. Websites and web applications are not a piece of paper: we can't go Joseph Muller Brockmann-style when rewiring the latest Wordpress interface. Depending on the situation, you might consider working with another type of column system, based on percentages.</p>
+
+		<h3 id="percentageBasedColumns">Percentage based column system</h3>
+
+		<p>The grid system is an easy way to create layouts. However, not everything fits on the grid. Websites and web applications are not a piece of paper: we can't go Joseph Muller Brockmann-style when rewiring the latest Wordpress interface. Depending on the situation, you might consider working with another type of column system, based on percentages.</p>
+		<p>Winston provides such a system: structurally it works like the grid system but it uses different class names.</p>
+		<p>Here's the 3 columns again, but with the percentage based system:</p>
+		
+		<style type="text/css" media="screen">
+			
+			.col-1d3, .col-1d2 {
+				background: #DDD;
+			}
+			
+		</style>
+		<div class="cols">
+			<div class="col col-1d3">
+				This is column A.
+			</div>
+			<div class="col col-1d3">
+				This is column B.
+			</div>
+			<div class="col col-1d3">
+				This is column C.
+			</div>
+		</div>
+		
+		<br />
+		
+		<p>This is what the code looks like:</p>
+		
+		<pre class="brush: xml;">
+		<div class="cols">
+			<div class="col col-1d3">
+				This is column A.
+			</div>
+			<div class="col col-1d3">
+				This is column B.
+			</div>
+			<div class="col col-1d3">
+				This is column C.
+			</div>
+		</div>
+		</pre>
+		
+		<p>1d3 stands for 1/3. Since we can't use slashes in class names, we use 'd'. So if you wanted to have 2 columns, each 50/50, then you would code it like this:</p>
+		
+		<pre class="brush: xml;">
+		<div class="cols">
+			<div class="col col-1d2">
+				This is column A.
+			</div>
+			<div class="col col-1d2">
+				This is column B.
+			</div>
+		</div>
+		</pre>
+		
+		<p>Which would result in:</p>
+
+		<div class="cols">
+			<div class="col col-1d2">
+				This is column A.
+			</div>
+			<div class="col col-1d2">
+				This is column B.
+			</div>
+		</div>
+		<br />
+		<p>If you want some spacing inside those columns, you can use the provided classes to do this:</p>
+		
+		<pre class="brush: css;">
+			.cols .spacingLeft { margin-left: 24px; }
+			.cols .spacingLeftHalf { margin-left: 12px; }
+			.cols .spacingRight { margin-right: 24px; }
+			.cols .spacingRightHalf { margin-right: 12px; }
+			.cols .spacingBothHalf { margin-right: 12px; margin-left: 12px; }
+		</pre>
+		
+		<p>Using these classes you can get a result like this:</p>
+		
+		<div class="example">
+			<span class="ex">Percentage Columns example</span>
+			<div class="cols">
+				<div class="col col-1d3">
+					<div class="spacingRight">
+						This is column A. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id magna. Proin euismod vestibulum tortor. Vestibulum eget nisl. Donec interdum quam at nunc. In laoreet orci sit amet sem. In sed metus ac nunc blandit ultricies. Maecenas sed tortor. 
+					</div>
+				</div>
+				<div class="col col-1d3">
+					<div class="spacingBothHalf">
+						This is column B. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id magna. Proin euismod vestibulum tortor. Vestibulum eget nisl. Donec interdum quam at nunc. In laoreet orci sit amet sem. In sed metus ac nunc blandit ultricies. Maecenas sed tortor. 
+					</div>
+				</div>
+				<div class="col col-1d3">
+					<div class="spacingLeft">
+						This is column C. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id magna. Proin euismod vestibulum tortor. Vestibulum eget nisl. Donec interdum quam at nunc. In laoreet orci sit amet sem. In sed metus ac nunc blandit ultricies. Maecenas sed tortor. 
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<h3 id="centerAnythingHorizontally">Center anything horizontally</h3>
 		
 		<p>This is a div structure that you can use to center anything horizontally. Normally block elements need a defined width to center them in CSS. Using this div structure you can center anything. It's ugly but it works.</p>
+		
+		<p>Some extra measures have to be taken for older browsers like IE6 and Firefox though, so use with caution (see: test_suite/layout/).</p>
 
 		<pre class="brush: xml;">
 		<div class="centerHorizontallyWrap">
