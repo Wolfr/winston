@@ -7,9 +7,10 @@
 
 */
 
-/* Clearfix */
+/*
+	Grid based column system 
+*/
 
-.cols:after,
 .colsGrid:after {
 	content: ".";
 	display: block;
@@ -18,13 +19,12 @@
 	visibility: hidden;
 }
 
-/* Grid based column system (72px columns/24px gutter/10 columns) */
-
 .colsGrid .col {
 	float: left;
 	margin-right: 24px;
 }
 
+/* (72px columns/24px gutter/10 columns) */
 .col-1 { width: 72px; }
 .col-2 { width: 168px; }
 .col-3 { width: 264px; }
@@ -40,6 +40,14 @@
 /*
 	Simple column system
 */
+
+.cols:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 
 .cols .col {
 	float: left;
@@ -89,7 +97,10 @@ img.alignright {
 	padding: 0 0 12px 24px;
 }
 
-/* Center anything horizontally  */
+/*
+	Center anything* horizontally
+	(not really anything, see test_suite layout)
+*/
 
 .centerHorizontallyWrap {
 	width: 100%;
