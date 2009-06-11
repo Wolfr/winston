@@ -31,17 +31,17 @@ a.button:visited {
 a.button:link span,
 a.button:visited span {
 	font-size: 11px;
-	line-height: 22px;
 	font-weight: 700;
 }
 
 a.button * {
-	float: left;
-	background-image: url(../images/buttonbg.png);
+	background-image: url(../../images/button.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
+	float: left;
+	height: 100%;
 }
-	
+
 	a.button:link span,
 	a.button:visited span {
 		background-position: center top;
@@ -73,6 +73,11 @@ a.button * {
 	a.button:active i,
 	a.button:focus i {
 		background-position: right -22px;
+	}
+	
+	a.button i:after,
+	a.button b:after {
+		content: ".";
 	}
 
 /* Standard side width */

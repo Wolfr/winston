@@ -1,0 +1,427 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	
+	<title>Test_suite/buttons</title>
+
+	<!-- Winston -->
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.reset.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.typography.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.datagrid.0.4.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.buttons.0.4.css" type="text/css" media="screen" />
+
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.buttons.0.4.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.buttons.0.4.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<style type="text/css" media="screen">
+		
+		body {
+			padding: 20px;
+		}
+		
+		.yes {
+			color: green;
+			font-weight: 700;
+		}
+		
+		.datagrid th.yes {
+			color: #FFF;
+			background: green;
+		}
+		
+		.no {
+			color: red;
+			font-weight: 700;
+		}
+		
+		.buttonRow {
+			padding: 6px;
+			background: #FFF;
+			width: 300px;
+			border: 1px solid #CCC;
+			/* Border radius */
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="content">
+
+		<h2>Test_suite/buttons</h2>
+		<p>Includes:</p>
+	
+		<ul>
+			<li>winston.reset.0.4.css</li>
+			<li>winston.typography.0.4.css</li>
+			<li>winston.datagrid.0.4.css</li>
+			<li><strong>winston.buttons.0.4.css</strong></li>
+		</ul>
+		
+		<table border="0" cellspacing="0" cellpadding="0" class="datagrid" style="width: 960px;">
+			<thead>
+				<tr>
+					<th>Browser</th>
+					<th>Version</th>
+					<th>OS</th>
+					<th>Passes basic button test?</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th colspan="3">Works?</th>
+					<th class="yes">Yes</th>
+					<th>/</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Firefox</td>
+					<td>2</td>
+					<td>OSX</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Firefox</td>
+					<td>2</td>
+					<td>Windows</td>
+					<td>Untested</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Firefox</td>
+					<td>3</td>
+					<td>OSX</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Firefox</td>
+					<td>3</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Firefox</td>
+					<td>3.5</td>
+					<td>OSX</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Firefox</td>
+					<td>3.5</td>
+					<td>Windows</td>
+					<td>Untested</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Opera</td>
+					<td>9.64</td>
+					<td>OSX</td>
+					<td class="yes">Yes</td>
+					<td>basic_button_test: Vertical alignment is slightly off</td>
+				</tr>
+				<tr>
+					<td>Opera</td>
+					<td>9.64</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>basic_button_test: Vertical alignment is perfect</td>
+				</tr>
+				<tr>
+					<td>Opera</td>
+					<td>10 (beta)</td>
+					<td>OSX</td>
+					<td class="yes">Yes</td>
+					<td>basic_button_test: Vertical alignment is slightly off</td>
+				</tr>
+				<tr>
+					<td>Opera</td>
+					<td>10 (beta)</td>
+					<td>Win</td>
+					<td>Untested</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Safari</td>
+					<td>3</td>
+					<td>OSX</td>
+					<td>Untested</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Safari</td>
+					<td>3</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Safari</td>
+					<td>4</td>
+					<td>OSX</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Safari</td>
+					<td>4</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Google Chrome</td>
+					<td>2</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Internet Explorer</td>
+					<td>6</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>! Using gif replacement</td>
+				</tr>
+				<tr>
+					<td>Internet Explorer</td>
+					<td>7</td>
+					<td>Windows</td>
+					<td>Untested</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Internet Explorer</td>
+					<td>8</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>Internet Explorer</td>
+					<td>7 (8 in compatibility mode)</td>
+					<td>Windows</td>
+					<td class="yes">Yes</td>
+					<td>/</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<br /><br />
+	<h3>Basic button</h3>
+	
+	<div class="buttonHolder">
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button</span>
+			<i>&nbsp;</i>
+		</a>
+	</div>
+
+	<br /><br />
+	<h3>Basic button (really long label)</h3>
+	
+	<div class="buttonHolder">
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>This is a really long button label</span>
+			<i>&nbsp;</i>
+		</a>
+	</div>
+
+	<br /><br />
+	<h3>Basic button (multiple)</h3>
+	
+	<div class="buttonHolder">
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 1</span>
+			<i>&nbsp;</i>
+		</a>
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 2</span>
+			<i>&nbsp;</i>
+		</a>
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 3</span>
+			<i>&nbsp;</i>
+		</a>
+	</div>
+	
+	<br /><br />
+	<h3>Basic button (right)</h3>
+	
+	<div class="buttonHolderRight">
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 1</span>
+			<i>&nbsp;</i>
+		</a>
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 2</span>
+			<i>&nbsp;</i>
+		</a>
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 3</span>
+			<i>&nbsp;</i>
+		</a>
+	</div>
+	
+	<br /><br />
+	<h3>Basic button compared with button and input submit element</h3>
+	
+	<a class="button" href="#">
+		<b>&nbsp;</b>
+		<span>Button</span>
+		<i>&nbsp;</i>
+	</a>
+	&nbsp;
+	<button>
+		Button
+	</button>
+
+	<input type="submit" value="Button" />
+	
+	<br /><br />
+	<h3>Basic button placed on custom element buttonRow</h3>
+	
+	<div class="buttonHolder buttonRow">
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 1</span>
+			<i>&nbsp;</i>
+		</a>
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 2</span>
+			<i>&nbsp;</i>
+		</a>
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 3</span>
+			<i>&nbsp;</i>
+		</a>
+		<a class="button" href="#">
+			<b>&nbsp;</b>
+			<span>Button 4</span>
+			<i>&nbsp;</i>
+		</a>
+	</div>
+
+	<br /><br />
+	<h3>Basic button placed on custom element buttonRow (no non breaking spaces)</h3>
+	
+	<div class="buttonHolder buttonRow">
+		<a class="button" href="#">
+			<b></b><span>Button 1</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 2</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 3</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 4</span><i></i>
+		</a>
+	</div>
+
+	<br /><br />
+	<h3>PNG vs GIF test</h3>
+	
+	<div class="buttonHolder buttonRow" style="background: red;">
+		<a class="button" href="#">
+			<b></b><span>Button 1</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 2</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 3</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 4</span><i></i>
+		</a>
+	</div>
+
+	<div class="buttonHolder buttonRow" style="background: purple;">
+		<a class="button" href="#">
+			<b></b><span>Button 1</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 2</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 3</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 4</span><i></i>
+		</a>
+	</div>
+
+	<div class="buttonHolder buttonRow" style="background: green;">
+		<a class="button" href="#">
+			<b></b><span>Button 1</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 2</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 3</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 4</span><i></i>
+		</a>
+	</div>
+	<div class="buttonHolder buttonRow" style="background: yellow;">
+		<a class="button" href="#">
+			<b></b><span>Button 1</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 2</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 3</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 4</span><i></i>
+		</a>
+	</div>
+	<div class="buttonHolder buttonRow" style="background: blue;">
+		<a class="button" href="#">
+			<b></b><span>Button 1</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 2</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 3</span><i></i>
+		</a>
+		<a class="button" href="#">
+			<b></b><span>Button 4</span><i></i>
+		</a>
+	</div>
+
+</body>
+</html>

@@ -13,7 +13,12 @@
 	<link rel="stylesheet" href="../../start_project/css/modules/winston.layout.0.4.css" type="text/css" media="screen" />
 
 	<!--[if lte IE 6]>
-		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.layout.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.layout.0.4.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.layout.0.4.css" type="text/css" media="screen" />
 	<![endif]-->
 
 	<!-- jQuery -->
@@ -56,7 +61,10 @@
 		<ul>
 			<li>winston.reset.0.4.css</li>
 			<li>winston.typography.0.4.css</li>
-			<li>winston.layout.0.4.css</li>
+			<li>winston.datagrid.0.4.css</li>
+			<li><strong>winston.layout.0.4.css</strong></li>
+			<li><strong>winston.ie6.layout.0.4.css</strong></li>
+			<li><strong>winston.ie7.layout.0.4.css</strong></li>
 		</ul>
 
 		<p>Wolf photo used in the horizontal centering test by DigitalArt2 on <a href="http://www.flickr.com/photos/digitalart/2341120205/">Flickr</a>, under a Creative Commons license</p>
@@ -80,7 +88,7 @@
 				<td class="yes">Yes</td>
 				<td class="no">No</td>
 				<td>Untested</td>
-				<td>Doesn't pass horizontal centering test! Fix: give the element a width (which defeats the purpose); Fix2: floating the main element in centerHorizontallyInner to the left</td>
+				<td>Doesn't pass horizontal centering test! Fix: give the element inside wrapper divs a width (which defeats the purpose); Fix2: floating the main element in centerHorizontallyInner to the left</td>
 			</tr>
 			<tr>
 				<td>Firefox</td>
@@ -136,7 +144,7 @@
 				<td>Opera</td>
 				<td>9.64</td>
 				<td>OSX</td>
-				<td class="no">No</td>
+				<td class="yes">Yes</td>
 				<td>Untested</td>
 				<td>Untested</td>
 				<td>Untested</td>
@@ -156,7 +164,7 @@
 				<td>Opera</td>
 				<td>10 (beta)</td>
 				<td>OSX</td>
-				<td class="no">No</td>
+				<td class="yes">Yes</td>
 				<td>Untested</td>
 				<td>Untested</td>
 				<td>Untested</td>
@@ -196,7 +204,7 @@
 				<td>Safari</td>
 				<td>4</td>
 				<td>OSX</td>
-				<td class="no">No</td>
+				<td class="yes">Yes</td>
 				<td>Untested</td>
 				<td>Untested</td>
 				<td>Untested</td>
@@ -230,7 +238,7 @@
 				<td class="yes">Yes</td>
 				<td class="no">No</td>
 				<td>Untested</td>
-				<td>/</td>
+				<td>Doesn't pass horizontal centering test! Fix: give the element inside wrapper divs a width (which defeats the purpose);</td>
 			</tr>
 			<tr>
 				<td>Internet Explorer</td>

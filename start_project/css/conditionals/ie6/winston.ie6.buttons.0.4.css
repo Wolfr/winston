@@ -11,3 +11,9 @@
 .buttonHolderRight {
 	zoom: 1;
 }
+
+/* Buttons */
+
+a.button * {
+	background-image: url(../../../images/button.gif);
+}
