@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	
+	<title>Test_suite/typography</title>
+
+	<!-- Winston -->
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.reset.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.general.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.typography.common.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../start_project/css/modules/winston.layout.0.4.css" type="text/css" media="screen" />
+
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie6/winston.ie6.layout.0.4.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.general.0.4.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../start_project/css/conditionals/ie7/winston.ie7.layout.0.4.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<style type="text/css" media="screen">
+		
+		body {
+			
+			background: #46452f;
+			color: #FFF;
+			color: rgba(227,225,178,0.7);
+		}
+		
+		strong, h2 {
+			color: #FFF;
+			color: rgb(255,252,171);
+		}
+
+		
+		.intro {
+			font-size: 15px;
+			font-family: Georgia, serif;
+		}
+		
+			.intro strong {
+				font-family: Helvetica, Arial, sans-serif;
+			}
+		
+		div.fakeImg {
+			background: url(ec3f7a9d820f.jpg) bottom left;
+			width: 100%;
+			height: 220px;
+		}
+		
+		.article {
+			padding: 36px 0;
+		}
+		
+		.heading {
+			height: 550px;
+			overflow: hidden;
+			position: relative;
+			margin: 0 0 20px;
+		}
+		
+			.heading .title {
+				position: absolute;
+				top: 200px;
+				left: 0;
+			}
+			
+			.heading img {
+				position: relative;
+				bottom: 300px;
+			}
+		
+		.article h2 {
+			width: 960px;
+			font-size: 52px;
+			letter-spacing: -2px;
+			padding: 36px 0 0;
+			text-align: center;
+			font-family: "Gill Sans", "Gill Sans MT";
+			text-transform: uppercase;
+			color: #FFF;
+		}
+		
+		.article .subtitle {
+			text-align: center;
+			font-family: "Gill Sans", "Gill Sans MT";
+			font-size: 18px;
+			text-transform: uppercase;
+			letter-spacing: 14px;
+			padding: 0 0 18px;
+			color: #FFF;
+		}
+		
+		.pullquote {
+			float: left;
+			font-family: "Times New Roman", Times, serif;
+			width: 168px;
+			padding: 0 24px 0 0;
+		}
+		
+		.pullquote p {
+			font-size: 17px;
+			line-height: 1.3;
+		}
+		
+		.pullquote cite {
+			font-size: 11px;
+			display: block;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-family: Arial, sans-serif;
+			text-align: right;
+			font-style: normal;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		
+		#container {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		
+		#containerWrapper {
+			width: 960px;
+			margin: 0 auto;
+			position: relative;
+		}
+		
+		#backdrop {
+			background: rgba(92,92,70,0.5);
+			width: 50%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			width: 300px;
+		}
+		
+		#backdrop2 {
+			background: rgba(92,92,70,0.33);
+			width: 50%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 300px;
+			z-index: 0;
+		}
+		
+		#container {
+			z-index: 10;
+		}
+		
+		
+		body, html {
+			width: 100%;
+			height: 100%;
+		}
+	
+	</style>
+</head>
+<body>
+
+	<div id="backdrop"></div>
+	<div id="backdrop2"></div>
+
+	<div id="containerWrapper">
+		<div id="container">
+			<div class="article">
+
+				<div class="heading">
+					<img src="ec3f7a9d820f.jpg" width="100%" alt="Ec3f7a9d820f">
+
+					<div class="title">
+						<h2>singing from my little point</h2>
+						<p class="subtitle">a tale of treachery</p>
+					</div>
+				</div>
+
+				<div class="cols">
+					<div class="col col-1d3">
+						<div class="spacingRight">
+							<p class="intro"><strong>This example uses winston.reset, winston.layout, winston.general and winston.typography.common to create a basic article layout.</strong> Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<div class="fakeImg"></div>
+						</div>
+					</div>
+					<div class="col col-1d3">
+						<div class="spacingBothHalf">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <em>dolore magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="col col-1d3 colLast">
+						<div class="spacingLeft">
+							<blockquote class="pullquote">
+								<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<cite>E. Vergilius</cite>
+							</blockquote>
+							<p>Lorem ipsum dolor sit amet, consectetur  labore ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur  labore ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum •</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
