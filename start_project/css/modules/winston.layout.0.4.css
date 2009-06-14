@@ -1,54 +1,65 @@
 
+
 .colLast {
   margin-right: 0 !important; }
 
 .col-1 {
   width: 72px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-2 {
   width: 168px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-3 {
   width: 264px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-4 {
   width: 360px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-5 {
   width: 456px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-6 {
   width: 552px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-7 {
   width: 648px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-8 {
   width: 744px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-9 {
   width: 840px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
 .col-10 {
   width: 936px;
+  display: inline;
   float: left;
   margin-right: 24px; }
 
@@ -78,46 +89,55 @@
 
 .col-1d2, .col-2d4 {
   width: 50%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-2d3 {
   width: 66.66%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-1d3 {
   width: 33.33%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-1d4 {
   width: 25%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-3d4 {
   width: 75%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-1d5 {
   width: 20%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-2d5 {
   width: 40%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-3d5 {
   width: 60%;
+  display: inline;
   float: left;
   margin: 0; }
 
 .col-4d5 {
   width: 80%;
+  display: inline;
   float: left;
   margin: 0; }
 
@@ -134,9 +154,11 @@
   margin-left: 12px; }
 
 img.alignleft {
+  display: inline;
   float: left;
   padding: 0 24px 12px 0; }
 img.alignright {
+  display: inline;
   float: right;
   padding: 0 0 12px 24px; }
 

@@ -1,3 +1,6 @@
+@import compass/utilities/general/clearfix.sass
+@import compass/utilities/general/float.sass
+
 // /*
 // 
 //     Name:       Winston buttons module [0.4]
@@ -5,14 +8,13 @@
 // 
 // */
 
+
 // /* Clearfix */
 
-.buttonHolder:after, .buttonHolderRight:after
-  :content "."
-  :display block
-  :height 0
-  :clear both
-  :visibility hidden
+.buttonHolder,
+.buttonHolderRight
+  +pie-clearfix
+
 
 // /* Buttons */
 
