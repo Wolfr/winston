@@ -1,58 +1,24 @@
-/*
-    
-	Name:       IE6 conditional comments for
-	            Winston layout module [0.4]
-	Desc:       Styles for the layout module
+.colsGrid, .cols {
+  zoom: 1; }
 
-*/
+.col-2d3 {
+  width: 66.5%; }
 
-/*
-	Grid based column system
-*/
+.col-1d3 {
+  width: 33.2%; }
 
-.colsGrid {
-	zoom: 1;
-}
-
-/*
-	Simple column system
-*/
-
-.cols {
-	zoom: 1;
-}
-
-/* Three columns */
-.col-2d3 { width: 66.5%; }
-.col-1d3 { width: 33.2%; }
-
-/*
-	Center anything* horizontally
-	(not really anything, see test_suite layout)
-*/
-
-/* Make sure centred col grids behave as expected */
-.centerHorizontallyInner .colsGrid,
-.centerHorizontallyInner .cols,
-.centerHorizontallyInner .col {
-	float: left;
-	position: relative;
-}
-
-/* Center anything vertically */
+.centerHorizontallyInner .colsGrid, .centerHorizontallyInner .cols, .centerHorizontallyInner .col {
+  float: left;
+  position: relative; }
 
 .centerVerticallyWrap {
-	position: relative;
-}
+  position: relative; }
 
 .centerVertically[class] {
-	position: absolute;
-	top: 50%;
-}
+  position: absolute;
+  top: 50%; }
 
 .centerVerticallyInner {
-	position: relative;
-	top: -50%;
-	float: left;
-}
-
+  position: relative;
+  top: -50%;
+  float: left; }

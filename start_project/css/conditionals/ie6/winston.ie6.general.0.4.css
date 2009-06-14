@@ -1,18 +1,5 @@
-/*
-
-	Name:       IE6 conditional comments for
-	            Winston general module [0.4]
-
-*/
-
-/* Clearfix */
-
 .clearfix {
-	zoom: 1;
-}
-
-/* Fix image rendering */
+  zoom: 1; }
 
 img {
-	-ms-interpolation-mode: bicubic;
-}
+  -ms-interpolation-mode: bicubic; }

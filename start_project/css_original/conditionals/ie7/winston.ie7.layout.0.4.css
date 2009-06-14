@@ -1,0 +1,13 @@
+/*
+
+	Name:       IE7 conditional comments for
+	            Winston layout module [0.4]
+
+*/
+
+/* Clearfix */
+
+.cols,
+.colsGrid {
+	zoom: 1;
+}
