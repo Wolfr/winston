@@ -1,78 +1,100 @@
+// Link colours
+
+!link_color = #001E91
+!link_color_alt = #B5121B
+
+// Visited link color should be a bit darker
+// Selected link color should be a bit darker than visited
+// Hover link color should be a bit lighter
+
+!link_visited_color = (!link_color - #333)
+!link_selected_color = (!link_visited_color - #333)
+!link_hover_color = (!link_color + #333)
+
+//
+// Links border logic
+//
+
+// Borders should be quite a bit lighter
+!link_border_color = (!link_color + #666)
+!link_border_color_visited = (!link_visited_color + #666)
+!link_border_color_hover = (!link_hover_color + #666)
+
+// Alternate link colours
+
+!link_visited_color_alt = (!link_color_alt - #333)
+!link_selected_color_alt = (!link_visited_color_alt - #333)
+!link_hover_color_alt = (!link_color_alt + #333)
+
+!link_border_color_alt = (!link_color_alt + #666)
+!link_border_color_visited_alt = (!link_visited_color_alt + #666)
+!link_border_color_hover_alt = (!link_hover_color_alt + #666)
+
+!link_border_color_alt = (!link_color_alt + #666)
+!link_border_color_visited_alt = (!link_visited_color_alt + #666)
+!link_border_color_hover_alt = (!link_hover_color_alt + #666)
+
+// Links
+
 a
   :text-decoration none
-  :border-width 0 0 1px 0
-  :border-style solid
-  :border-color #FFF
-
+  :border
+    :width 0 0 1px
+    :style solid
   &:link
-    :border-color #A8B6E5
-    :color #002BB8
-
+    :color = (!link_color)
+    :border-color = (!link_border_color)
   &:visited
-    :border-color #AEB5CE
-    :color #112773
+    :color = (!link_visited_color)
+    :border-color = (!link_border_color_visited)
+  &:hover,
+  &:focus,
+  &:active
+    :color = (!link_hover_color)
+    :border-color = (!link_border_color_hover)
 
-  &:hover, &:active, &:focus
-    :border-color #B1C1F7
-    :color #1A4CEF
-
-
-.halfmute a:link, a.halfmute:link
-  :color #A7A7FB
-  :border-color #DEDEFF
-
-
-.halfmute a:visited, a.halfmute:visited
-  :color #6C82CC
-  :border-color #CFC2FF
-
-
-.halfmute
-  a:hover, &:active, &:focus
-    :color #B1C1F7
-    :border-color #1A4CEF
-
-
-a.halfmute
-  &:hover, &:active, &:focus
-    :color #B1C1F7
-    :border-color #1A4CEF
-
-
-.mute a
+.alt a
   &:link
-    :color #9C9C9C
-    :border-color #E3E3E3
-
+    :color = (!link_color_alt)
+    :border-color = (!link_border_color_alt)
   &:visited
-    :color #7B7B7B
-    :border-color #D3D3D3
-
-  &:hover
-    :color #6AAEED
-    :border-color #CEE4F9
-
-
-a.mute
-  &:active, &:focus
-    :color #6AAEED
-    :border-color #CEE4F9
-
-
-.noUnderlines a
-  &:link, &:visited, &:hover, &:active
-    :border-color #FFF
-
-
-.colorInverse .noUnderlines a
-  &:link, &:visited, &:hover, &:active
-    :border-color #000
-
+    :color = (!link_visited_color_alt)
+    :border-color = (!link_border_color_visited_alt)
+  &:hover,
+  &:focus,
+  &:active
+    :color = (!link_hover_color_alt)
+    :border-color = (!link_border_color_hover_alt)
 
 .swapUnderlines a
-  &:link, &:visited
-    :border-color #FFF
+  &:link,
+  &:visited
+    :border-color transparent
+  &:hover,
+  &:active,
+  &:focus
+    :border-color = (!link_border_color_hover)
 
-  &:hover, &:active
-    :color #1A4CEF
-    :border-bottom 1px solid #B1C1F7
+.alt .swapUnderlines a,
+.swapUnderlines .alt a
+  &:link,
+  &:visited
+    :border-color transparent
+  &:hover,
+  &:active,
+  &:focus
+    :border-color = (!link_border_color_hover_alt)
+
+.noUnderlines a
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus
+    :border none !important
+
+.selected a
+  :color = (!link_selected_color)
+
+.alt .selected a
+  :color = (!link_selected_color_alt)
