@@ -6,6 +6,8 @@ Updated 2009-06-14
 For 0.5 release
 ---------------
 
+Rename files 0.5 to 0.5
+
 Buttons
 
 * Add small buttons, button mixes

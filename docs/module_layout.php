@@ -12,17 +12,17 @@
 
 			<p>To use the layout module you will need:</p>
 			<ul>
-				<li><code>winston.reset.0.4.css</code></li>
-				<li><code>winston.layout.0.4.css</code></li>
-				<li><code>winston.ie6.layout.0.4.css</code> (IE6 support for vertical centering)</li>
-				<li><code>winston.ie7.layout.0.4.css</code> (IE7 clearfix)</li>
+				<li><code>winston.reset.0.5.css</code></li>
+				<li><code>winston.layout.0.5.css</code></li>
+				<li><code>winston.ie6.layout.0.5.css</code> (IE6 support for vertical centering)</li>
+				<li><code>winston.ie7.layout.0.5.css</code> (IE7 clearfix)</li>
 			</ul>
 
 			<p>Or alternatively the full versions of each file:</p>
 			<ul>
-				<li><code>winston.full.0.4.css</code></li>
-				<li><code>winston.ie6.full.0.4.css</code> (IE6 support for vertical centering)</li>
-				<li><code>winston.ie7.full.0.4.css</code> (IE7 clearfix)</li>
+				<li><code>winston.full.0.5.css</code></li>
+				<li><code>winston.ie6.full.0.5.css</code> (IE6 support for vertical centering)</li>
+				<li><code>winston.ie7.full.0.5.css</code> (IE7 clearfix)</li>
 			</ul>
 
 		</div>

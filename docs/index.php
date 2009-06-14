@@ -55,9 +55,9 @@
 						index.html
 						- [css]
 							- [modules]
-							  winston.full.0.4.css
-							  winston.ie6.full.0.4.css
-							  winston.ie7.full.0.4.css
+							  winston.full.0.5.css
+							  winston.ie6.full.0.5.css
+							  winston.ie7.full.0.5.css
 						- [images]
 						- [js]
 							+ [cufon]

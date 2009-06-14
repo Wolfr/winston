@@ -4,9 +4,9 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	
-	<title>Winston 0.4</title>
+	<title>Winston 0.5</title>
 
-	<link rel="stylesheet" href="../start_project/css/winston.full.0.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../start_project/css/winston.full.0.5.css" type="text/css" media="screen" />
 
 	<!-- jQuery -->
 	<script src="../start_project/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
