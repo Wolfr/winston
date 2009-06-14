@@ -3,12 +3,6 @@ Winston todo
 
 Updated 2009-06-14
 
-For 0.4 release:
-----------------
-
-DONE * Create sass files for every module (on sass branch)
-DONE * Link root index.php to relevant parts
-
 For 0.5 release
 ---------------
 
