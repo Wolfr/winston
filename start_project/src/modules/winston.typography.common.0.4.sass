@@ -1,96 +1,93 @@
-body
-  :font 300 13px Arial, sans-serif
-  :line-height 1.5
-  :color #454545
+//  /*
+//  
+//      Name:       Winston typography.common module [0.4]
+//      Desc:       Provides basic typography to start a project with
+//                  These elements are used on almost any website.
+//  
+//  */
 
+!body_color ||= #333
+!base_font_size ||= 13px
+!leading ||= 1.4
+!gutter_width ||= 24px
+
+body
+  :font
+    :weight 300
+    :size = (!base_font_size)
+    :family Arial, sans-serif
+  :line-height = (!leading)
+  :color = (!body_color)
 
 h1, h2, h3
   :line-height 1.1
   :font-family Helvetica, Arial, sans-serif
 
-
 h1, h2, h3, h4
   :font-weight 700
-  :color #000
-  :padding 0 0 12px
+  :color = (!body_color - #333)
 
-
+h1,
 h2
-  :font-size 22px
-
+  :font-size = (!base_font_size * 2)
+  :padding = round(!base_font_size * !leading) 0 round(!base_font_size * !leading)
 
 h3
-  :font-size 16px
-
+  :font-size = (!base_font_size * 1.5)
+  :padding = round(!base_font_size * 0.75 * !leading) 0 round(!base_font_size * 0.75 * !leading)
 
 h4
-  :font-size 13px
-
+  :font-size = (!base_font_size)
+  :padding = round(!base_font_size * 0.5 * !leading) 0 round(!base_font_size * 0.5 * !leading)
 
 p
-  :padding 0 0 12px
-
+  :padding = 0 0 round(!base_font_size * !leading)
 
 strong
   :font-weight 700
   :color #000
 
-
 em
   :font-style italic
 
-
 .content
   ol
-    :padding 0 0 12px 28px
-
+    :padding = 0 0 round(!base_font_size * !leading) 28px
   ul
     :list-style disc
-    :padding 0 0 12px 24px
-
+    :padding = 0 0 round(!base_font_size * !leading) 24px
   ol
     :list-style-type decimal
-
   ul ul
     :padding-bottom 0
-
   ol
     ul, ol
       :padding-bottom 0
-
   ul ol
-    :padding 0 0 0 24px
-
+    :padding = 0 0 0 (!gutter_width)
   ol ol
     :list-style upper-roman
-
     ol
       :list-style lower-roman
-
   dl
-    :padding 0 0 0 12px
-
+    :padding = 0 0 0 round(!base_font_size * !leading)
   dt
     :font-weight 700
     :color #000
-
   dd
-    :padding 0 0 12px
-
+    :padding =  0 0 round(!base_font_size * !leading) 
 
 blockquote, q
   :font-style italic
   :font-family Georgia, serif
 
-
 blockquote
-  :padding 0 0 0 12px
-
+  :padding = 0 0 0 round(!base_font_size * !leading) 
 
 hr
   :height 1px
   :background #CCC
+  :margin = round(!base_font_size * !leading) 0 round(!base_font_size * !leading)
   :border 0
   :font-size 0
-  :margin 12px 0 24px
   :line-height 0

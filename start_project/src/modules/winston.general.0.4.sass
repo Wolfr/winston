@@ -1,10 +1,15 @@
-.clearfix:after
-  :content "."
-  :display block
-  :height 0
-  :clear both
-  :visibility hidden
+// /*
+// 
+//     Name:       Winston general module [0.4]
+//     Desc:       A set of general purpose classes
+// 
+// */
 
+@import compass/utilities/general/clearfix.sass
+@import compass/utilities/general/float.sass
+
+.clearfix
+  +pie-clearfix
 
 .hidden
   :display none

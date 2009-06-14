@@ -1,9 +1,19 @@
-.buttonHolder:after, .buttonHolderRight:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
+
+
+.buttonHolder,
+.buttonHolderRight {
+  display: inline-block; }
+  .buttonHolder:after,
+  .buttonHolderRight:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  .buttonHolder,
+  .buttonHolderRight {
+    display: block; }
 
 a.button:link, a.button:visited {
   height: 22px;
