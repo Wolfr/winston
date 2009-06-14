@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en">
 <head>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	
 	<title>Winston UI Library</title>
 
 	<!-- Winston -->
-	<link rel="stylesheet" href="start_project/css/winston.full.0.5.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="start_project/css/winston.full.0.5.css" type="text/css" media="screen">
 
 	<!-- jQuery -->
 	<script src="start_project/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
@@ -78,4 +78,3 @@
 
 </body>
 </html>
-
