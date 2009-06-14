@@ -1,0 +1,43 @@
+h1 {
+	background: url(docs/images/winston_logo.png) no-repeat;
+	width: 418px;
+	height: 97px;
+	font-size: 97px;
+	letter-spacing: -5px;
+	text-transform: uppercase;
+	line-height: 1;
+	text-indent: -9000px;
+	margin: 24px;
+}
+
+li {
+	font-size: 18px;
+}
+
+#resources {
+	width: 466px;
+	padding: 48px;
+	margin: 48px auto;
+	background: #FFF;
+	border: 1px dotted #CCC;
+	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#resources ul {
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
+}
+
+#resources li {
+	border-bottom: 1px solid #CCC;
+	padding: 0 0 6px;
+	margin: 0 0 6px;
+}
+
+#resources li:last-child {
+	border: 0; margin: 0; padding: 0;
+}
