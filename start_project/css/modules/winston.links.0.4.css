@@ -1,66 +1,56 @@
-/*
+a {
+  text-decoration: none;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #FFF; }
+  a:link {
+    border-color: #A8B6E5;
+    color: #002BB8; }
+  a:visited {
+    border-color: #AEB5CE;
+    color: #112773; }
+  a:hover, a:active, a:focus {
+    border-color: #B1C1F7;
+    color: #1A4CEF; }
 
-	Name:       Winston links module [0.4]
-	Desc:       Link styles: pick the ones you need
+.halfmute a:link, a.halfmute:link {
+  color: #A7A7FB;
+  border-color: #DEDEFF; }
 
-*/
+.halfmute a:visited, a.halfmute:visited {
+  color: #6C82CC;
+  border-color: #CFC2FF; }
 
-/* Regular border style links */
+.halfmute a:hover, .halfmute:active, .halfmute:focus {
+  color: #B1C1F7;
+  border-color: #1A4CEF; }
 
-a { text-decoration: none; border-width: 0 0 1px 0; border-style: solid; border-color: #FFF; }
-a:link { border-color: #A8B6E5; color: #002BB8; }
-a:visited { border-color: #AEB5CE; color: #112773; }
-a:hover, a:active { border-color: #B1C1F7; color: #1A4CEF; }
-a:focus { border-color: #B1C1F7; color: #1A4CEF; }
+a.halfmute:hover, a.halfmute:active, a.halfmute:focus {
+  color: #B1C1F7;
+  border-color: #1A4CEF; }
 
-/*
-	Regular border style links, 50% opacity (fake)
-	Dependency: Regular border style links
-*/
+.mute a:link {
+  color: #9C9C9C;
+  border-color: #E3E3E3; }
+.mute a:visited {
+  color: #7B7B7B;
+  border-color: #D3D3D3; }
+.mute a:hover {
+  color: #6AAEED;
+  border-color: #CEE4F9; }
 
-.halfmute a:link, a.halfmute:link { color: #A7A7FB; border-color: #DEDEFF; }
-.halfmute a:visited, a.halfmute:visited { color: #6C82CC; border-color: #CFC2FF; }
-.halfmute a:hover, .halfmute:active, .halfmute:focus,
-a.halfmute:hover, a.halfmute:active, a.halfmute:focus { color: #B1C1F7; border-color: #1A4CEF; }
+a.mute:active, a.mute:focus {
+  color: #6AAEED;
+  border-color: #CEE4F9; }
 
-/*
-	Greyed out style links
-	Dependency: Regular border style links
-*/
+.noUnderlines a:link, .noUnderlines a:visited, .noUnderlines a:hover, .noUnderlines a:active {
+  border-color: #FFF; }
 
-.mute a:link { color: #9C9C9C; border-color: #E3E3E3; }
-.mute a:visited { color: #7B7B7B; border-color: #D3D3D3; }
-.mute a:hover, a.mute:active, a.mute:focus { color: #6AAEED; border-color: #CEE4F9; }
+.colorInverse .noUnderlines a:link, .colorInverse .noUnderlines a:visited, .colorInverse .noUnderlines a:hover, .colorInverse .noUnderlines a:active {
+  border-color: #000; }
 
-/*
-	No underlines links: for areas that are clearly navigational
-	Dependency: Regular border style links
-*/
-
-.noUnderlines a:link,
-.noUnderlines a:visited,
-.noUnderlines a:hover,
-.noUnderlines a:active
-.noUnderlines a:focus {
-	border-color: #FFF;
-}
-
-	.colorInverse .noUnderlines a:link,
-	.colorInverse .noUnderlines a:visited,
-	.colorInverse .noUnderlines a:hover,
-	.colorInverse .noUnderlines a:active
-	.colorInverse .noUnderlines a:focus {
-		border-color: #000;
-	}
-
-.swapUnderlines a:link,
-.swapUnderlines a:visited {
-	border-color: #FFF;
-}
-
-.swapUnderlines a:hover,
-.swapUnderlines a:active
-.swapUnderlines a:focus {
-	color: #1A4CEF;
-	border-bottom: 1px solid #B1C1F7;
-}
+.swapUnderlines a:link, .swapUnderlines a:visited {
+  border-color: #FFF; }
+.swapUnderlines a:hover, .swapUnderlines a:active {
+  color: #1A4CEF;
+  border-bottom: 1px solid #B1C1F7; }

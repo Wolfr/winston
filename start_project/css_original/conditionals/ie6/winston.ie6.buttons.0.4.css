@@ -1,0 +1,19 @@
+/*
+
+	Name:       IE6 conditional comments for
+	            Winston buttons module [0.4]
+
+*/
+
+/* Clearfix */
+
+.buttonHolder,
+.buttonHolderRight {
+	zoom: 1;
+}
+
+/* Buttons */
+
+a.button * {
+	background-image: url(../../../images/buttons/button.gif);
+}

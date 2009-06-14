@@ -1,0 +1,75 @@
+.buttonHolder:after, .buttonHolderRight:after
+  :content "."
+  :display block
+  :height 0
+  :clear both
+  :visibility hidden
+
+
+a
+  &.button
+    &:link, &:visited
+      :height 22px
+      :line-height 22px
+      :border none !important
+      :white-space nowrap
+      :text-decoration none
+      :color #287BC8 !important
+
+    &:link span, &:visited span
+      :font-size 11px
+      :font-weight 700
+
+    *
+      :background-image url(../../images/buttons/button.png)
+      :background-repeat no-repeat
+      :cursor pointer
+      :float left
+      :height 100%
+
+    &:link span, &:visited span
+      :background-position center top
+
+    &:hover span, &:active span, &:focus span
+      :background-position center -22px
+
+    &:link b, &:visited b
+      :background-position 0 0
+
+    &:hover b, &:active b, &:focus b
+      :background-position 0 -22px
+
+    &:link i, &:visited i
+      :background-position top right
+
+    &:hover i, &:active i, &:focus i
+      :background-position right -22px
+
+    i:after
+      :content "."
+
+    b
+      :width 7px
+      :text-indent -9000px
+      :display block
+
+      &:after
+        :content "."
+
+    i
+      :width 7px
+      :text-indent -9000px
+      :display block
+
+  &.buttonIconLeft b, &.buttonIconRight i
+    :width 22px
+
+
+.buttonHolder .button
+  :float left
+  :padding-right 6px
+
+
+.buttonHolderRight .button
+  :float right
+  :padding-left 6px
