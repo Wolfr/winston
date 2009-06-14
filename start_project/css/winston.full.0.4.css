@@ -429,7 +429,7 @@ a.button:link span, a.button:visited span {
   font-size: 11px;
   font-weight: 700; }
 a.button * {
-  background-image: url(../images/buttons/button.png);
+  background-image: url(../../images/buttons/button.png);
   background-repeat: no-repeat;
   cursor: pointer;
   float: left;
