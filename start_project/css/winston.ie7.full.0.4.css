@@ -1,2 +1,36 @@
-.clearfix, .cols, .colsGrid, .buttonHolder, .buttonHolderRight {
+.buttonHolder, .buttonHolderRight {
   zoom: 1; }
+
+a.button * {
+  background-image: url(../../../images/buttons/button.gif); }
+
+.clearfix {
+  zoom: 1; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+.colsGrid, .cols {
+  zoom: 1; }
+
+.col-2d3 {
+  width: 66.5%; }
+
+.col-1d3 {
+  width: 33.2%; }
+
+.centerHorizontallyInner .colsGrid, .centerHorizontallyInner .cols, .centerHorizontallyInner .col {
+  float: left;
+  position: relative; }
+
+.centerVerticallyWrap {
+  position: relative; }
+
+.centerVertically[class] {
+  position: absolute;
+  top: 50%; }
+
+.centerVerticallyInner {
+  position: relative;
+  top: -50%;
+  float: left; }
