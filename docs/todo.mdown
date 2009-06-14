@@ -7,8 +7,7 @@ For 0.4 release:
 ----------------
 
 DONE * Create sass files for every module (on sass branch)
-
-* Link root index.php to relevant parts
+DONE * Link root index.php to relevant parts
 
 For 0.5 release
 ---------------
