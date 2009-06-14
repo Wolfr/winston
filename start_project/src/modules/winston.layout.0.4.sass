@@ -1,137 +1,132 @@
-.colsGrid
-  &:after
-    :content "."
-    :display block
-    :height 0
-    :clear both
-    :visibility hidden
+// /*
+//     Grid columns
+// */
 
-  .col
-    :float left
-    :margin-right 24px
+// Layout constants and mixins
+@import compass/utilities/general/clearfix.sass
 
+// Default # of columns
+!n ||= 10
+// Default column width
+!column_width ||= 72px
+// Default gutter width
+!gutter_width ||= 24px
 
-.col-1
-  :width 72px
-
-
-.col-2
-  :width 168px
-
-
-.col-3
-  :width 264px
-
-
-.col-4
-  :width 360px
-
-
-.col-5
-  :width 456px
-
-
-.col-6
-  :width 552px
-
-
-.col-7
-  :width 648px
-
-
-.col-8
-  :width 744px
-
-
-.col-9
-  :width 840px
-
-
-.col-10
-  :width 936px
-
+=col(!n, !override = false)
+  !width = !column_width * !n + (!gutter_width * (!n - 1))
+  @if !override
+    :width = !width !important
+  @else
+    :width = !width
+  :float left
+  :margin
+    :right = !gutter_width
 
 .colLast
   :margin-right 0 !important
 
+@for !n from 1 to (!n + 1)
+  .col-#{!n}
+    +col(!n)
+
+.colsGrid
+  +pie-clearfix
+
+
+
+
+// /*
+//     Percentage columns
+// */
 
 .cols
-  &:after
-    :content "."
-    :display block
-    :height 0
-    :clear both
-    :visibility hidden
-
-  .col
-    :float left
-    :margin 0
-
+  +pie-clearfix
 
 .col-1d2, .col-2d4
   :width 50%
-
+  :float left
+  :margin 0
 
 .col-2d3
   :width 66.66%
-
+  :float left
+  :margin 0
 
 .col-1d3
   :width 33.33%
-
+  :float left
+  :margin 0
 
 .col-1d4
   :width 25%
-
+  :float left
+  :margin 0
 
 .col-3d4
   :width 75%
-
+  :float left
+  :margin 0
 
 .col-1d5
   :width 20%
-
+  :float left
+  :margin 0
 
 .col-2d5
   :width 40%
-
+  :float left
+  :margin 0
 
 .col-3d5
   :width 60%
-
+  :float left
+  :margin 0
 
 .col-4d5
   :width 80%
-
+  :float left
+  :margin 0
 
 .cols
   .spacingLeft
-    :margin-left 24px
+    :margin-left = (!gutter_width)
 
   .spacingLeftHalf
-    :margin-left 12px
+    :margin-left = (!gutter_width / 2)
 
   .spacingRight
-    :margin-right 24px
+    :margin-right = (!gutter_width)
 
   .spacingRightHalf
-    :margin-right 12px
+    :margin-right = (!gutter_width / 2)
 
   .spacingBothHalf
-    :margin-right 12px
-    :margin-left 12px
+    :margin-right = (!gutter_width / 2)
+    :margin-left = (!gutter_width / 2)
 
+
+
+
+// /*
+//     Default image classes
+// */
 
 img
   &.alignleft
     :float left
-    :padding 0 24px 12px 0
+    :padding = 0 (!gutter_width) (!gutter_width / 2) 0
 
   &.alignright
     :float right
-    :padding 0 0 12px 24px
+    :padding = 0 0 (!gutter_width / 2) (!gutter_width)
 
 
+
+
+// /*
+//     Center anything horizontally
+// */
+	
 .centerHorizontallyWrap
   :width 100%
   :overflow hidden
@@ -147,6 +142,11 @@ img
   :position relative
   :left -50%
 
+
+
+// /*
+//     Center anything vertically
+// */
 
 .centerVerticallyWrap
   :height 100%
