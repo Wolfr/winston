@@ -27,6 +27,19 @@
 		}
 		
 	</style>
+
+	<!-- jQuery -->
+	<script src="../../start_project/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		
+		$(document).ready(function() {
+			var randomLink = 'http://' + 'random' + Math.floor(Math.random() * 500) + '.com';
+			$('.unvisited').attr('href', randomLink);
+		});
+		
+		
+	</script>
 </head>
 <body>
 
@@ -45,7 +58,7 @@
 
 		<h3>Regular</h3>
 		
-		<p><a href="http://random209-0280-18201.com">This is an unvisited link</a></p>
+		<p><a class="unvisited" href="http://random209-0280-18201.com">This is an unvisited link</a></p>
 
 		<p><a href="http://www.google.be">This is a visited link (google.be)</a></p>
 
@@ -55,7 +68,7 @@
 		
 		<div class="swapUnderlines">
 
-			<p><a href="http://random209-0280-18201.com">This is an unvisited link</a></p>
+			<p><a class="unvisited" href="http://random209-0280-18201.com">This is an unvisited link</a></p>
 
 			<p><a href="http://www.google.be">This is a visited link (google.be)</a></p>
 			
@@ -67,7 +80,7 @@
 		
 		<div class="noUnderlines">
 
-			<p><a href="http://random209-0280-18201.com">This is an unvisited link</a></p>
+			<p><a class="unvisited" href="http://random209-0280-18201.com">This is an unvisited link</a></p>
 
 			<p><a href="http://www.google.be">This is a visited link (google.be)</a></p>
 			
